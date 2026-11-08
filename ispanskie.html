@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="ispanskie.css">
 
   <script type="application/ld+json">
   {
@@ -3697,59 +3697,62 @@
     </div>
   </footer>
 
-  <!-- MODAL: BOOKING -->
+  
+  <!-- MODAL: REAL BOOKING CHANNELS (No simulation, no fake form) -->
   <div class="modal-backdrop" id="booking-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="booking-modal-title">
     <div class="modal-window">
       <button type="button" class="modal-close-btn" id="booking-modal-close" aria-label="Закрыть окно">×</button>
-      <div class="modal-kicker">ЗАПИСЬ НА ПРИЁМ</div>
+      <div class="modal-kicker">ОФИЦИАЛЬНАЯ ЗАПИСЬ · ДАНТИСТЪ ИСПАНСКИЕ КВАРТАЛЫ</div>
       <h2 class="modal-head" id="booking-modal-title">Выберите удобный способ записи</h2>
       <p class="modal-sub">
-        Вы можете выбрать окно приёма в системе DentalPRO или оставить заявку на звонок администратора клиники.
+        Приём ведётся по предварительной записи ежедневно с 09:00 до 21:00. Выберите прямое бронирование в медицинской системе или свяжитесь с регистратурой клиники:
       </p>
 
-      <div class="booking-methods">
-        <a href="https://stomatolog-ispanskie-kvartaly.ru/online-zapis/" target="_blank" rel="noopener noreferrer" class="booking-option-card">
-          <div class="option-icon">
+      <div id="selected-service-banner" class="selected-service-banner" style="display: none;">
+        <span class="service-banner-label">Выбранная медицинская услуга:</span>
+        <strong id="selected-service-name" class="service-banner-name"></strong>
+      </div>
+
+      <div class="booking-channels-list">
+        <!-- Канал 1: DentalPRO -->
+        <a href="https://stomatolog-ispanskie-kvartaly.ru/online-zapis/" target="_blank" rel="noopener noreferrer" class="booking-channel-card">
+          <div class="channel-icon-box">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-          <div class="option-body">
-            <span class="option-name">Запись через систему DentalPRO ↗</span>
-            <span class="option-desc">Интерактивный календарь с актуальным расписанием врачей</span>
+          <div class="channel-text">
+            <span class="channel-title">Онлайн-запись через систему DentalPRO ↗</span>
+            <span class="channel-desc">Интерактивный календарь с актуальным расписанием врачей и свободными окнами приёма.</span>
           </div>
+          <span class="channel-btn">Выбрать окно →</span>
         </a>
 
-        <div class="booking-quick-form-wrap">
-          <h3 class="quick-form-title">Или оставьте заявку на звонок:</h3>
-          <form id="quick-booking-form" class="quick-form">
-            <div class="form-row">
-              <label for="client-name" class="form-label">Ваше имя</label>
-              <input type="text" id="client-name" name="name" class="form-input" placeholder="Как к вам обращаться" required>
-            </div>
-            <div class="form-row">
-              <label for="client-phone" class="form-label">Номер телефона</label>
-              <input type="tel" id="client-phone" name="phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
-            </div>
-            <div class="form-row">
-              <label for="client-service" class="form-label">Интересующая услуга (необязательно)</label>
-              <input type="text" id="client-service" name="service" class="form-input" placeholder="Например: Детский приём, консультация...">
-            </div>
-            <div class="form-consent">
-              <label class="consent-label">
-                <input type="checkbox" id="client-consent" name="consent" required>
-                <span>Согласен на обработку персональных данных в соответствии с <a href="https://stomatolog-ispanskie-kvartaly.ru/privacy-policy/" target="_blank" rel="noopener noreferrer">Политикой конфиденциальности</a> (152-ФЗ)</span>
-              </label>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">
-              Отправить заявку в регистратуру
-            </button>
-            <div id="booking-success-message" class="booking-success-alert" style="display: none;" role="status">
-              ✓ Заявка принята! Регистратура свяжется с вами в течение 10 минут.
-            </div>
-          </form>
-        </div>
+        <!-- Канал 2: Телефон -->
+        <a href="tel:+79045199697" class="booking-channel-card">
+          <div class="channel-icon-box channel-icon-phone">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="channel-text">
+            <span class="channel-title">Телефон регистратуры: +7 (904) 519-96-97</span>
+            <span class="channel-desc">Единая линия для консультаций, записи и уточнения деталей приёма. Ежедневно 09:00 – 21:00.</span>
+          </div>
+          <span class="channel-btn">Позвонить →</span>
+        </a>
+
+        <!-- Канал 3: Telegram -->
+        <a href="https://t.me/Stomatologiya1108" target="_blank" rel="noopener noreferrer" class="booking-channel-card">
+          <div class="channel-icon-box channel-icon-tg">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="channel-text">
+            <span class="channel-title">Официальный Telegram-канал @Stomatologiya1108 ↗</span>
+            <span class="channel-desc">Прямой чат для оперативных консультаций дежурного администратора и согласования времени.</span>
+          </div>
+          <span class="channel-btn">Написать в чат →</span>
+        </a>
       </div>
     </div>
   </div>
+  
 
   <!-- MODAL: DOCTOR DOSSIER -->
   <div class="modal-backdrop" id="certs-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="certs-modal-title">

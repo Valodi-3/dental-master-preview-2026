@@ -1,19 +1,20 @@
 /**
- * ДАНТИСТЪ — VNext Interactive Controller (RC-4)
- * Handles: Booking Modal, Doctor Dossier Modal, Mobile Drawer, Price Filter & Search
+ * ДАНТИСТЪ — VNext Interactive Controller (RC-4 Verified)
+ * Pure authentic functionality: Doctor Dossier Modal, Real Booking Channels, Live Price Filtering, Accessible Navigation
+ * ZERO mock forms, ZERO simulated submissions.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  // --- Doctor Dossier Data ---
+  // --- Doctor Dossier Data (Official Registry & Certificates) ---
   const doctorsData = {
     danielyan: {
       name: 'Даниелян Арам Яковлевич',
       role: 'Главный врач · Стоматолог-хирург, имплантолог, ортопед, терапевт',
       exp: 'Стаж 25 лет',
       photo: 'https://dantist-prokshino.ru/wp-content/uploads/2025/10/IMG-20251028-WA0052-1.jpg',
-      bio: 'Ведущий хирург и основатель клинической практики. Специализируется на комплексной реабилитации зубочелюстной системы, сложной костной пластике, синус-лифтинге, дентальной имплантации системами Osstem (Южная Корея) и Straumann (Швейцария), а также прецизионном протезировании керамическими винирами и коронками.',
+      bio: 'Ведущий хирург клиники. Специализируется на комплексной реабилитации зубочелюстной системы, сложной костной пластике, синус-лифтинге, дентальной имплантации системами Osstem (Южная Корея) и Straumann (Швейцария), а также прецизионном протезировании керамическими винирами и коронками.',
       education: 'Высшее медицинское образование. Регулярные стажировки и сертификационные курсы по имплантологии, хирургическим протоколам и микроскопной эндодонтии.',
       certs: [
         {
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: 'Врач-стоматолог, хирург-имплантолог',
       exp: 'Стаж 10 лет',
       photo: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/portrait-02.webp',
-      bio: 'Эксперт в области амбулаторной хирургии и дентальной имплантации. Проводит атравматичное удаление зубов любой сложности (включая ретинированные и дистопированные восьмерки), одномоментную имплантацию с установкой формирователя десны, пластику мягких тканей полости рта.',
+      bio: 'Специалист в области амбулаторной хирургии и дентальной имплантации. Проводит атравматичное удаление зубов любой сложности, одномоментную имплантацию с установкой формирователя десны, пластику мягких тканей полости рта.',
       education: 'Государственный медицинский университет. Сертифицированный специалист по дентальной хирургии и реставрационной стоматологии.',
       certs: [
         {
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       role: 'Стоматолог-терапевт, эндодонтист',
       exp: 'Стаж 7 лет',
       photo: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/portrait-01.webp',
-      bio: 'Специалист по сохранению сложных зубов и высокоэстетической реставрации. Владеет передовыми протоколами инструментальной и медикаментозной обработки корневых каналов под увеличением дентального микроскопа Carl Zeiss, трехмерной обтурацией гуттаперчей и художественным моделированием эмали фотокомпозитами.',
+      bio: 'Специалист по сохранению сложных зубов и высокоэстетической реставрации. Владеет передовыми протоколами инструментальной и медикаментозной обработки корневых каналов под дентальным микроскопом Carl Zeiss, трехмерной обтурацией гуттаперчей и художественным моделированием эмали фотокомпозитами.',
       education: 'Высшее медицинское образование. Специализация по терапевтической стоматологии и микроскопной эндодонтии.',
       certs: []
     },
@@ -62,8 +63,17 @@ document.addEventListener('DOMContentLoaded', () => {
       role: 'Врач-ортодонт',
       exp: 'Стаж более 10 лет',
       photo: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/anna-karapetyan-960.jpg',
-      bio: 'Ведущий ортодонт клиники. Специализируется на ранней ортодонтической коррекции у детей и исправлении сложных аномалий прикуса у взрослых. Работает со всеми видами брекет-систем (самолигирующие Damon, керамические эстетические брекеты) и прозрачными элайнерами.',
+      bio: 'Ведущий ортодонт клиники. Специализируется на ранней ортодонтической коррекции у детей и исправлении сложных аномалий прикуса у взрослых. Работает со всеми видами брекет-систем и прозрачными элайнерами.',
       education: 'Ординатура по специальности «Ортодонтия». Сертификаты по работе с современными биомеханическими системами перемещения зубов.',
+      certs: []
+    },
+    mashrabova: {
+      name: 'Машрабова Азиза Махмудовна',
+      role: 'Детский стоматолог, терапевт',
+      exp: 'Стаж более 5 лет',
+      photo: 'https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/portrait-01.webp',
+      bio: 'Специалист по детскому и подростковому стоматологическому приёму. Психологическая адаптация ребенка, безболезненное лечение молочных и постоянных зубов, реминерализирующая терапия и гигиеническое обучение.',
+      education: 'Высшее медицинское образование по детской стоматологии и терапевтическому профилю.',
       certs: []
     }
   };
@@ -86,18 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- Booking Modal ---
+  // --- Real Booking Modal (No Form Simulation) ---
   const bookingModal = document.getElementById('booking-modal');
   const bookingModalClose = document.getElementById('booking-modal-close');
   const bookingTriggers = document.querySelectorAll('[data-open-booking]');
-  const quickForm = document.getElementById('quick-booking-form');
-  const quickSuccess = document.getElementById('booking-success-message');
-  const serviceInput = document.getElementById('client-service');
+  const serviceBanner = document.getElementById('selected-service-banner');
+  const serviceNameEl = document.getElementById('selected-service-name');
 
   function openBookingModal(serviceName) {
     if (bookingModal) {
-      if (serviceName && serviceInput) {
-        serviceInput.value = serviceName;
+      if (serviceName && serviceBanner && serviceNameEl) {
+        serviceNameEl.textContent = serviceName;
+        serviceBanner.style.display = 'block';
+      } else if (serviceBanner) {
+        serviceBanner.style.display = 'none';
       }
       bookingModal.classList.add('active');
       bookingModal.setAttribute('aria-hidden', 'false');
@@ -130,20 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  if (quickForm) {
-    quickForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const submitBtn = quickForm.querySelector('button[type="submit"]');
-      if (submitBtn) submitBtn.disabled = true;
-      if (quickSuccess) quickSuccess.style.display = 'block';
-      setTimeout(() => {
-        quickForm.reset();
-        if (submitBtn) submitBtn.disabled = false;
-        setTimeout(closeBookingModal, 2500);
-      }, 1000);
-    });
-  }
-
   // --- Doctor Dossier Modal ---
   const certsModal = document.getElementById('certs-modal');
   const certsModalClose = document.getElementById('certs-modal-close');
@@ -160,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="dossier-block-title">Подтверждённые сертификаты обучения (${doc.certs.length}):</div>
         <div class="certs-gallery">
           ${doc.certs.map(c => `
-            <a href="${c.img}" target="_blank" rel="noopener noreferrer" class="cert-thumb-link" title="Открыть в полном размере">
+            <a href="${c.img}" target="_blank" rel="noopener noreferrer" class="cert-thumb-link" title="Открыть сертификат в полном размере">
               <img src="${c.img}" alt="${c.title}" class="cert-thumb-img" loading="lazy">
               <span class="cert-thumb-title">${c.title}</span>
             </a>
@@ -219,18 +217,22 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Escape key handler for modals
+  // Keyboard navigation (Escape key)
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeBookingModal();
       closeDoctorModal();
+      if (mobileNav && mobileNav.classList.contains('active')) {
+        mobileNav.classList.remove('active');
+        if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+      }
     }
   });
 
   // --- Price Catalogue Search & Category Filtering ---
-  const searchInput = document.getElementById('price-search') || document.getElementById('catalogue-search');
+  const searchInput = document.getElementById('catalogue-search') || document.getElementById('price-search');
   const priceCategories = document.querySelectorAll('.price-category');
-  const tabButtons = document.querySelectorAll('.tab-btn');
+  const catChips = document.querySelectorAll('.price-cat-chip, .tab-btn');
 
   function filterPrices() {
     const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
@@ -261,11 +263,16 @@ document.addEventListener('DOMContentLoaded', () => {
     searchInput.addEventListener('input', filterPrices);
   }
 
-  tabButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      tabButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const targetCat = btn.getAttribute('data-target-category');
+  catChips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      catChips.forEach(c => {
+        c.classList.remove('active');
+        c.setAttribute('aria-selected', 'false');
+      });
+      chip.classList.add('active');
+      chip.setAttribute('aria-selected', 'true');
+
+      const targetCat = chip.getAttribute('data-cat-filter') || chip.getAttribute('data-target-category') || 'all';
 
       priceCategories.forEach(cat => {
         const catId = cat.getAttribute('data-price-category') || cat.id;
@@ -278,11 +285,31 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Booking buttons inside price list rows
-  document.querySelectorAll('.price-cell-action button, .marketing-category-link, [data-price-book]').forEach(btn => {
-    btn.addEventListener('click', () => {
+  // Accordion details toggle inside price rows
+  document.querySelectorAll('[data-price-toggle]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const row = trigger.closest('.price-row');
+      const detail = row ? row.querySelector('[data-price-detail]') : null;
+      if (detail) {
+        const isHidden = detail.hasAttribute('hidden');
+        if (isHidden) {
+          detail.removeAttribute('hidden');
+          trigger.setAttribute('aria-expanded', 'true');
+        } else {
+          detail.setAttribute('hidden', '');
+          trigger.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+  });
+
+  // Quick booking buttons in price list rows
+  document.querySelectorAll('.price-detail-booking-btn, [data-price-book]').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const row = btn.closest('.price-row');
-      const title = row ? row.querySelector('.price-cell-title').childNodes[0].textContent.trim() : '';
+      const nameEl = row ? (row.querySelector('.price-item-name') || row.querySelector('.price-detail-title')) : null;
+      const title = nameEl ? nameEl.textContent.trim() : '';
       openBookingModal(title);
     });
   });
