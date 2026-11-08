@@ -1,465 +1,289 @@
 /**
- * ДАНТИСТЪ — VNext Interactive Controller (2026)
- * Accessibility-first: WCAG 2.1 AA, Focus Trap, Keyboard Nav & Live Filters
+ * ДАНТИСТЪ — VNext Interactive Controller (RC-4)
+ * Handles: Booking Modal, Doctor Dossier Modal, Mobile Drawer, Price Filter & Search
  */
 
-(function () {
+document.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  // State
-  let activeFilter = 'all';
-  let activeSearchQuery = '';
-  let previouslyFocusedElement = null;
-
-  // Elements
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileNav = document.getElementById('mobile-nav');
-  const filterChips = document.querySelectorAll('.filter-chip');
-  const searchInput = document.getElementById('catalogue-search');
-  const serviceCards = document.querySelectorAll('.service-card');
-  const symptomChips = document.querySelectorAll('.symptom-chip');
-  
-  // Modals
-  const bookingModal = document.getElementById('booking-modal');
-  const bookingModalClose = document.getElementById('booking-modal-close');
-  const bookingTriggers = document.querySelectorAll('[data-open-booking]');
-  const bookingForm = document.getElementById('quick-booking-form');
-  const formSuccessBox = document.getElementById('form-success-box');
-
-  const certModal = document.getElementById('cert-modal');
-  const certModalClose = document.getElementById('cert-modal-close');
-  const certTriggers = document.querySelectorAll('[data-open-certs]');
-  const certModalTitle = document.getElementById('cert-modal-title');
-  const certModalGallery = document.getElementById('cert-modal-gallery');
-
-  // Certificate database (verified from live clinic template)
-  const doctorCertificates = {
-    'danielyan': {
+  // --- Doctor Dossier Data ---
+  const doctorsData = {
+    danielyan: {
       name: 'Даниелян Арам Яковлевич',
+      role: 'Главный врач · Стоматолог-хирург, имплантолог, ортопед, терапевт',
+      exp: 'Стаж 25 лет',
+      photo: 'https://dantist-prokshino.ru/wp-content/uploads/2025/10/IMG-20251028-WA0052-1.jpg',
+      bio: 'Ведущий хирург и основатель клинической практики. Специализируется на комплексной реабилитации зубочелюстной системы, сложной костной пластике, синус-лифтинге, дентальной имплантации системами Osstem (Южная Корея) и Straumann (Швейцария), а также прецизионном протезировании керамическими винирами и коронками.',
+      education: 'Высшее медицинское образование. Регулярные стажировки и сертификационные курсы по имплантологии, хирургическим протоколам и микроскопной эндодонтии.',
       certs: [
         {
           title: 'Osstem: базовый хирургический курс, 2018',
-          src: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-osstem.webp'
+          img: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-osstem.webp'
         },
         {
           title: 'Имплантация: хирургические и ортопедические протоколы, 2018',
-          src: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-implantation.webp'
+          img: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-implantation.webp'
         },
         {
-          title: 'Препарирование под виниры, 2021',
-          src: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-veneers.webp'
+          title: 'Препарирование под виниры, 2018',
+          img: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-veneers.webp'
         },
         {
-          title: 'Лечение корневых каналов под микроскопом',
-          src: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-endodontics.webp'
+          title: 'Эндодонтия с микроскопом, 2018',
+          img: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-endodontics.webp'
         }
       ]
     },
-    'nadzhafov': {
+    nadzhafov: {
       name: 'Наджафов Азер Этибарович',
+      role: 'Врач-стоматолог, хирург-имплантолог',
+      exp: 'Стаж 10 лет',
+      photo: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/portrait-02.webp',
+      bio: 'Эксперт в области амбулаторной хирургии и дентальной имплантации. Проводит атравматичное удаление зубов любой сложности (включая ретинированные и дистопированные восьмерки), одномоментную имплантацию с установкой формирователя десны, пластику мягких тканей полости рта.',
+      education: 'Государственный медицинский университет. Сертифицированный специалист по дентальной хирургии и реставрационной стоматологии.',
       certs: [
         {
-          title: 'Реставрация жевательной группы зубов, 2019',
-          src: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/nadzhafov-restoration.webp'
+          title: 'Эстетическая и функциональная реставрация, 2018',
+          img: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/nadzhafov-restoration.webp'
         }
       ]
     },
-    'karapetyan': {
-      name: 'Карапетян Анна Арменаковна',
-      certs: [
-        {
-          title: 'Художественная реставрация фронтальных зубов, AVS school, 2021',
-          src: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-restoration-2021.jpg'
-        },
-        {
-          title: 'Ultimate Endo: клиническая эндодонтия от диагностики до обтурации, 2021',
-          src: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-ultimate-endo-2021.jpg'
-        },
-        {
-          title: 'Курс «Эндодонтическое перелечивание», 2021',
-          src: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-endodontic-retreatment-2021.jpg'
-        }
-      ]
+    fiasheva: {
+      name: 'Фиашева Диана Аслановна',
+      role: 'Стоматолог-терапевт, эндодонтист',
+      exp: 'Стаж 7 лет',
+      photo: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/portrait-01.webp',
+      bio: 'Специалист по сохранению сложных зубов и высокоэстетической реставрации. Владеет передовыми протоколами инструментальной и медикаментозной обработки корневых каналов под увеличением дентального микроскопа Carl Zeiss, трехмерной обтурацией гуттаперчей и художественным моделированием эмали фотокомпозитами.',
+      education: 'Высшее медицинское образование. Специализация по терапевтической стоматологии и микроскопной эндодонтии.',
+      certs: []
+    },
+    karapetyan: {
+      name: 'Карапетян Анна Артаковна',
+      role: 'Врач-ортодонт',
+      exp: 'Стаж более 10 лет',
+      photo: 'https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/anna-karapetyan-960.jpg',
+      bio: 'Ведущий ортодонт клиники. Специализируется на ранней ортодонтической коррекции у детей и исправлении сложных аномалий прикуса у взрослых. Работает со всеми видами брекет-систем (самолигирующие Damon, керамические эстетические брекеты) и прозрачными элайнерами.',
+      education: 'Ординатура по специальности «Ортодонтия». Сертификаты по работе с современными биомеханическими системами перемещения зубов.',
+      certs: []
     }
   };
 
-  /* ==========================================================================
-     1. Mobile Navigation
-     ========================================================================== */
+  // --- Mobile Drawer ---
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
   if (menuToggle && mobileNav) {
-    menuToggle.addEventListener('click', function () {
-      const isOpen = mobileNav.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      menuToggle.innerHTML = isOpen ? '✕' : '☰';
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      mobileNav.classList.toggle('active');
     });
 
-    // Close when clicking nav link
-    const mobileLinks = mobileNav.querySelectorAll('.mobile-nav-link');
-    mobileLinks.forEach(function (link) {
-      link.addEventListener('click', function () {
-        mobileNav.classList.remove('open');
+    mobileNav.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
         menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.innerHTML = '☰';
+        mobileNav.classList.remove('active');
       });
     });
   }
 
-  /* ==========================================================================
-     2. Services Filter & Search
-     ========================================================================== */
-  function updateServicesVisibility() {
-    let matchCount = 0;
-    const query = activeSearchQuery.toLowerCase().trim();
+  // --- Booking Modal ---
+  const bookingModal = document.getElementById('booking-modal');
+  const bookingModalClose = document.getElementById('booking-modal-close');
+  const bookingTriggers = document.querySelectorAll('[data-open-booking]');
+  const quickForm = document.getElementById('quick-booking-form');
+  const quickSuccess = document.getElementById('booking-success-message');
+  const serviceInput = document.getElementById('client-service');
 
-    serviceCards.forEach(function (card) {
-      const category = card.getAttribute('data-category');
-      const title = (card.querySelector('.service-title')?.textContent || '').toLowerCase();
-      const desc = (card.querySelector('.service-desc')?.textContent || '').toLowerCase();
-      const scope = (card.getAttribute('data-scope') || '').toLowerCase();
-
-      const matchesCategory = (activeFilter === 'all') || (category === activeFilter);
-      const matchesSearch = !query || title.includes(query) || desc.includes(query) || scope.includes(query);
-
-      if (matchesCategory && matchesSearch) {
-        card.style.display = '';
-        matchCount++;
-      } else {
-        card.style.display = 'none';
+  function openBookingModal(serviceName) {
+    if (bookingModal) {
+      if (serviceName && serviceInput) {
+        serviceInput.value = serviceName;
       }
-    });
-
-    // Update status counter if element exists
-    const counterEl = document.getElementById('catalogue-count');
-    if (counterEl) {
-      counterEl.textContent = `Показано направлений: ${matchCount}`;
+      bookingModal.classList.add('active');
+      bookingModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
     }
   }
 
-  filterChips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      filterChips.forEach(function (c) {
-        c.classList.remove('active');
-        c.setAttribute('aria-pressed', 'false');
-      });
-      chip.classList.add('active');
-      chip.setAttribute('aria-pressed', 'true');
-      activeFilter = chip.getAttribute('data-filter') || 'all';
-      updateServicesVisibility();
-    });
-  });
-
-  if (searchInput) {
-    searchInput.addEventListener('input', function (e) {
-      activeSearchQuery = e.target.value;
-      updateServicesVisibility();
-    });
-  }
-
-  /* ==========================================================================
-     3. Symptom Quick-Click Trigger
-     ========================================================================== */
-  symptomChips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      const targetFilter = chip.getAttribute('data-filter') || 'all';
-      const targetChip = document.querySelector(`.filter-chip[data-filter="${targetFilter}"]`);
-      if (targetChip) {
-        targetChip.click();
-      }
-      const servicesSection = document.getElementById('services');
-      if (servicesSection) {
-        servicesSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    });
-  });
-
-  /* ==========================================================================
-     4. Focus Trap & Accessible Modal Manager
-     ========================================================================== */
-  function getFocusableElements(container) {
-    return Array.from(
-      container.querySelectorAll(
-        'button:not([disabled]), [href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
-      )
-    );
-  }
-
-  function trapFocus(e, modalContainer) {
-    if (e.key !== 'Tab') return;
-
-    const focusables = getFocusableElements(modalContainer);
-    if (focusables.length === 0) return;
-
-    const firstFocusable = focusables[0];
-    const lastFocusable = focusables[focusables.length - 1];
-
-    if (e.shiftKey) {
-      if (document.activeElement === firstFocusable) {
-        lastFocusable.focus();
-        e.preventDefault();
-      }
-    } else {
-      if (document.activeElement === lastFocusable) {
-        firstFocusable.focus();
-        e.preventDefault();
-      }
+  function closeBookingModal() {
+    if (bookingModal) {
+      bookingModal.classList.remove('active');
+      bookingModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
     }
   }
 
-  function openModal(modal) {
-    if (!modal) return;
-    previouslyFocusedElement = document.activeElement;
-    modal.classList.add('open');
-    modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-
-    const focusables = getFocusableElements(modal);
-    if (focusables.length > 0) {
-      setTimeout(() => focusables[0].focus(), 50);
-    }
-  }
-
-  function closeModal(modal) {
-    if (!modal) return;
-    modal.classList.remove('open');
-    modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-
-    if (previouslyFocusedElement) {
-      previouslyFocusedElement.focus();
-    }
-  }
-
-  // Booking Modal Events
-  bookingTriggers.forEach(function (trigger) {
-    trigger.addEventListener('click', function (e) {
-      e.preventDefault();
-      openModal(bookingModal);
+  bookingTriggers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const service = btn.getAttribute('data-service') || '';
+      openBookingModal(service);
     });
   });
 
   if (bookingModalClose) {
-    bookingModalClose.addEventListener('click', function () {
-      closeModal(bookingModal);
-    });
+    bookingModalClose.addEventListener('click', closeBookingModal);
   }
 
   if (bookingModal) {
-    bookingModal.addEventListener('click', function (e) {
-      if (e.target === bookingModal) {
-        closeModal(bookingModal);
-      }
-    });
-    bookingModal.addEventListener('keydown', function (e) {
-      trapFocus(e, bookingModal);
+    bookingModal.addEventListener('click', (e) => {
+      if (e.target === bookingModal) closeBookingModal();
     });
   }
 
-  // Certificate Modal Events
-  certTriggers.forEach(function (trigger) {
-    trigger.addEventListener('click', function (e) {
+  if (quickForm) {
+    quickForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const docKey = trigger.getAttribute('data-doctor-key');
-      const docData = doctorCertificates[docKey];
+      const submitBtn = quickForm.querySelector('button[type="submit"]');
+      if (submitBtn) submitBtn.disabled = true;
+      if (quickSuccess) quickSuccess.style.display = 'block';
+      setTimeout(() => {
+        quickForm.reset();
+        if (submitBtn) submitBtn.disabled = false;
+        setTimeout(closeBookingModal, 2500);
+      }, 1000);
+    });
+  }
 
-      if (docData && certModalGallery && certModalTitle) {
-        certModalTitle.textContent = `Сертификаты: ${docData.name}`;
-        certModalGallery.innerHTML = docData.certs.map(function (c) {
-          return `
-            <div class="cert-item">
-              <a href="${c.src}" target="_blank" rel="noopener noreferrer" title="Открыть в полном размере">
-                <img src="${c.src}" alt="${c.title}" loading="lazy">
-              </a>
-              <div class="cert-item-title">${c.title}</div>
-            </div>
-          `;
-        }).join('');
+  // --- Doctor Dossier Modal ---
+  const certsModal = document.getElementById('certs-modal');
+  const certsModalClose = document.getElementById('certs-modal-close');
+  const certsContent = document.getElementById('certs-modal-content');
+  const certTriggers = document.querySelectorAll('[data-open-certs]');
 
-        openModal(certModal);
-      }
+  function openDoctorModal(docKey) {
+    const doc = doctorsData[docKey];
+    if (!doc || !certsContent || !certsModal) return;
+
+    let certsHtml = '';
+    if (doc.certs && doc.certs.length > 0) {
+      certsHtml = `
+        <div class="dossier-block-title">Подтверждённые сертификаты обучения (${doc.certs.length}):</div>
+        <div class="certs-gallery">
+          ${doc.certs.map(c => `
+            <a href="${c.img}" target="_blank" rel="noopener noreferrer" class="cert-thumb-link" title="Открыть в полном размере">
+              <img src="${c.img}" alt="${c.title}" class="cert-thumb-img" loading="lazy">
+              <span class="cert-thumb-title">${c.title}</span>
+            </a>
+          `).join('')}
+        </div>
+      `;
+    }
+
+    certsContent.innerHTML = `
+      <div class="dossier-header">
+        <img src="${doc.photo}" alt="${doc.name}" class="dossier-photo">
+        <div>
+          <h2 class="dossier-name">${doc.name}</h2>
+          <div class="dossier-role">${doc.role}</div>
+          <span class="dossier-exp">${doc.exp}</span>
+        </div>
+      </div>
+      <div class="dossier-body">
+        <div class="dossier-block-title">Специализация и клинический опыт:</div>
+        <p class="dossier-block-text">${doc.bio}</p>
+
+        <div class="dossier-block-title">Образование и квалификация:</div>
+        <p class="dossier-block-text">${doc.education}</p>
+
+        ${certsHtml}
+      </div>
+    `;
+
+    certsModal.classList.add('active');
+    certsModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDoctorModal() {
+    if (certsModal) {
+      certsModal.classList.remove('active');
+      certsModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+  }
+
+  certTriggers.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const key = btn.getAttribute('data-doctor-key');
+      openDoctorModal(key);
     });
   });
 
-  if (certModalClose) {
-    certModalClose.addEventListener('click', function () {
-      closeModal(certModal);
+  if (certsModalClose) {
+    certsModalClose.addEventListener('click', closeDoctorModal);
+  }
+
+  if (certsModal) {
+    certsModal.addEventListener('click', (e) => {
+      if (e.target === certsModal) closeDoctorModal();
     });
   }
 
-  if (certModal) {
-    certModal.addEventListener('click', function (e) {
-      if (e.target === certModal) {
-        closeModal(certModal);
-      }
-    });
-    certModal.addEventListener('keydown', function (e) {
-      trapFocus(e, certModal);
-    });
-  }
-
-  // Global Escape key
-  document.addEventListener('keydown', function (e) {
+  // Escape key handler for modals
+  document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      if (bookingModal && bookingModal.classList.contains('open')) {
-        closeModal(bookingModal);
-      }
-      if (certModal && certModal.classList.contains('open')) {
-        closeModal(certModal);
-      }
+      closeBookingModal();
+      closeDoctorModal();
     }
   });
 
-  /* ==========================================================================
-     5. Booking Form Submission
-     ========================================================================== */
-  if (bookingForm) {
-    bookingForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const phoneInput = bookingForm.querySelector('input[type="tel"]');
-      if (phoneInput && !phoneInput.value.trim()) {
-        phoneInput.focus();
-        return;
-      }
-
-      // Display polite submission state
-      if (formSuccessBox) {
-        bookingForm.style.display = 'none';
-        formSuccessBox.style.display = 'block';
-      }
-    });
-  }
-
-
-
-  /* ==========================================================================
-     6. Complete 10-Category Price Catalogue Controller (VNext)
-     ========================================================================== */
-  const priceCatChips = document.querySelectorAll('.price-cat-chip');
-  const priceSearchInput = document.getElementById('price-catalog-search');
+  // --- Price Catalogue Search & Category Filtering ---
+  const searchInput = document.getElementById('price-search') || document.getElementById('catalogue-search');
   const priceCategories = document.querySelectorAll('.price-category');
-  const priceRows = document.querySelectorAll('.price-row');
-  const priceCountBadge = document.getElementById('price-catalog-count');
-  const priceEmptyMsg = document.getElementById('price-catalog-empty');
+  const tabButtons = document.querySelectorAll('.tab-btn');
 
-  let activePriceCategory = 'all';
-  let activePriceSearch = '';
+  function filterPrices() {
+    const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
 
-  function filterFullPriceCatalog() {
-    let visibleCount = 0;
-    const query = activePriceSearch.toLowerCase().trim();
-
-    priceCategories.forEach(function (cat) {
-      const catId = cat.getAttribute('data-price-category');
-      const matchesCategory = (activePriceCategory === 'all' || activePriceCategory === catId);
-      
-      if (!matchesCategory) {
-        cat.style.display = 'none';
-        return;
-      }
-
-      let visibleInCat = 0;
+    priceCategories.forEach(cat => {
+      let catHasMatch = false;
       const rows = cat.querySelectorAll('.price-row');
-      rows.forEach(function (row) {
-        const text = row.textContent.toLowerCase();
-        const matchesSearch = (!query || text.includes(query));
 
-        if (matchesSearch) {
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        if (query === '' || text.includes(query)) {
           row.style.display = '';
-          visibleInCat++;
-          visibleCount++;
+          catHasMatch = true;
         } else {
           row.style.display = 'none';
         }
       });
 
-      if (visibleInCat > 0) {
+      if (catHasMatch || query === '') {
         cat.style.display = '';
-        const countSpan = cat.querySelector('.price-category-count');
-        if (countSpan) {
-          countSpan.textContent = 'Показано: ' + visibleInCat;
-        }
       } else {
         cat.style.display = 'none';
       }
     });
-
-    if (priceCountBadge) {
-      priceCountBadge.innerHTML = 'Показано услуг: <strong>' + visibleCount + '</strong>';
-    }
-
-    if (priceEmptyMsg) {
-      priceEmptyMsg.hidden = (visibleCount > 0);
-    }
   }
 
-  // Category chip event listeners
-  priceCatChips.forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      priceCatChips.forEach(function (c) {
-        c.classList.remove('active');
-        c.setAttribute('aria-selected', 'false');
+  if (searchInput) {
+    searchInput.addEventListener('input', filterPrices);
+  }
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      tabButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const targetCat = btn.getAttribute('data-target-category');
+
+      priceCategories.forEach(cat => {
+        const catId = cat.getAttribute('data-price-category') || cat.id;
+        if (targetCat === 'all' || catId === targetCat) {
+          cat.style.display = '';
+        } else {
+          cat.style.display = 'none';
+        }
       });
-      chip.classList.add('active');
-      chip.setAttribute('aria-selected', 'true');
-      activePriceCategory = chip.getAttribute('data-cat-filter');
-      filterFullPriceCatalog();
     });
   });
 
-  // Search input event listener
-  if (priceSearchInput) {
-    priceSearchInput.addEventListener('input', function (e) {
-      activePriceSearch = e.target.value;
-      filterFullPriceCatalog();
-    });
-  }
-
-  // Accordion row trigger event listeners
-  document.querySelectorAll('.price-row-trigger').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      const detailId = btn.getAttribute('aria-controls');
-      const detail = document.getElementById(detailId);
-
-      btn.setAttribute('aria-expanded', !isExpanded);
-      if (detail) {
-        detail.hidden = isExpanded;
-      }
+  // Booking buttons inside price list rows
+  document.querySelectorAll('.price-cell-action button, .marketing-category-link, [data-price-book]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const row = btn.closest('.price-row');
+      const title = row ? row.querySelector('.price-cell-title').childNodes[0].textContent.trim() : '';
+      openBookingModal(title);
     });
   });
-
-  // Prefill booking modal when booking from specific price item
-  document.querySelectorAll('.price-detail-booking-btn').forEach(function (btn) {
-    btn.addEventListener('click', function (e) {
-      e.preventDefault();
-      const parentRow = btn.closest('.price-row');
-      const serviceName = parentRow ? parentRow.querySelector('.price-item-name').textContent.trim() : '';
-      
-      const commentInput = document.getElementById('booking-comment') || document.querySelector('input[name="comment"]');
-      if (commentInput && serviceName) {
-        commentInput.value = 'Запись на услугу: ' + serviceName;
-      }
-
-      if (bookingModal) {
-        openModal(bookingModal);
-      }
-    });
-  });
-
-
-
-
-  // Selected Service Badge Clear button
-  const badgeClearBtn = document.getElementById('booking-selected-clear');
-  if (badgeClearBtn) {
-    badgeClearBtn.addEventListener('click', function () {
-      const badgeEl = document.getElementById('booking-selected-badge');
-      const badgeName = document.getElementById('booking-selected-name');
-      const commentInput = document.getElementById('booking-comment');
-      if (badgeEl) badgeEl.hidden = true;
-      if (badgeName) badgeName.textContent = '';
-      if (commentInput) commentInput.value = '';
-    });
-  }
-
-})();
+});
