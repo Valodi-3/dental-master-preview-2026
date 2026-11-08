@@ -447,4 +447,19 @@
   });
 
 
+
+
+  // Selected Service Badge Clear button
+  const badgeClearBtn = document.getElementById('booking-selected-clear');
+  if (badgeClearBtn) {
+    badgeClearBtn.addEventListener('click', function () {
+      const badgeEl = document.getElementById('booking-selected-badge');
+      const badgeName = document.getElementById('booking-selected-name');
+      const commentInput = document.getElementById('booking-comment');
+      if (badgeEl) badgeEl.hidden = true;
+      if (badgeName) badgeName.textContent = '';
+      if (commentInput) commentInput.value = '';
+    });
+  }
+
 })();

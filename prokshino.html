@@ -70,7 +70,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           Ежедневно: 09:00 – 21:00
         </span>
-        <span class="topbar-badge">Лицензия и гарантия</span>
+        <span class="topbar-badge">Лицензия Л041-01137-77/00368294 · Стандарты Минздрава РФ</span>
       </div>
       <div class="topbar-actions">
         <a href="tel:+79045199697" class="topbar-link" aria-label="Позвонить в регистратуру">
@@ -3420,16 +3420,7 @@
 				</div>
 
 				<div class="rs">
-					<mxform
-					v-on:form_data="get_form_data"
-					title=""
-					submit-text="Записаться"
-					pretitle=""
-					:inputs = "[
-					{type:'text', caption:'Ваше имя', value:''},
-					{type:'tel', caption:'Номер телефона', value:'', required:true}
-					]"
-				></mxform>
+					
 				</div>
 			</div>
 		</div>
@@ -3493,19 +3484,7 @@
 								<p>ежедневно с 9:00-21:00</p>
 							</div>
 						</div>
-						<popup
-							:status="popup_current_message"
-							v-on:form_data="get_form_data"
-							cta-name="Записаться на консультацию"
-							btn-style="linear"
-							title="Записаться на консультацию"
-							pretitle="Заполните форму и в ближайшее время с вами свяжется наш менеджер"
-							:inputs = "[
-								{type:'text',caption:'Введите имя',  value:''},
-								{type:'tel',caption:'Номер телефона',required:true, value:''},
-								{type:'email',caption:'E-mail',  value:''}
-								]"
-						></popup>
+						
 					</div>
 				</div>
 			</div>
@@ -4016,7 +3995,13 @@
       <!-- Quick Consultation Form -->
       <form class="quick-form" id="quick-booking-form">
         <div style="font-size: 13.5px; font-weight: 700; color: var(--color-primary-dark);">Или оставьте заявку на обратный звонок:</div>
-        <div class="form-group">
+        
+          <div class="selected-service-pill" id="booking-selected-badge" hidden style="margin-bottom: 14px; padding: 10px 14px; background: var(--color-primary-surface); border: 1px solid var(--color-border); border-radius: 8px; font-size: 13.5px; display: flex; align-items: center; justify-content: space-between; gap: 8px;">
+            <span>Выбранная услуга: <strong id="booking-selected-name" style="color: var(--color-primary);"></strong></span>
+            <button type="button" id="booking-selected-clear" style="background:none; border:none; color:var(--color-text-subtle); cursor:pointer; font-size:16px;" aria-label="Сбросить выбранную услугу">✕</button>
+          </div>
+          <input type="hidden" id="booking-comment" name="service_interest" value="">
+<div class="form-group">
           <label class="form-label" for="client-name">Ваше имя</label>
           <input type="text" id="client-name" class="form-input" placeholder="Как к вам обращаться" required>
         </div>
@@ -4025,7 +4010,7 @@
           <input type="tel" id="client-phone" class="form-input" placeholder="+7 (___) ___-__-__" required>
         </div>
         <div class="form-checkbox">
-          <input type="checkbox" id="client-consent" required checked>
+          <input type="checkbox" id="client-consent" required>
           <label for="client-consent">
             Согласен на обработку персональных данных в соответствии с <a href="https://dantist-prokshino.ru/privacy-policy/" target="_blank" rel="noopener noreferrer" style="text-decoration: underline;">Политикой конфиденциальности</a>
           </label>
