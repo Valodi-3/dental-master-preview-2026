@@ -142,9 +142,9 @@ G16 confirms the existing PR is open and Draft; no merge, production change, or 
   EVIDENCE: two Chromium full-page screenshots `1440×4699` exist and are linked at the bottom of the report and in the V5 screenshot-index section; `V5_HOMEPAGE_PASS desktopFullPage=2`.
 
 
-- [ ] G25: финальная V5-версия опубликована только в отдельную дизайн-ветку и остаётся в открытом Draft PR; `main`, tech, Pages и production неизменны.
+- [x] G25: финальная V5-версия опубликована только в отдельную дизайн-ветку и остаётся в открытом Draft PR; `main`, tech, Pages и production неизменны.
   CHECK: `python design/draft_safety_qa.py`
   EXPECT: `DRAFT_SAFETY_PASS`
-  EVIDENCE: pending
+  EVIDENCE: `DRAFT_SAFETY_PASS branch=design/manus-dental-master-2026 pr=2 openDraft=true mainUnchanged=true techUnchanged=true protectedFiles=0`; local/remote design heads matched after push; worktree clean.
 
 Проверка безопасности проводится после последнего commit/push, чтобы сравнивать окончательные local/remote refs.
