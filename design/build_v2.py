@@ -149,7 +149,7 @@ def booking_dialog(page: Path, branch: str) -> str:
         online_description = "Свободные интервалы и варианты приёма — в официальной системе онлайн-записи."
         online_button = "Продолжить в DentalPRO ↗"
         dialog_intro = "Выберите реальный способ связи с клиникой."
-    return f'''<dialog class="booking-dialog" id="booking-dialog" data-booking-dialog aria-labelledby="booking-title">
+    return f'''<dialog class="booking-dialog" id="booking-dialog" data-booking-dialog closedby="any" aria-labelledby="booking-title">
   <div class="booking-dialog-inner">
     <header class="dialog-topline"><span class="eyebrow">ДАНТИСТЪ · ВЫБОР СПОСОБА ЗАПИСИ</span><button type="button" class="dialog-close" data-close-booking aria-label="Закрыть окно">×</button></header>
     <div class="booking-service" data-booking-service hidden><span>Вы выбрали интересующее направление</span><strong data-booking-service-name></strong><span data-booking-service-price></span></div>
@@ -171,13 +171,14 @@ def booking_dialog(page: Path, branch: str) -> str:
 def shell(page: Path, *, title: str, description: str, body: str, branch: str | None, active: str, page_type: str, category: str = "") -> str:
     repo_root = rel_path(page, ROOT).rstrip("/") + "/"
     css = rel_path(page, ASSETS / "v2.css")
-    editorial_css = rel_path(page, ASSETS / "editorial-v4.css") if page_type == "home" and branch else ""
-    editorial_link = f'  <link rel="stylesheet" href="{h(editorial_css)}">' if editorial_css else ""
+    editorial_link = ""
     reference_css = rel_path(page, ASSETS / "reference-v6.css")
     reference_link = f'  <link rel="stylesheet" href="{h(reference_css)}">'
+    v7_css = rel_path(page, ASSETS / "v7-master.css")
+    v7_link = f'  <link rel="stylesheet" href="{h(v7_css)}">'
     data_js = rel_path(page, ASSETS / "v2-data.js")
     app_js = rel_path(page, ASSETS / "v2.js")
-    theme = "#103a32" if page_type == "home" and branch else ("#183d42" if branch == "prokshino" else "#6d3f36")
+    theme = "#0a2620" if branch == "prokshino" else ("#2c1a17" if branch == "ispanskie" else "#0f2e27")
     nav = render_nav(page, branch, active) if branch else ""
     footer = render_footer(page, branch) if branch else ""
     dialog = booking_dialog(page, branch) if branch else ""
@@ -196,6 +197,7 @@ def shell(page: Path, *, title: str, description: str, body: str, branch: str | 
   <link rel="stylesheet" href="{h(css)}">
 {editorial_link}
 {reference_link}
+{v7_link}
   <script defer src="{h(data_js)}"></script>
   <script defer src="{h(app_js)}"></script>
 </head>
@@ -276,11 +278,13 @@ def render_home(branch: str) -> None:
         doctor_cards.append(f'''<article class="doctor-carousel-card" data-doctor-card data-doctor-slug="{h(doctor['slug'])}"><a class="doctor-card-photo" href="{h(profile)}" aria-label="Открыть профиль врача {h(doctor['name'])}"><img src="{h(repo_asset(page,doctor['portrait']))}" alt="Портрет врача {h(doctor['name'])}" width="620" height="430" loading="lazy"><span>{index:02d} / {len(DOCTORS):02d}</span></a><div class="doctor-card-copy"><p class="doctor-card-role">{h(doctor['role'])}</p><h3><a href="{h(profile)}">{h(doctor['name'])}</a></h3><div class="doctor-card-experience"><span>СТАЖ</span><strong>{h(doctor['experience'])}</strong></div><a class="doctor-card-profile" href="{h(profile_details)}">{h(detail_label)}</a></div></article>''')
     doctor_cards_markup = "".join(doctor_cards)
     welcome_image = repo_asset(page, info["welcomeImage"])
-    welcome_photo = f'''<figure class="welcome-photo welcome-photo-{branch}"><img src="{h(welcome_image)}" alt="{h(info['welcomeImageAlt'])}" width="1000" height="667"><figcaption><span>СТОМАТОЛОГИЯ · ДАНТИСТЪ</span><span>{h(info['name'].upper())}</span></figcaption></figure>'''
-    welcome_copy = f'''<div class="welcome-copy"><p class="editorial-overline"><span>{'01' if branch == 'prokshino' else '02'}</span><i></i> ДОБРО ПОЖАЛОВАТЬ · {h(info['name'].upper())}</p><h1 id="welcome-title">Добро пожаловать<br><em>в ДантистЪ.</em></h1><p class="welcome-lead">Рады видеть вас в клинике филиала {h(info['name'])}. Здесь можно познакомиться с пространством клиники и её командой.</p><div class="welcome-details"><span>{h(info['address'])}</span><span>{h(SHARED['hours'])}</span></div><a class="welcome-scroll" href="#clinic-space"><span>ПОЗНАКОМИТЬСЯ С КЛИНИКОЙ</span><b aria-hidden="true">↓</b></a></div>'''
     if branch == "prokshino":
+        welcome_copy = f'''<div class="welcome-copy"><p class="editorial-overline"><span>01</span><i></i> СТОМАТОЛОГИЯ ВЫСОКИХ СТАНДАРТОВ · ПРОКШИНО</p><h1 id="welcome-title">Технологичная стоматология<br><em>в Прокшино.</em></h1><p class="welcome-lead">Точная диагностика под микроскопом, бережное лечение зубов и открытый прейскурант без скрытых доплат в клинике ДантистЪ.</p><div class="hero-features-bar"><div class="hero-feature-item"><span class="hero-feature-icon">🔬</span><span>Микроскопы Carl Zeiss</span></div><div class="hero-feature-item"><span class="hero-feature-icon">📋</span><span>254 позиции в прайсе</span></div><div class="hero-feature-item"><span class="hero-feature-icon">⭐</span><span>Стаж врачей до 25 лет</span></div><div class="hero-feature-item"><span class="hero-feature-icon">🕒</span><span>Ежедневно 09:00 — 21:00</span></div></div><div class="hero-actions-row"><button type="button" class="button button-primary" data-open-booking><span>Записаться на приём</span><span aria-hidden="true">↗</span></button><a href="#service-selection" class="button button-secondary">Выбрать услугу ↓</a></div><div class="welcome-details"><span>📍 {h(info['address'])}</span><span>🕒 {h(SHARED['hours'])}</span></div></div>'''
+        welcome_photo = f'''<figure class="welcome-photo welcome-photo-prokshino"><div class="photo-frame-wrap"><img src="{h(welcome_image)}" alt="{h(info['welcomeImageAlt'])}" width="1000" height="667"><div class="photo-floating-badge"><span class="floating-badge-title">ДАНТИСТЪ · ПРОКШИНО</span><span class="floating-badge-sub">Клиника современной стоматологии</span></div></div></figure>'''
         hero = f'''<section class="home-hero home-welcome home-welcome-prokshino" aria-labelledby="welcome-title"><div class="shell welcome-inner">{welcome_copy}{welcome_photo}</div></section>'''
     else:
+        welcome_copy = f'''<div class="welcome-copy"><p class="editorial-overline"><span>02</span><i></i> СЕМЕЙНАЯ СТОМАТОЛОГИЯ · ИСПАНСКИЕ КВАРТАЛЫ</p><h1 id="welcome-title">Семейная стоматология<br><em>в Испанских кварталах.</em></h1><p class="welcome-lead">Бережное лечение зубов для взрослых и детей в спокойной и уютной обстановке. Опытные доктора и честный план лечения.</p><div class="hero-features-bar"><div class="hero-feature-item"><span class="hero-feature-icon">👨‍👩‍👧</span><span>Детский и взрослый приём</span></div><div class="hero-feature-item"><span class="hero-feature-icon">🌿</span><span>Лечение без боли и стресса</span></div><div class="hero-feature-item"><span class="hero-feature-icon">📋</span><span>254 позиции в прайсе</span></div><div class="hero-feature-item"><span class="hero-feature-icon">🕒</span><span>Ежедневно 09:00 — 21:00</span></div></div><div class="hero-actions-row"><button type="button" class="button button-primary" data-open-booking><span>Записаться на приём</span><span aria-hidden="true">↗</span></button><a href="#service-selection" class="button button-secondary">Направления лечения ↓</a></div><div class="welcome-details"><span>📍 {h(info['address'])}</span><span>🕒 {h(SHARED['hours'])}</span></div></div>'''
+        welcome_photo = f'''<figure class="welcome-photo welcome-photo-ispanskie"><div class="photo-frame-wrap"><img src="{h(welcome_image)}" alt="{h(info['welcomeImageAlt'])}" width="1000" height="667"><div class="photo-floating-badge"><span class="floating-badge-title">ДАНТИСТЪ · ИСПАНСКИЕ КВАРТАЛЫ</span><span class="floating-badge-sub">Семейная стоматология рядом с домом</span></div></div></figure>'''
         hero = f'''<section class="home-hero home-welcome home-welcome-ispanskie" aria-labelledby="welcome-title"><div class="shell welcome-inner">{welcome_photo}{welcome_copy}</div></section>'''
     clinic_section = f'''<section class="section-shell clinic-strip" id="clinic-space"><div class="shell section-heading-row"><div><p class="eyebrow">ПРОСТРАНСТВО · {h(info['name'].upper())}</p><h2>Познакомьтесь<br><em>с клиникой.</em></h2></div><p>Фотографии пространства и приёма — из официальной галереи филиала.</p></div><div class="shell gallery-grid gallery-count-{len(info['gallery'])}">{gallery}</div></section>'''
     selector_section = f'''<section class="section-shell selector-section" id="service-selection"><div class="shell section-heading-row"><div><p class="eyebrow">КАТАЛОГ · 10 НАПРАВЛЕНИЙ</p><h2>Когда будете готовы,<br><em>изучите направления.</em></h2></div><p>Откройте интересующий раздел и опубликованную позицию прайса. Это навигация по каталогу, а не медицинская рекомендация.</p></div><div class="shell">{selector_markup(page,branch,'home')}</div><div class="shell selector-footnote"><span>Цена относится к отдельной позиции</span><a href="{h(branch_route(page,branch,'directions/index.html'))}">Посмотреть все направления ↗</a></div></section>'''
