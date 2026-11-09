@@ -84,10 +84,10 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
   EXPECT: `V2_BROWSER_QA_PASS` and `NEW_DIRECTION_UX_PASS`
   EVIDENCE: `V2_BROWSER_QA_PASS routes=41 viewports=9 routeChecks=369 zoomChecks=123 totalLayoutChecks=492 screenshots=41 overflow=0 brokenImages=0 interactionErrors=0`; static/evidence gate sees 58 screenshots; 254 exact catalogue rows per branch; 168 selector prices without wraps.
 
-- [ ] G16: the project remains an unmerged Draft on the isolated design branch; main and technical foundation SHAs remain unchanged.
+- [x] G16: the project remains an unmerged Draft on the isolated design branch; main and technical foundation SHAs remain unchanged.
   CHECK: `python design/draft_safety_qa.py`
   EXPECT: `DRAFT_SAFETY_PASS`
-  EVIDENCE: pending
+  EVIDENCE: `DRAFT_SAFETY_PASS branch=design/manus-dental-master-2026 pr=2 openDraft=true mainUnchanged=true techUnchanged=true protectedFiles=0`; worktree clean and local/remote design heads matched after push.
 
 - [x] G17: mobile/desktop design feels polished, inspired by the supplied editorial emerald reference without copying its portfolio layout or introducing irrelevant imagery.
   EVIDENCE: final Prokshino emerald/champagne mobile and desktop, distinct warm Spanish Quarters collage, and both 390px three-choice phone dialogs were visually reviewed; genuine clinic assets and responsive controls confirmed.
@@ -96,8 +96,4 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
 Final artifacts for this iteration: [`layout-metrics.json`](design/v2qa/layout-metrics.json), [`premium-booking-choice-prokshino-390.png`](design/v2qa/screenshots/premium-booking-choice-prokshino-390.png), [`premium-booking-choice-ispanskie-390.png`](design/v2qa/screenshots/premium-booking-choice-ispanskie-390.png), and [`V2_SCREENSHOT_INDEX.md`](docs/V2_SCREENSHOT_INDEX.md).
 
 Design review and before/after comparisons are documented in `docs/V2_DESIGN_REPORT.md` and `docs/V2_SCREENSHOT_INDEX.md`.
-Publication integrity remains a separate check under G16 and has not yet been certified in this ledger.
-
-
-Design review and before/after comparisons are documented in `docs/V2_DESIGN_REPORT.md` and `docs/V2_SCREENSHOT_INDEX.md`.
-Publication integrity remains a separate check under G16 and has not yet been certified in this ledger.
+G16 confirms the existing PR is open and Draft; no merge, production change, or Pages-setting change was made.
