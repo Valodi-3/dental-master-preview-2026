@@ -129,7 +129,13 @@
       if (!DATA.categories[category]) return;
       activeCategory = category;
       activeServiceId = DATA.featuredServiceIds[category][0];
-      categoryButtons.forEach((button, key) => button.setAttribute('aria-selected', String(key === category)));
+      categoryButtons.forEach((button, key) => {
+        const isCurrent = key === category;
+        button.setAttribute('aria-selected', String(isCurrent));
+        if (isCurrent && typeof button.scrollIntoView === 'function') {
+          button.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+        }
+      });
       makeVariants();
       renderPanel();
     }
@@ -146,6 +152,12 @@
       const service = selectedService();
       if (!service) return;
       const category = service.category;
+      const copyWrap = selector.querySelector('.selected-procedure-copy');
+      if (copyWrap) {
+        copyWrap.classList.remove('is-updating');
+        void copyWrap.offsetWidth;
+        copyWrap.classList.add('is-updating');
+      }
       if (categoryLabel) categoryLabel.textContent = DATA.categories[category].title.toLocaleUpperCase('ru');
       if (serviceName) serviceName.textContent = service.name;
       if (description) description.textContent = DATA.categoryDescriptions[category];
@@ -418,10 +430,51 @@
     applyFilters();
   }
 
+  function initializeSmartFab() {
+    const fab = document.querySelector('.booking-fab');
+    if (!fab) return;
+    const heroCta = document.querySelector('[data-hero-cta]');
+    const footer = document.querySelector('.v2-footer');
+
+    let heroVisible = false;
+    let footerVisible = false;
+
+    function updateFab() {
+      fab.classList.toggle('is-hidden', heroVisible || footerVisible);
+    }
+
+    if (typeof IntersectionObserver === 'function') {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === heroCta) heroVisible = entry.isIntersecting;
+          if (entry.target === footer) footerVisible = entry.isIntersecting;
+        });
+        updateFab();
+      }, { rootMargin: '0px 0px -10px 0px', threshold: 0.05 });
+
+      if (heroCta) observer.observe(heroCta);
+      if (footer) observer.observe(footer);
+    } else {
+      window.addEventListener('scroll', () => {
+        if (heroCta) {
+          const r = heroCta.getBoundingClientRect();
+          heroVisible = r.bottom > 0 && r.top < window.innerHeight;
+        }
+        if (footer) {
+          const f = footer.getBoundingClientRect();
+          footerVisible = f.top < window.innerHeight;
+        }
+        updateFab();
+      }, { passive: true });
+    }
+    updateFab();
+  }
+
   initializeMenu();
   initializeDoctorCarousels();
   document.querySelectorAll('[data-service-selector]').forEach(initializeSelector);
   initializeServiceDeepLink();
   initializePriceCatalog();
   initializeBookingDialog();
+  initializeSmartFab();
 })();

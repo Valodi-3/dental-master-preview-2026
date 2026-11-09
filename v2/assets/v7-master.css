@@ -938,6 +938,15 @@ body.v2-page .selected-procedure-image .image-mark,
   gap: 14px;
 }
 
+@keyframes v7-fade-in {
+  from { opacity: 0.4; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.selected-procedure-copy.is-updating {
+  animation: v7-fade-in 0.18s ease-out;
+}
+
 .selected-procedure-copy .eyebrow {
   margin: 0;
 }
@@ -1535,7 +1544,14 @@ body.v2-page.clinic-ispanskie .contact-band p,
   font-weight: 700;
   border: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
-  transition: transform var(--v7-ease) 0.25s, box-shadow var(--v7-ease) 0.25s, background-color var(--v7-ease) 0.25s;
+  transition: transform var(--v7-ease) 0.25s, box-shadow var(--v7-ease) 0.25s, background-color var(--v7-ease) 0.25s, opacity 0.25s var(--v7-ease), visibility 0.25s;
+}
+
+.booking-fab.is-hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: translateY(16px) scale(0.92) !important;
 }
 
 .booking-fab:hover {
@@ -1706,30 +1722,41 @@ dialog[open]::backdrop {
 }
 
 #booking-title {
-  margin: 0 0 6px 0;
-  font-size: clamp(1.45rem, 2.4vw, 1.85rem);
+  margin: 0 0 10px 0;
+  font-size: clamp(1.3rem, 2.2vw, 1.65rem);
   font-weight: 750;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   color: var(--v7-text-main);
+}
+
+.dialog-notice-branch {
+  margin: 0 0 14px 0;
+  padding: 10px 14px;
+  background: var(--v7-gold-soft, #faf5ed);
+  border: 1px solid var(--v7-gold-border, rgba(207, 158, 98, 0.4));
+  border-radius: var(--v7-radius-sm);
+  color: var(--v7-text-main);
+  font-size: 0.82rem;
+  line-height: 1.45;
 }
 
 /* 2 Method Cards Grid */
 .booking-choice-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin-bottom: 16px;
+  gap: 14px;
+  margin-bottom: 12px;
 }
 
 .booking-choice {
   background: var(--v7-bg-page);
-  border: 1px solid var(--v7-border);
+  border: 1px solid var(--v7-border-subtle);
   border-radius: var(--v7-radius-md);
-  padding: 20px;
+  padding: 18px 16px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  transition: all var(--v7-ease) 0.25s;
+  gap: 8px;
+  transition: all var(--v7-ease) 0.22s;
 }
 
 .booking-choice:hover {
@@ -1740,20 +1767,20 @@ dialog[open]::backdrop {
 }
 
 .choice-icon {
-  width: 44px;
-  height: 44px;
+  width: 38px;
+  height: 38px;
   border-radius: var(--v7-radius-sm);
-  background: #ffffff;
+  background: var(--v7-accent-soft);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--v7-shadow-sm);
   color: var(--v7-primary);
+  margin-bottom: 2px;
 }
 
 .choice-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   stroke: currentColor;
   stroke-width: 2;
   fill: none;
@@ -1762,20 +1789,20 @@ dialog[open]::backdrop {
 .choice-kicker {
   font-size: 0.68rem;
   font-weight: 750;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--v7-primary);
+  color: var(--v7-gold);
 }
 
 .booking-choice h3 {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   font-weight: 750;
   color: var(--v7-text-main);
 }
 
 .choice-number {
-  font-size: 1.15rem;
+  font-size: 1.12rem;
   font-weight: 800;
   color: var(--v7-primary);
   text-decoration: none;
@@ -1789,60 +1816,58 @@ dialog[open]::backdrop {
   line-height: 1.45;
 }
 
-.booking-choice .button {
+.booking-card-actions {
+  display: flex;
+  gap: 8px;
   margin-top: auto;
-  padding: 11px 18px;
-  font-size: 0.84rem;
+  padding-top: 8px;
   width: 100%;
+}
+
+.booking-card-actions .button {
+  padding: 9px 14px;
+  font-size: 0.84rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.booking-choice-online .booking-card-actions .button {
+  flex: 1;
 }
 
 .booking-data-note {
   font-size: 0.74rem;
   color: var(--v7-text-light);
-  margin: 0 0 16px 0;
+  margin: 8px 0 0 0;
   line-height: 1.45;
+  text-align: center;
 }
 
-/* Message / Messengers Bar */
-.booking-choice-message {
-  background: #ffffff;
-  border: 1px solid var(--v7-border-subtle);
-  border-radius: var(--v7-radius-md);
-  padding: 16px 20px;
+/* Compact Messengers Row */
+.booking-messengers-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
-}
-
-.booking-choice-message .choice-icon {
-  width: 38px;
-  height: 38px;
-  flex-shrink: 0;
-}
-
-.booking-message-copy h3 {
-  margin: 2px 0 0;
-  font-size: 0.96rem;
-  font-weight: 750;
-}
-
-.booking-message-copy p {
-  margin: 2px 0 0;
-  font-size: 0.78rem;
+  gap: 12px;
+  padding: 10px 14px;
+  background: var(--v7-bg-page);
+  border: 1px solid var(--v7-border-subtle);
+  border-radius: var(--v7-radius-sm);
+  font-size: 0.82rem;
   color: var(--v7-text-muted);
 }
 
-.booking-message-actions {
+.booking-messengers-links {
   display: flex;
   align-items: center;
   gap: 8px;
-  flex-shrink: 0;
 }
 
-.booking-message-actions .button {
-  padding: 8px 16px;
-  font-size: 0.82rem;
+.button-messenger {
+  padding: 6px 14px !important;
+  font-size: 0.8rem !important;
+  border-radius: var(--v7-radius-full) !important;
+  min-height: auto !important;
 }
 
 /* Call Confirmation Step Inside Dialog */
@@ -2651,20 +2676,184 @@ dialog[open]::backdrop {
     cursor: pointer;
   }
   
+  /* Mobile Hero: Compact, Photo High Above the Fold, Balanced Typography */
+  .home-welcome {
+    padding: clamp(20px, 4vw, 32px) 0 clamp(28px, 5vw, 40px) !important;
+  }
+  
+  .welcome-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 14px !important;
+  }
+  
+  .welcome-copy {
+    display: contents !important;
+  }
+  
+  .editorial-overline {
+    order: 1 !important;
+    margin: 0 !important;
+    font-size: 0.68rem !important;
+    padding: 4px 10px !important;
+    align-self: flex-start !important;
+  }
+  
+  .welcome-copy h1 {
+    order: 2 !important;
+    font-size: clamp(1.75rem, 6.2vw, 2.15rem) !important;
+    margin: 0 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.03em !important;
+  }
+  
+  .welcome-photo {
+    order: 3 !important;
+    margin: 2px 0 0 0 !important;
+    width: 100% !important;
+  }
+  
+  .welcome-photo .photo-frame-wrap {
+    aspect-ratio: 16 / 10 !important;
+    max-height: 220px !important;
+    border-radius: var(--v7-radius-lg) !important;
+    overflow: hidden !important;
+  }
+  
+  .photo-floating-badge {
+    bottom: 10px !important;
+    left: 10px !important;
+    padding: 6px 12px !important;
+  }
+  
+  .floating-badge-title {
+    font-size: 0.7rem !important;
+  }
+  
+  .floating-badge-sub {
+    font-size: 0.62rem !important;
+  }
+  
+  .welcome-lead {
+    order: 4 !important;
+    margin: 0 !important;
+    font-size: 0.92rem !important;
+    line-height: 1.5 !important;
+  }
+  
   .hero-features-bar {
-    grid-template-columns: 1fr;
+    order: 5 !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+    border-radius: var(--v7-radius-md) !important;
+  }
+  
+  .hero-feature-item {
+    font-size: 0.78rem !important;
+    gap: 6px !important;
+  }
+  
+  .hero-feature-icon {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 0.75rem !important;
+  }
+  
+  .hero-actions-row {
+    order: 6 !important;
+    margin: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .hero-actions-row .button {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 11px 18px !important;
+    font-size: 0.88rem !important;
+  }
+  
+  .welcome-details {
+    order: 7 !important;
+    padding-top: 10px !important;
+    gap: 6px 14px !important;
+    font-size: 0.76rem !important;
   }
   
   .section-heading-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 14px;
   }
   
+  /* Horizontal Scrollable Categories on Mobile */
   .selector-categories {
-    grid-template-columns: 1fr;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important;
+    gap: 8px !important;
+    padding-bottom: 8px !important;
+    margin-bottom: 14px !important;
+    scrollbar-width: thin !important;
   }
   
+  .selector-category {
+    flex: 0 0 auto !important;
+    scroll-snap-align: start !important;
+    white-space: nowrap !important;
+    min-height: 40px !important;
+    padding: 8px 12px !important;
+    font-size: 0.82rem !important;
+  }
+  
+  .selector-category span:nth-child(2) {
+    white-space: nowrap !important;
+  }
+  
+  .selector-variants-box {
+    padding: 12px !important;
+    margin-bottom: 14px !important;
+  }
+  
+  .selector-variants {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    max-height: 180px !important;
+  }
+  
+  .procedure-option {
+    padding: 8px 12px !important;
+    font-size: 0.82rem !important;
+  }
+  
+  .selected-procedure-copy {
+    padding: 18px 16px !important;
+    gap: 10px !important;
+  }
+  
+  .selected-procedure-copy h3 {
+    font-size: 1.15rem !important;
+  }
+  
+  .selected-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+  }
+  
+  .selected-actions .button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
   .gallery-grid {
     grid-template-columns: 1fr;
   }
@@ -2678,13 +2867,85 @@ dialog[open]::backdrop {
     align-items: flex-start;
   }
   
-  .booking-choice-grid {
-    grid-template-columns: 1fr;
+  /* Native Mobile Bottom Sheet Drawer */
+  dialog.booking-dialog {
+    position: fixed !important;
+    inset: auto 0 0 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    max-height: 88dvh !important;
+    border-radius: 24px 24px 0 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    overflow-y: auto !important;
+    overscroll-behavior: contain !important;
+    transform: translateY(100%);
+    transition: transform 0.28s var(--v7-ease), opacity 0.28s var(--v7-ease), display 0.28s, overlay 0.28s;
+    transition-behavior: allow-discrete;
   }
   
-  .booking-choice-message {
-    flex-direction: column;
-    align-items: flex-start;
+  dialog.booking-dialog[open] {
+    transform: translateY(0);
+    @starting-style {
+      transform: translateY(100%);
+    }
+  }
+  
+  .booking-dialog-inner {
+    border-radius: 24px 24px 0 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    padding: 18px 16px 32px !important;
+    gap: 14px !important;
+  }
+  
+  .booking-choice-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  .booking-choice {
+    padding: 14px 14px !important;
+    gap: 8px !important;
+  }
+  
+  .booking-card-actions {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8px !important;
+    width: 100% !important;
+  }
+  
+  .booking-choice-online .booking-card-actions {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .booking-messengers-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+    padding: 10px 12px !important;
+  }
+  
+  .booking-messengers-links {
+    display: flex !important;
+    width: 100% !important;
+    gap: 8px !important;
+  }
+  
+  .booking-messengers-links .button {
+    flex: 1 !important;
+    justify-content: center !important;
+    padding: 8px 12px !important;
+  }
+  
+  .booking-fab {
+    bottom: 16px !important;
+    right: 16px !important;
+    padding: 10px 18px !important;
+    font-size: 0.84rem !important;
   }
   
   .direction-card-grid {
@@ -2720,7 +2981,7 @@ dialog[open]::backdrop {
   }
   
   .welcome-copy h1 {
-    font-size: clamp(2rem, 8vw, 2.5rem);
+    font-size: clamp(1.7rem, 6.8vw, 2.05rem) !important;
   }
   
   .price-summary {
@@ -2745,19 +3006,6 @@ dialog[open]::backdrop {
   
   .price-detail {
     padding-left: 20px;
-  }
-  
-  dialog.booking-dialog {
-    width: 100%;
-    margin-bottom: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-  
-  .booking-dialog-inner {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    padding: 20px 16px;
   }
 }
 

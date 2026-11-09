@@ -140,31 +140,66 @@ def booking_dialog(page: Path, branch: str) -> str:
     if branch == "ispanskie":
         online_kicker = "ОНЛАЙН · ФИЛИАЛ ПРОКШИНО"
         online_title = "DentalPRO · Прокшино"
-        online_description = "Официальная ссылка с сайта Испанских кварталов ведёт в расписание филиала Прокшино. Для записи сюда позвоните."
+        online_description = "Свободные окна в расписании филиала Прокшино."
         online_button = "Открыть DentalPRO · Прокшино ↗"
-        dialog_intro = "Важно: официальный переход на онлайн-запись с сайта Испанских кварталов ведёт в филиал Прокшино. Для записи в Испанские кварталы используйте телефон."
+        dialog_notice = '<p class="dialog-notice-branch">Важно: официальный переход на онлайн-запись с сайта Испанских кварталов ведёт в филиал Прокшино. Для записи в Испанские кварталы используйте телефон.</p>'
     else:
         online_kicker = "ОНЛАЙН · DentalPRO"
         online_title = "Выбрать врача и время"
-        online_description = "Свободные интервалы и варианты приёма — в официальной системе онлайн-записи."
+        online_description = "Свободные интервалы в официальном расписании."
         online_button = "Продолжить в DentalPRO ↗"
-        dialog_intro = "Выберите реальный способ связи с клиникой."
+        dialog_notice = ""
     return f'''<dialog class="booking-dialog" id="booking-dialog" data-booking-dialog closedby="any" aria-labelledby="booking-title">
   <div class="booking-dialog-inner">
-    <header class="dialog-topline"><span class="eyebrow">ДАНТИСТЪ · ВЫБОР СПОСОБА ЗАПИСИ</span><button type="button" class="dialog-close" data-close-booking aria-label="Закрыть окно">×</button></header>
-    <div class="booking-service" data-booking-service hidden><span>Вы выбрали интересующее направление</span><strong data-booking-service-name></strong><span data-booking-service-price></span></div>
+    <header class="dialog-topline"><span class="eyebrow">ДАНТИСТЪ · ВЫБОР СПОСОБА СВЯЗИ</span><button type="button" class="dialog-close" data-close-booking aria-label="Закрыть окно">×</button></header>
+    <div class="booking-service" data-booking-service hidden><span>Выбранная позиция для ориентира:</span><strong data-booking-service-name></strong><span data-booking-service-price></span></div>
     <p class="booking-explainer" data-booking-service-note hidden>{h(SHARED['appointmentNote'])}</p>
     <section data-booking-step="choices">
-      <h2 id="booking-title">Как вам удобнее записаться?</h2><p class="dialog-intro">{h(dialog_intro)}</p>
+      <h2 id="booking-title">Как вам удобнее записаться?</h2>
+      {dialog_notice}
       <div class="booking-choice-grid">
-        <article class="booking-choice booking-choice-call"><div class="choice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.4 1.6a14 14 0 0 0 4.8 4.8L15 13l5 2v4c0 1.1-.9 2-2 2C10.5 21 3 13.5 3 6c0-1.1.9-2 2-2Z"/></svg></div><span class="choice-kicker">ПО ТЕЛЕФОНУ</span><h3>Позвонить</h3><a class="choice-number" href="{tel}">{h(SHARED['phone'])}</a><p>{h(SHARED['hours'])}</p><button type="button" class="button button-light" data-book-call>Посмотреть варианты звонка</button></article>
-        <article class="booking-choice booking-choice-online"><div class="choice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></div><span class="choice-kicker">{h(online_kicker)}</span><h3>{h(online_title)}</h3><p>{h(online_description)}</p><a class="button button-primary" href="{dentalpro}" target="_blank" rel="noopener noreferrer">{h(online_button)}</a></article>
+        <article class="booking-choice booking-choice-call">
+          <div class="choice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.4 1.6a14 14 0 0 0 4.8 4.8L15 13l5 2v4c0 1.1-.9 2-2 2C10.5 21 3 13.5 3 6c0-1.1.9-2 2-2Z"/></svg></div>
+          <span class="choice-kicker">ПО ТЕЛЕФОНУ</span>
+          <h3>Позвонить в клинику</h3>
+          <a class="choice-number" href="{tel}">{h(SHARED['phone'])}</a>
+          <p>{h(SHARED['hours'])}</p>
+          <div class="booking-card-actions">
+            <a class="button button-primary" href="{tel}">Позвонить</a>
+            <button type="button" class="button button-light" data-copy-phone>Скопировать номер</button>
+            <button type="button" data-book-call hidden>Варианты звонка</button>
+          </div>
+        </article>
+        <article class="booking-choice booking-choice-online">
+          <div class="choice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></svg></div>
+          <span class="choice-kicker">{h(online_kicker)}</span>
+          <h3>{h(online_title)}</h3>
+          <p>{h(online_description)}</p>
+          <div class="booking-card-actions">
+            <a class="button button-primary" href="{dentalpro}" target="_blank" rel="noopener noreferrer">{h(online_button)}</a>
+          </div>
+        </article>
+      </div>
+      <div class="booking-messengers-row">
+        <span>Или напишите в клинику:</span>
+        <div class="booking-messengers-links">
+          <a class="button button-secondary button-messenger" href="{whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="Написать в клинику в WhatsApp">WhatsApp <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary button-messenger" href="{telegram}" target="_blank" rel="noopener noreferrer" aria-label="Написать или открыть канал клиники в Telegram">Telegram <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
       <p class="booking-data-note">Выбранное направление отображается в этом окне только для вашего ориентира и не передаётся в DentalPRO.</p>
-      <article class="booking-choice booking-choice-message"><div class="choice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4V5Z"/><path d="M8 9h8M8 12h5"/></svg></div><div class="booking-message-copy"><span class="choice-kicker">СНАЧАЛА СПРОСИТЬ</span><h3>Написать в клинику</h3><p>Откроется выбранный вами канал — сообщение отправляете только вы.</p></div><div class="booking-message-actions"><a class="button button-secondary" href="{whatsapp}" target="_blank" rel="noopener noreferrer" aria-label="Написать в клинику в WhatsApp">WhatsApp <span aria-hidden="true">↗</span></a><a class="button button-secondary" href="{telegram}" target="_blank" rel="noopener noreferrer" aria-label="Написать или открыть канал клиники в Telegram">Telegram <span aria-hidden="true">↗</span></a></div></article>
     </section>
     <section data-booking-step="call" hidden aria-labelledby="booking-call-title">
-      <button type="button" class="text-button call-back" data-booking-back>← К способам записи</button><p class="choice-kicker">ПРЯМОЙ НОМЕР РЕГИСТРАТУРЫ</p><h2 id="booking-call-title" tabindex="-1">Позвонить в клинику</h2><p>Режим работы: {h(SHARED['hours'])}. На компьютере звонок откроет телефонное приложение, если оно подключено.</p><div class="call-confirm-number"><a href="{tel}">{h(SHARED['phone'])}</a><button type="button" class="button button-light" data-copy-phone>Скопировать номер</button></div><p class="copy-status" data-copy-status role="status" aria-live="polite"></p></section>
+      <button type="button" class="text-button call-back" data-booking-back>← К способам записи</button>
+      <p class="choice-kicker">ПРЯМОЙ НОМЕР РЕГИСТРАТУРЫ</p>
+      <h2 id="booking-call-title" tabindex="-1">Позвонить в клинику</h2>
+      <p>Режим работы: {h(SHARED['hours'])}. На компьютере звонок откроет телефонное приложение, если оно подключено.</p>
+      <div class="call-confirm-number">
+        <a href="{tel}">{h(SHARED['phone'])}</a>
+        <button type="button" class="button button-light" data-copy-phone>Скопировать номер</button>
+      </div>
+      <p class="copy-status" data-copy-status role="status" aria-live="polite"></p>
+    </section>
   </div>
 </dialog>'''
 
@@ -243,11 +278,11 @@ def selector_markup(page: Path, branch: str, mode: str = "home") -> str:
   <div class="selector-column">
     <div class="selector-column-head"><span class="section-index">01 / 10</span><h3>Выберите направление</h3></div>
     <div class="selector-categories" role="tablist" aria-label="Направления стоматологии" data-selector-categories></div>
-    <div class="selector-variants-box"><div class="selector-column-head variant-head"><span class="section-index">ВАРИАНТЫ</span><h4 id="{h(variant_label_id)}">Выберите позицию прайса</h4></div><div class="selector-variants" role="tablist" aria-labelledby="{h(variant_label_id)}" data-selector-variants></div></div>
+    <div class="selector-variants-box"><div class="selector-column-head variant-head"><span class="section-index">ВАРИАНТЫ</span><h4 id="{h(variant_label_id)}">Выберите процедуру</h4></div><div class="selector-variants" role="tablist" aria-labelledby="{h(variant_label_id)}" data-selector-variants></div></div>
   </div>
   <article class="selected-procedure" id="selected-procedure" data-selector-card aria-labelledby="{h(heading_id)}">
     <div class="selected-procedure-image"><img data-selector-image src="{h(image)}" alt="Изображение стоматологического приёма в клинике" width="720" height="520"><span class="image-mark">01 <i>·</i> ДантистЪ</span></div>
-    <div class="selected-procedure-copy"><span class="eyebrow" data-selector-category>ДЕНТАЛЬНАЯ ИМПЛАНТАЦИЯ</span><h3 id="{h(heading_id)}" data-selector-name>{h(default_service['name'])}</h3><p data-selector-description>{h(CLINIC_CONTENT['categoryDescriptions'][default_category])}</p><div class="selected-price"><span>Цена позиции в каталоге</span><strong data-selector-price>{h(price_for(default_service, branch))}</strong></div><p class="selected-price-note">Стоимость отдельной позиции не равна стоимости полного плана лечения.</p><div class="selected-actions"><button class="button button-primary" type="button" data-open-booking data-service-id="{h(default_service['id'])}">Обсудить запись</button><a class="button button-secondary" data-selector-details href="{h(detail_url)}">Подробнее</a></div><a class="all-prices-link" href="{h(branch_route(page, branch, 'prices/index.html'))}">Открыть все 254 позиции прайса ↗</a></div>
+    <div class="selected-procedure-copy"><span class="eyebrow" data-selector-category>ДЕНТАЛЬНАЯ ИМПЛАНТАЦИЯ</span><h3 id="{h(heading_id)}" data-selector-name>{h(default_service['name'])}</h3><p data-selector-description>{h(CLINIC_CONTENT['categoryDescriptions'][default_category])}</p><div class="selected-price"><span class="price-label">Цена в каталоге</span><strong data-selector-price>{h(price_for(default_service, branch))}</strong></div><div class="selected-actions"><button class="button button-primary" type="button" data-open-booking data-service-id="{h(default_service['id'])}">Обсудить запись</button><a class="button button-secondary" data-selector-details href="{h(detail_url)}">Подробнее</a></div><a class="all-prices-link" href="{h(branch_route(page, branch, 'prices/index.html'))}">Открыть все 254 позиции прайса ↗</a></div>
   </article>
 </div>'''
 
@@ -279,15 +314,15 @@ def render_home(branch: str) -> None:
     doctor_cards_markup = "".join(doctor_cards)
     welcome_image = repo_asset(page, info["welcomeImage"])
     if branch == "prokshino":
-        welcome_copy = f'''<div class="welcome-copy"><p class="editorial-overline"><span>01</span><i></i> СТОМАТОЛОГИЯ ВЫСОКИХ СТАНДАРТОВ · ПРОКШИНО</p><h1 id="welcome-title">Технологичная стоматология<br><em>в Прокшино.</em></h1><p class="welcome-lead">Точная диагностика под микроскопом, бережное лечение зубов и открытый прейскурант без скрытых доплат в клинике ДантистЪ.</p><div class="hero-features-bar"><div class="hero-feature-item"><span class="hero-feature-icon">🔬</span><span>Микроскопы Carl Zeiss</span></div><div class="hero-feature-item"><span class="hero-feature-icon">📋</span><span>254 позиции в прайсе</span></div><div class="hero-feature-item"><span class="hero-feature-icon">⭐</span><span>Стаж врачей до 25 лет</span></div><div class="hero-feature-item"><span class="hero-feature-icon">🕒</span><span>Ежедневно 09:00 — 21:00</span></div></div><div class="hero-actions-row"><button type="button" class="button button-primary" data-open-booking><span>Записаться на приём</span><span aria-hidden="true">↗</span></button><a href="#service-selection" class="button button-secondary">Выбрать услугу ↓</a></div><div class="welcome-details"><span>📍 {h(info['address'])}</span><span>🕒 {h(SHARED['hours'])}</span></div></div>'''
+        welcome_copy = f'''<div class="welcome-copy"><p class="editorial-overline"><span>01</span><i></i> СТОМАТОЛОГИЯ · ПРОКШИНО</p><h1 id="welcome-title">Технологичная стоматология<br><em>в Прокшино.</em></h1><p class="welcome-lead">Точная диагностика под микроскопом Zeiss, бережное лечение зубов и открытый прейскурант.</p><div class="hero-features-bar"><div class="hero-feature-item"><span class="hero-feature-icon">🔬</span><span>Микроскопы Carl Zeiss</span></div><div class="hero-feature-item"><span class="hero-feature-icon">⭐</span><span>Стаж врачей до 25 лет</span></div></div><div class="hero-actions-row"><button type="button" class="button button-primary" data-open-booking data-hero-cta><span>Записаться на приём</span><span aria-hidden="true">↗</span></button><a href="#service-selection" class="button button-secondary">Выбрать услугу ↓</a></div><div class="welcome-details"><span>📍 {h(info['address'])}</span><span>🕒 {h(SHARED['hours'])}</span></div></div>'''
         welcome_photo = f'''<figure class="welcome-photo welcome-photo-prokshino"><div class="photo-frame-wrap"><img src="{h(welcome_image)}" alt="{h(info['welcomeImageAlt'])}" width="1000" height="667"><div class="photo-floating-badge"><span class="floating-badge-title">ДАНТИСТЪ · ПРОКШИНО</span><span class="floating-badge-sub">Клиника современной стоматологии</span></div></div></figure>'''
         hero = f'''<section class="home-hero home-welcome home-welcome-prokshino" aria-labelledby="welcome-title"><div class="shell welcome-inner">{welcome_copy}{welcome_photo}</div></section>'''
     else:
-        welcome_copy = f'''<div class="welcome-copy"><p class="editorial-overline"><span>02</span><i></i> СЕМЕЙНАЯ СТОМАТОЛОГИЯ · ИСПАНСКИЕ КВАРТАЛЫ</p><h1 id="welcome-title">Семейная стоматология<br><em>в Испанских кварталах.</em></h1><p class="welcome-lead">Бережное лечение зубов для взрослых и детей в спокойной и уютной обстановке. Опытные доктора и честный план лечения.</p><div class="hero-features-bar"><div class="hero-feature-item"><span class="hero-feature-icon">👨‍👩‍👧</span><span>Детский и взрослый приём</span></div><div class="hero-feature-item"><span class="hero-feature-icon">🌿</span><span>Лечение без боли и стресса</span></div><div class="hero-feature-item"><span class="hero-feature-icon">📋</span><span>254 позиции в прайсе</span></div><div class="hero-feature-item"><span class="hero-feature-icon">🕒</span><span>Ежедневно 09:00 — 21:00</span></div></div><div class="hero-actions-row"><button type="button" class="button button-primary" data-open-booking><span>Записаться на приём</span><span aria-hidden="true">↗</span></button><a href="#service-selection" class="button button-secondary">Направления лечения ↓</a></div><div class="welcome-details"><span>📍 {h(info['address'])}</span><span>🕒 {h(SHARED['hours'])}</span></div></div>'''
+        welcome_copy = f'''<div class="welcome-copy"><p class="editorial-overline"><span>02</span><i></i> СЕМЕЙНАЯ СТОМАТОЛОГИЯ · ИСПАНСКИЕ КВАРТАЛЫ</p><h1 id="welcome-title">Семейная стоматология<br><em>в Испанских кварталах.</em></h1><p class="welcome-lead">Бережное лечение зубов для всей семьи в спокойной и уютной обстановке.</p><div class="hero-features-bar"><div class="hero-feature-item"><span class="hero-feature-icon">👨‍👩‍👧</span><span>Семейный и детский приём</span></div><div class="hero-feature-item"><span class="hero-feature-icon">⭐</span><span>Стаж врачей до 25 лет</span></div></div><div class="hero-actions-row"><button type="button" class="button button-primary" data-open-booking data-hero-cta><span>Записаться на приём</span><span aria-hidden="true">↗</span></button><a href="#service-selection" class="button button-secondary">Направления лечения ↓</a></div><div class="welcome-details"><span>📍 {h(info['address'])}</span><span>🕒 {h(SHARED['hours'])}</span></div></div>'''
         welcome_photo = f'''<figure class="welcome-photo welcome-photo-ispanskie"><div class="photo-frame-wrap"><img src="{h(welcome_image)}" alt="{h(info['welcomeImageAlt'])}" width="1000" height="667"><div class="photo-floating-badge"><span class="floating-badge-title">ДАНТИСТЪ · ИСПАНСКИЕ КВАРТАЛЫ</span><span class="floating-badge-sub">Семейная стоматология рядом с домом</span></div></div></figure>'''
-        hero = f'''<section class="home-hero home-welcome home-welcome-ispanskie" aria-labelledby="welcome-title"><div class="shell welcome-inner">{welcome_photo}{welcome_copy}</div></section>'''
+        hero = f'''<section class="home-hero home-welcome home-welcome-ispanskie" aria-labelledby="welcome-title"><div class="shell welcome-inner">{welcome_copy}{welcome_photo}</div></section>'''
     clinic_section = f'''<section class="section-shell clinic-strip" id="clinic-space"><div class="shell section-heading-row"><div><p class="eyebrow">ПРОСТРАНСТВО · {h(info['name'].upper())}</p><h2>Познакомьтесь<br><em>с клиникой.</em></h2></div><p>Фотографии пространства и приёма — из официальной галереи филиала.</p></div><div class="shell gallery-grid gallery-count-{len(info['gallery'])}">{gallery}</div></section>'''
-    selector_section = f'''<section class="section-shell selector-section" id="service-selection"><div class="shell section-heading-row"><div><p class="eyebrow">КАТАЛОГ · 10 НАПРАВЛЕНИЙ</p><h2>Когда будете готовы,<br><em>изучите направления.</em></h2></div><p>Откройте интересующий раздел и опубликованную позицию прайса. Это навигация по каталогу, а не медицинская рекомендация.</p></div><div class="shell">{selector_markup(page,branch,'home')}</div><div class="shell selector-footnote"><span>Цена относится к отдельной позиции</span><a href="{h(branch_route(page,branch,'directions/index.html'))}">Посмотреть все направления ↗</a></div></section>'''
+    selector_section = f'''<section class="section-shell selector-section" id="service-selection"><div class="shell section-heading-row"><div><p class="eyebrow">КАТАЛОГ · 10 НАПРАВЛЕНИЙ</p><h2>Когда будете готовы,<br><em>изучите направления.</em></h2></div><p>Откройте интересующий раздел и опубликованную позицию прайса. Это навигация по каталогу, а не медицинская рекомендация.</p></div><div class="shell">{selector_markup(page,branch,'home')}</div><div class="shell selector-footnote"><span>Опубликованная цена позиции каталога</span><a href="{h(branch_route(page,branch,'directions/index.html'))}">Посмотреть все направления ↗</a></div></section>'''
     team_section = f'''<section class="section-shell team-strip" id="clinic-team"><div class="shell section-heading-row team-heading"><div><p class="eyebrow">КОМАНДА · {len(DOCTORS)} СПЕЦИАЛИСТОВ</p><h2>Познакомьтесь <em>с врачами.</em></h2></div><div class="doctor-carousel-controls" role="group" aria-label="Перелистать карточки врачей"><button class="doctor-carousel-button" type="button" data-doctor-prev aria-label="Предыдущие врачи" aria-controls="{h(track_id)}" disabled>←</button><output class="doctor-carousel-position" data-doctor-position aria-live="polite">01 / {len(DOCTORS):02d}</output><button class="doctor-carousel-button" type="button" data-doctor-next aria-label="Следующие врачи" aria-controls="{h(track_id)}">→</button></div></div><p class="shell doctor-carousel-note">Листайте карточки. Стаж и опубликованные сведения об образовании и документах — в профильных страницах.</p><div class="shell doctor-carousel" data-doctor-carousel role="region" aria-roledescription="карусель" aria-label="Врачи филиала {h(info['name'])}"><div class="doctor-carousel-track" id="{h(track_id)}" data-doctor-track tabindex="0">{doctor_cards_markup}</div></div><div class="shell doctor-carousel-footer"><a class="text-button" href="{h(branch_route(page,branch,'doctors/index.html'))}">Открыть все профили врачей ↗</a><span>Показаны только сведения, опубликованные клиникой.</span></div></section>'''
     contact = f'''<section class="contact-band shell home-contact-{branch}"><div><p class="eyebrow">ФИЛИАЛ · {h(info['name'].upper())}</p><h2>Если появятся вопросы,<br><em>мы на связи.</em></h2><p>{h(info['address'])}<br>{h(SHARED['hours'])}</p></div><div class="contact-band-actions"><a href="{h(SHARED['tel'])}" class="contact-phone">{h(SHARED['phone'])}</a><button type="button" class="button button-primary" data-open-booking>Выбрать способ связи ↗</button><a href="{h(branch_route(page,branch,'contacts/index.html'))}" class="text-button">Адрес и контакты ↗</a></div></section>'''
     body = f'''{hero}\n{clinic_section}\n{team_section}\n{selector_section}\n{contact}'''
