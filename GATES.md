@@ -37,7 +37,7 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
 - [x] G7: each major V2 page type has browser captures and old/new comparisons; source URLs/findings are recorded.
   CHECK: `python design/v2_verify.py --evidence`
   EXPECT: `V2_EVIDENCE_PASS`
-  EVIDENCE: `screenshots=50`, `measuredRoutes=369`, `zoomChecks=123`, nine widths; complete [screenshot index](docs/V2_SCREENSHOT_INDEX.md), source record `docs/V2_SOURCES.md`.
+  EVIDENCE: `screenshots=56` including six preserved visual-polish before-state captures, `measuredRoutes=369`, `zoomChecks=123`, nine widths; complete [screenshot index](docs/V2_SCREENSHOT_INDEX.md), source record `docs/V2_SOURCES.md`.
 
 - [x] G8: a complete openable local preview is provided; lack of isolated public hosting is documented.
   CHECK: `python design/v2_verify.py --preview`
@@ -53,3 +53,15 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
   CHECK: `python .work/dental_regression/run_tech_qa.py --expect-30`
   EXPECT: `TECH_QA_SUMMARY total=30 passed=30 failed=0`.
   EVIDENCE: the unmodified suite passes 30/30; separate responsive smoke passes 10/10 requested page-width checks, 2/2 branch booking flows, six search states and 5/5 official local doctor portraits. Reports/screenshots: `design/v2qa/tech-root-qa-30-30.json`, `regression-validation.json`, `regression-comparison.json` and `screenshots/regression-*`.
+
+## Iteration: visual finish after client feedback
+
+- [x] G11: Prokshino and Spanish Quarters homepages have distinct, finished visual compositions at desktop and mobile, improve text hierarchy/legibility, and use varied authentic clinic images rather than repeating the same visual treatment.
+  CHECK: inspect refreshed screenshots `design/v2qa/screenshots/v2-mobile-home-prokshino-390.png`, `v2-mobile-home-ispanskie-390.png`, `v2-desktop-home-prokshino-1440.png`, and `v2-desktop-home-ispanskie-1440.png`; inspect full-page mobile pair.
+  EXPECT: visible branch-specific composition, readable body text and controls at phone size, stable hero/cards, no repeated-homepage clone; save visual review and changed-section evidence in `docs/V2_DESIGN_REPORT.md`.
+  EVIDENCE: desktop/mobile before-and-after screenshots and full mobile pages are indexed in `docs/V2_SCREENSHOT_INDEX.md`; Prokshino now has a deep-green clinical hero and nonrepeating treatment/gallery imagery, while Spanish Quarters has an independently composed warm arch collage.
+
+- [x] G12: polish does not regress the route/data/booking architecture or responsive contract.
+  CHECK: `python design/build_v2.py`; `python design/v2_verify.py --architecture --selector-data --booking --doctors --catalogues --preview --evidence`; `python design/v2_visual_qa.py`; `python design/verify_design.py --static`; `python design/verify_design.py --catalogs`; `python design/polish_currency_qa.py`.
+  EXPECT: all named commands exit zero; 41 routes, 254 correct services per branch, and browser checks stay at `overflow=0`, `brokenImages=0`, `interactionErrors=0`.
+  EVIDENCE: final Chromium run `routeChecks=369`, `zoomChecks=123`, `totalLayoutChecks=492`, all error counters zero; source/catalogue gates pass; currency regression passes `cases=6`, `categoryChipPriceLabels=168`, `failures=0` (`design/v2qa/polish-currency-results.json`).
