@@ -142,9 +142,37 @@ G16 confirms the existing PR is open and Draft; no merge, production change, or 
   EVIDENCE: two Chromium full-page screenshots `1440×4699` exist and are linked at the bottom of the report and in the V5 screenshot-index section; `V5_HOMEPAGE_PASS desktopFullPage=2`.
 
 
-- [x] G25: финальная V5-версия опубликована только в отдельную дизайн-ветку и остаётся в открытом Draft PR; `main`, tech, Pages и production неизменны.
+- [x] G25: историческая V5-версия опубликована только в отдельную дизайн-ветку и оставалась в открытом Draft PR; `main`, tech, Pages и production не затронуты.
   CHECK: `python design/draft_safety_qa.py`
   EXPECT: `DRAFT_SAFETY_PASS`
   EVIDENCE: `DRAFT_SAFETY_PASS branch=design/manus-dental-master-2026 pr=2 openDraft=true mainUnchanged=true techUnchanged=true protectedFiles=0`; local/remote design heads matched after push; worktree clean.
 
 Проверка безопасности проводится после последнего commit/push, чтобы сравнивать окончательные local/remote refs.
+
+
+## Итерация 6 — цельный сайт по визуальной логике AGRR Beauty
+
+- [x] G26: все 41 маршрута и проектная точка входа используют единую тёплую editorial-систему вместо белого базового шаблона; стоматологические данные и подтверждённые изображения остались собственными.
+  CHECK: `python design/reference_v6_qa.py --static`
+  EXPECT: `V6_STYLE_PASS`
+  EVIDENCE: `V6_STYLE_PASS routes=41 externalDependencies=0 localOfficialClinicImages=true appJsUntouched=true`; генератор и V6 CSS работают на всех клинических страницах, root entry ведёт в V2 chooser.
+
+- [x] G27: Chromium проверяет все 41 маршрута на девяти ширинах; новая тема загружается на каждой клинической странице, DOM не имеет горизонтального переполнения, картинки загружены, запись и интерактивные селекторы остаются в viewport.
+  CHECK: `python design/reference_v6_qa.py --all`; `python design/v2_visual_qa.py`
+  EXPECT: `V6_RESPONSIVE_PASS`, `V2_BROWSER_QA_PASS`
+  EVIDENCE: V6 `routes=41 widths=9 checks=369`; full matrix `routeChecks=369 zoomChecks=123 totalLayoutChecks=492 overflow=0 brokenImages=0 interactionErrors=0`; screenshots/evidence `screenshots=90 measuredRoutes=369 zoomChecks=123 viewportWidths=9`.
+
+- [x] G28: исходные сценарии V2/V5 не потеряны после полного visual refresh: настоящая запись и выбор каналов, карусель врачей, поиск/фильтры и раскрытие каталога работают.
+  CHECK: `python design/v2_visual_qa.py`; `python design/v5_homepage_qa.py`; `python design/new_direction_qa.py --motion --booking`; `python .work/dental_regression/run_tech_qa.py --expect-30`; `python design/polish_currency_qa.py`
+  EXPECT: `V2_BROWSER_QA_PASS`, `V5_HOMEPAGE_PASS`, `V5_MOTION_PASS`, `V5_BOOKING_PASS`, 30/30 root tests, 168/168 currency labels.
+  EVIDENCE: all listed tests passed on the full final regression chain; 10 team cards/profiles, two mobile touch-swipes, 18 floating-control geometry checks; phone/DentalPRO/WhatsApp/Telegram, earlyRedirects=0; 30 passed/0 failed; selector currency failures=0.
+
+- [x] G29: вручную просмотрены актуальные мобильные страницы, команда, целые desktop-версии от шапки до подвала и основные типы внутренних маршрутов; V5 before сохранён отдельно.
+  CHECK: открыть текущие PNG `v6-full-home-prokshino-390.png`, `v6-full-home-ispanskie-390.png`, `v2-home-doctors-prokshino-390.png`, `v2-home-doctors-ispanskie-390.png`, обе `v6-full-home-*-1440.png` и V6-страницу chooser, направлений, услуги, профиля врача, прайса и контактов по Screenshot Index.
+  EXPECT: обе mobile-страницы и обе цельные desktop-страницы показывают все секции; team-карточки доступны; внутренние страницы читаемы; V5-before не подменяет текущие кадры.
+  EVIDENCE: вручную просмотрены mobile/full-PC images и шесть типов внутренних маршрутов; exact desktop page images Prokshino=1440×4855, Испанские кварталы=1440×4780; archived V5 full-PC images=1440×4699. Все ссылки собраны в `docs/V2_SCREENSHOT_INDEX.md`.
+
+- [ ] G30: новая версия остаётся только в existing isolated design branch и current open Draft PR; `main`, tech, V1, Pages, production и merge status остаются нетронутыми.
+  CHECK: `python design/draft_safety_qa.py`
+  EXPECT: `DRAFT_SAFETY_PASS` после последнего commit/push
+  EVIDENCE: pending post-push safety recheck.

@@ -51,71 +51,71 @@
         {
           "width": 320,
           "height": 844,
-          "left": 170.6,
-          "right": 310,
+          "left": 168,
+          "right": 308,
           "bottom": 832
         },
         {
           "width": 360,
           "height": 844,
-          "left": 207,
+          "left": 208,
           "right": 348,
           "bottom": 832
         },
         {
           "width": 375,
           "height": 844,
-          "left": 222,
+          "left": 223,
           "right": 363,
           "bottom": 832
         },
         {
           "width": 390,
           "height": 844,
-          "left": 237,
+          "left": 238,
           "right": 378,
           "bottom": 832
         },
         {
           "width": 430,
           "height": 844,
-          "left": 277,
+          "left": 278,
           "right": 418,
           "bottom": 832
         },
         {
           "width": 768,
           "height": 900,
-          "left": 598.2,
-          "right": 752,
-          "bottom": 882
+          "left": 589.2,
+          "right": 746,
+          "bottom": 880
         },
         {
           "width": 1024,
           "height": 900,
-          "left": 854.2,
-          "right": 1008,
-          "bottom": 882
+          "left": 845.2,
+          "right": 1002,
+          "bottom": 880
         },
         {
           "width": 1440,
           "height": 900,
-          "left": 1270.2,
-          "right": 1424,
-          "bottom": 882
+          "left": 1261.2,
+          "right": 1418,
+          "bottom": 880
         },
         {
           "width": 1920,
           "height": 900,
-          "left": 1750.2,
-          "right": 1904,
-          "bottom": 882
+          "left": 1741.2,
+          "right": 1898,
+          "bottom": 880
         }
       ],
       "fullDesktopScreenshot": "design/v2qa/screenshots/v2-full-home-prokshino-1440.png",
       "fullDesktopDimensions": [
         1440,
-        4699
+        4855
       ]
     },
     {
@@ -159,71 +159,71 @@
         {
           "width": 320,
           "height": 844,
-          "left": 170.6,
-          "right": 310,
+          "left": 168,
+          "right": 308,
           "bottom": 832
         },
         {
           "width": 360,
           "height": 844,
-          "left": 207,
+          "left": 208,
           "right": 348,
           "bottom": 832
         },
         {
           "width": 375,
           "height": 844,
-          "left": 222,
+          "left": 223,
           "right": 363,
           "bottom": 832
         },
         {
           "width": 390,
           "height": 844,
-          "left": 237,
+          "left": 238,
           "right": 378,
           "bottom": 832
         },
         {
           "width": 430,
           "height": 844,
-          "left": 277,
+          "left": 278,
           "right": 418,
           "bottom": 832
         },
         {
           "width": 768,
           "height": 900,
-          "left": 598.2,
-          "right": 752,
-          "bottom": 882
+          "left": 589.2,
+          "right": 746,
+          "bottom": 880
         },
         {
           "width": 1024,
           "height": 900,
-          "left": 854.2,
-          "right": 1008,
-          "bottom": 882
+          "left": 845.2,
+          "right": 1002,
+          "bottom": 880
         },
         {
           "width": 1440,
           "height": 900,
-          "left": 1270.2,
-          "right": 1424,
-          "bottom": 882
+          "left": 1261.2,
+          "right": 1418,
+          "bottom": 880
         },
         {
           "width": 1920,
           "height": 900,
-          "left": 1750.2,
-          "right": 1904,
-          "bottom": 882
+          "left": 1741.2,
+          "right": 1898,
+          "bottom": 880
         }
       ],
       "fullDesktopScreenshot": "design/v2qa/screenshots/v2-full-home-ispanskie-1440.png",
       "fullDesktopDimensions": [
         1440,
-        4699
+        4780
       ]
     }
   ]
