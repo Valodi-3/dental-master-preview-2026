@@ -307,6 +307,55 @@
     });
   }
 
+  function initializeDoctorCarousels() {
+    document.querySelectorAll('[data-doctor-carousel]').forEach((carousel) => {
+      const track = carousel.querySelector('[data-doctor-track]');
+      const cards = [...carousel.querySelectorAll('[data-doctor-card]')];
+      const previous = document.querySelector(`[data-doctor-prev][aria-controls="${track?.id}"]`);
+      const next = document.querySelector(`[data-doctor-next][aria-controls="${track?.id}"]`);
+      const position = carousel.closest('.team-strip')?.querySelector('[data-doctor-position]');
+      if (!track || !cards.length || !previous || !next || !position) return;
+
+      let frame = 0;
+      let announced = 1;
+      const step = () => {
+        const gap = Number.parseFloat(getComputedStyle(track).columnGap) || 0;
+        return (cards[0]?.getBoundingClientRect().width || track.clientWidth) + gap;
+      };
+      const update = () => {
+        const maxScroll = Math.max(0, track.scrollWidth - track.clientWidth);
+        previous.disabled = track.scrollLeft <= 2;
+        next.disabled = track.scrollLeft >= maxScroll - 2;
+        const current = Math.min(cards.length, Math.max(1, Math.round(track.scrollLeft / Math.max(step(), 1)) + 1));
+        if (current !== announced) {
+          announced = current;
+          position.textContent = `${String(current).padStart(2, '0')} / ${String(cards.length).padStart(2, '0')}`;
+        }
+      };
+      const move = (direction) => {
+        const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        track.scrollBy({ left: direction * step(), behavior: reduced ? 'auto' : 'smooth' });
+      };
+
+      previous.addEventListener('click', () => move(-1));
+      next.addEventListener('click', () => move(1));
+      track.addEventListener('scroll', () => {
+        if (frame) return;
+        frame = window.requestAnimationFrame(() => {
+          frame = 0;
+          update();
+        });
+      }, { passive: true });
+      track.addEventListener('keydown', (event) => {
+        if (event.target !== track || !['ArrowLeft', 'ArrowRight'].includes(event.key)) return;
+        event.preventDefault();
+        move(event.key === 'ArrowRight' ? 1 : -1);
+      });
+      window.addEventListener('resize', update, { passive: true });
+      update();
+    });
+  }
+
   function serviceCountLabel(value) {
     const lastTwo = value % 100;
     const last = value % 10;
@@ -370,6 +419,7 @@
   }
 
   initializeMenu();
+  initializeDoctorCarousels();
   document.querySelectorAll('[data-service-selector]').forEach(initializeSelector);
   initializeServiceDeepLink();
   initializePriceCatalog();

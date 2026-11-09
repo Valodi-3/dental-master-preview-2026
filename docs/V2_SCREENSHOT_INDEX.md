@@ -1,6 +1,6 @@
 # Dental Master V2 — screenshot index
 
-Все скриншоты сделаны локальным Chromium/Playwright; PNG лежат в `design/v2qa/screenshots/`. Полные размеры и browser metrics: [`layout-metrics.json`](../design/v2qa/layout-metrics.json). Регрессионные проверки: [`regression-validation.json`](../design/v2qa/regression-validation.json), [`regression-comparison.json`](../design/v2qa/regression-comparison.json); точный 30/30 результат неизменённого tech-набора: [`tech-root-qa-30-30.json`](../design/v2qa/tech-root-qa-30-30.json).
+Все скриншоты сделаны локальным Chromium/Playwright. Текущий V5-прогон обновил 47 кадров; полный набор QA-свидетельств теперь содержит 74 PNG. Полные desktop-страницы 1440 px выделены отдельным разделом внизу.
 
 ## Root-регрессии — 9 снимков
 
@@ -105,13 +105,30 @@
 Объёмный hover — только лёгкий CSS `perspective`/`rotateY` над проверенными фото клиник. Внешние 3D- и анимационные библиотеки, сгенерированные фотографии и автозапуск связи не добавлялись. По «Записаться» сначала открывается эта панель: DentalPRO, предварительный телефонный шаг или самостоятельный переход в WhatsApp/Telegram.
 
 
-## Итерация 4 — переосмысление после оценки 3/10
+## Историческая итерация 4 — версия после оценки 3/10, до новых требований 5/10
 
-В этой части **до** — четыре сохранённых экрана непосредственно перед переработкой V4; **после** — текущая пересобранная версия. Всего отчётом проверено 62 PNG-свидетельства.
+Это архивное V4-сравнение: «до» — экраны до ответа на оценку 3/10, «после» — V4 до следующей оценки 5/10. Текущий вариант и его доказательства находятся в секции V5 ниже.
 
 | Филиал | До · mobile 390 px | После · mobile 390 px | До · desktop 1440 px | После · desktop 1440 px |
 |---|---|---|---|---|
-| Прокшино | [До](../design/v2qa/screenshots/v4-before-prokshino-mobile-390.png) | [V4](../design/v2qa/screenshots/v2-mobile-home-prokshino-390.png) | [До](../design/v2qa/screenshots/v4-before-prokshino-desktop-1440.png) | [V4](../design/v2qa/screenshots/v2-desktop-home-prokshino-1440.png) |
-| Испанские кварталы | [До](../design/v2qa/screenshots/v4-before-ispanskie-mobile-390.png) | [V4](../design/v2qa/screenshots/v2-mobile-home-ispanskie-390.png) | [До](../design/v2qa/screenshots/v4-before-ispanskie-desktop-1440.png) | [V4](../design/v2qa/screenshots/v2-desktop-home-ispanskie-1440.png) |
+| Прокшино | [До · 3/10](../design/v2qa/screenshots/v4-before-prokshino-mobile-390.png) | [V4 · до 5/10](../design/v2qa/screenshots/v5-before-v4-prokshino-mobile-390.png) | [До](../design/v2qa/screenshots/v4-before-prokshino-desktop-1440.png) | [V4 · до 5/10](../design/v2qa/screenshots/v5-before-v4-prokshino-desktop-1440.png) |
+| Испанские кварталы | [До · 3/10](../design/v2qa/screenshots/v4-before-ispanskie-mobile-390.png) | [V4 · до 5/10](../design/v2qa/screenshots/v5-before-v4-ispanskie-mobile-390.png) | [До](../design/v2qa/screenshots/v4-before-ispanskie-desktop-1440.png) | [V4 · до 5/10](../design/v2qa/screenshots/v5-before-v4-ispanskie-desktop-1440.png) |
 
-**Полный mobile-page:** [Прокшино](../design/v2qa/screenshots/v2-full-home-prokshino-390.png) · [Испанские кварталы](../design/v2qa/screenshots/v2-full-home-ispanskie-390.png). **Сначала выбор способа записи:** [Прокшино, 390×844](../design/v2qa/screenshots/premium-booking-choice-prokshino-390.png) · [Испанские кварталы, 390×844](../design/v2qa/screenshots/premium-booking-choice-ispanskie-390.png).
+**Полный mobile-page V4, архив:** [Прокшино](../design/v2qa/screenshots/v5-before-v4-prokshino-full-mobile-390.png) · [Испанские кварталы](../design/v2qa/screenshots/v5-before-v4-ispanskie-full-mobile-390.png). **Сначала выбор способа записи:**
+
+## Итерация 5 — welcome-first · полная ПК-версия
+
+Финальная V5-сборка после обратной связи «5/10»: сначала приветственный экран с пространством клиники; запись — отдельно закреплена снизу справа; команда листается и ведёт к профильным сведениям. Старые V4 «до» сохранены отдельно и не подменяют текущие файлы.
+
+**Начальные mobile-экраны · 390 px:** [Прокшино](../design/v2qa/screenshots/v2-mobile-home-prokshino-390.png) · [Испанские кварталы](../design/v2qa/screenshots/v2-mobile-home-ispanskie-390.png).
+
+**Doctor carousel:** [Прокшино · 390 px](../design/v2qa/screenshots/v2-home-doctors-prokshino-390.png) · [Испанские кварталы · 390 px](../design/v2qa/screenshots/v2-home-doctors-ispanskie-390.png) · [Прокшино · 1440 px](../design/v2qa/screenshots/v2-home-doctors-prokshino-1440.png) · [Испанские кварталы · 1440 px](../design/v2qa/screenshots/v2-home-doctors-ispanskie-1440.png).
+
+**V4 перед правкой V5:** mobile — [Прокшино](../design/v2qa/screenshots/v5-before-v4-prokshino-mobile-390.png) · [Испанские кварталы](../design/v2qa/screenshots/v5-before-v4-ispanskie-mobile-390.png); desktop 1440 — [Прокшино](../design/v2qa/screenshots/v5-before-v4-prokshino-desktop-1440.png) · [Испанские кварталы](../design/v2qa/screenshots/v5-before-v4-ispanskie-desktop-1440.png); полный mobile — [Прокшино](../design/v2qa/screenshots/v5-before-v4-prokshino-full-mobile-390.png) · [Испанские кварталы](../design/v2qa/screenshots/v5-before-v4-ispanskie-full-mobile-390.png).
+
+**Полный ПК-сайт, сверху до footer, 1440 × 4699 px:**
+
+- [ДантистЪ Прокшино — полный desktop PNG](../design/v2qa/screenshots/v2-full-home-prokshino-1440.png)
+- [ДантистЪ Испанские кварталы — полный desktop PNG](../design/v2qa/screenshots/v2-full-home-ispanskie-1440.png)
+
+**Канал записи до выхода из сайта:** [Прокшино · 390 px](../design/v2qa/screenshots/premium-booking-choice-prokshino-390.png) · [Испанские кварталы · 390 px](../design/v2qa/screenshots/premium-booking-choice-ispanskie-390.png). **Автотесты:** [`V5 homepage`](../design/v2qa/v5-homepage-check.json) · [`41 маршрута × 9 ширин и 200% текста`](../design/v2qa/layout-metrics.json).

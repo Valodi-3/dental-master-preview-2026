@@ -24,6 +24,8 @@
       "description": "Стоматология рядом с домом, открытый прейскурант и возможность записаться онлайн.",
       "image": "design/assets/prokshino/hero-clinic.webp",
       "imageAlt": "Врач обсуждает стоматологический снимок с пациентом",
+      "welcomeImage": "design/assets/prokshino/hero-clinic.webp",
+      "welcomeImageAlt": "Врач показывает пациенту снимок в стоматологическом кабинете Прокшино",
       "selectorImages": {
         "consultations": "design/assets/prokshino/hero-clinic.webp",
         "diagnostics": "design/assets/prokshino/hero-clinic.webp",
@@ -64,6 +66,8 @@
       "description": "Семейная стоматология в Испанских кварталах. Чёткая информация о клинике и открытый прайс.",
       "image": "design/assets/ispanskie/gallery-2.jpg",
       "imageAlt": "Врач помогает пациенту осмотреть улыбку в зеркале",
+      "welcomeImage": "design/assets/ispanskie/gallery-5.jpg",
+      "welcomeImageAlt": "Кабинет стоматологии в филиале Испанские кварталы",
       "selectorImages": {
         "consultations": "design/assets/ispanskie/hero-clinic.webp",
         "diagnostics": "design/assets/ispanskie/hero-clinic.webp",

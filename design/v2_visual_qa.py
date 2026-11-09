@@ -286,7 +286,7 @@ def screenshot_page(browser: Browser, base: str, route: str, filename: str, widt
     page.wait_for_function("window.DENTAL_V2 && document.readyState === 'complete'")
     wait_images(page)
     if selector:
-        page.add_style_tag(content=".skip-link { display: none !important; }")
+        page.add_style_tag(content=".skip-link, .booking-fab { display: none !important; }")
         locator = page.locator(selector)
         locator.scroll_into_view_if_needed()
         locator.screenshot(path=str(SHOTS / filename), animations="disabled", timeout=30000)
@@ -342,7 +342,10 @@ def capture_evidence(browser: Browser, base: str) -> dict:
         home = f"v2/{branch}/index.html"
         mobile_home = add(home, f"v2-mobile-home-{branch}-390.png", 390, full=False, label=f"Главная · {branch} · mobile")
         desktop_home = add(home, f"v2-desktop-home-{branch}-1440.png", 1440, full=False, label=f"Главная · {branch} · desktop")
-        add(home, f"v2-full-home-{branch}-390.png", 390, full=True, label=f"Страница целиком · {branch}")
+        add(home, f"v2-full-home-{branch}-1440.png", 1440, full=True, label=f"Главная целиком · {branch} · desktop 1440 px")
+        add(home, f"v2-full-home-{branch}-390.png", 390, full=True, label=f"Страница целиком · {branch} · mobile")
+        add(home, f"v2-home-doctors-{branch}-390.png", 390, selector=".team-strip", label=f"Листаемые карточки врачей · {branch} · mobile")
+        add(home, f"v2-home-doctors-{branch}-1440.png", 1440, selector=".team-strip", label=f"Листаемые карточки врачей · {branch} · desktop")
         old_new[branch] = {"mobile": mobile_home, "desktop": desktop_home}
         direction = f"v2/{branch}/directions/index.html"
         add(direction, f"v2-mobile-directions-{branch}-390.png", 390, selector=".directions-selector .service-selector", label=f"Интерактивный выбор направлений · {branch}")
@@ -386,7 +389,7 @@ def capture_evidence(browser: Browser, base: str) -> dict:
 
     page = browser.new_page(viewport={"width": 390, "height": HEIGHT})
     page.goto(urljoin(base, "v2/ispanskie/index.html"), wait_until="load")
-    page.locator(".home-hero [data-open-booking]").click()
+    page.locator(".booking-fab").click()
     page.locator("[data-booking-dialog]").screenshot(path=str(SHOTS / "v2-booking-modal-ispanskie-mobile-390.png"), animations="disabled")
     entries.append({"file": "design/v2qa/screenshots/v2-booking-modal-ispanskie-mobile-390.png", "label": "Запись Испанские кварталы · явное уточнение маршрута DentalPRO · mobile", "route": "v2/ispanskie/index.html", "width": 390})
     page.close()

@@ -90,6 +90,8 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
   EVIDENCE: `DRAFT_SAFETY_PASS branch=design/manus-dental-master-2026 pr=2 openDraft=true mainUnchanged=true techUnchanged=true protectedFiles=0`; worktree clean and local/remote design heads matched after push.
 
 - [x] G17: mobile/desktop design feels polished, inspired by the supplied editorial emerald reference without copying its portfolio layout or introducing irrelevant imagery.
+  CHECK: manually review the archived iteration-3 screenshots linked in `docs/V2_SCREENSHOT_INDEX.md`.
+  EXPECT: archived design is explicitly treated as historical and not as the current V5 visual result.
   EVIDENCE: historical iteration 3 only; its warm Spanish Quarters composition was superseded by G18–G19 after the user's 3/10 critique, and is not a claim about the current design. Three-way booking remains in G14/G19.
 
 
@@ -99,17 +101,50 @@ Design review and before/after comparisons are documented in `docs/V2_DESIGN_REP
 G16 confirms the existing PR is open and Draft; no merge, production change, or Pages-setting change was made.
 
 
-## Итерация 4 — пересмотр арт-дирекшна по оценке пользователя «3/10»
+## Историческая итерация 4 — пересмотр арт-дирекшна по оценке пользователя «3/10»
 
-- [x] G18: главные страницы демонстрируют цельную premium editorial-арт-дирекшн, соотнесённую с референсом пользователя: глубокая изумрудная сцена, тонкие детали, выразительная сетка и фото как композиционный центр; это не просто зелёная заливка с увеличенным заголовком.
+- [x] G18: в исторической V4-версии главные страницы демонстрировали цельную premium editorial-арт-дирекшн, соотнесённую с референсом пользователя; это не является оценкой текущей V5-композиции.
+  CHECK: вручную посмотреть архивные mobile/desktop снимки V4 в `docs/V2_SCREENSHOT_INDEX.md`.
+  EXPECT: V4-скриншоты чётко помечены как предыдущие, а не как текущий welcome-screen.
   EVIDENCE: 390px/1440px итоговые скриншоты проверены вручную: wordmark без белого прямоугольника, крупные подлинные портреты врача вместо перекрывающихся collage-инсетов; композиции филиалов идут в разных направлениях, читаемые подписи и hero-кнопки; четыре pre-V4 скриншота сохранены для сравнения.
 
 - [x] G19: mobile/desktop-иерархия, короткий путь к услугам/врачам/записи, кнопки и реальные локальные фотографии визуально и технически работают без переполнений.
   CHECK: `python design/build_v2.py` затем `python design/v2_visual_qa.py` и `python design/new_direction_qa.py --motion --booking`
   EXPECT: `V2_BROWSER_QA_PASS` и `NEW_DIRECTION_UX_PASS`
-  EVIDENCE: final run `routes=41`, `routeChecks=369`, `zoomChecks=123`, `totalLayoutChecks=492`, `overflow=0`, `brokenImages=0`, `interactionErrors=0`; `NEW_DIRECTION_UX_PASS` for both branches at 320/390/1440, 3 booking choices, no early redirect; 62 screenshot files.
+  EVIDENCE: V4 historical run `routes=41`, `routeChecks=369`, `zoomChecks=123`, `totalLayoutChecks=492`, `overflow=0`, `brokenImages=0`, `interactionErrors=0`; the new V5 welcome-first acceptance is recorded separately in G21–G25 below.
 
 - [x] G20: новая итерация остаётся в отдельной дизайн-ветке и открытом Draft PR, а исходные защищённые refs/production не меняются.
   CHECK: `python design/draft_safety_qa.py`
   EXPECT: `DRAFT_SAFETY_PASS`
   EVIDENCE: `DRAFT_SAFETY_PASS branch=design/manus-dental-master-2026 pr=2 openDraft=true mainUnchanged=true techUnchanged=true protectedFiles=0`; `main=9a99dc7baa6484bbec8b1823152f60a59bdbae2e`, `tech=72ad9a3de2668eb2fa7e3f3034a844f0d085fe69`; PR #2 OPEN · Draft · base `main`, `mergedAt=null`; local/remote design heads matched and worktree was clean after push.
+
+
+## Итерация 5 — спокойный welcome-screen, плавающая запись и команда врачей
+
+- [x] G21: содержимое hero обеих клиник приветствует посетителя и показывает пространство клиники; в самом hero нет портрета врача, каталога, статистики прайса или inline-призыва записаться/купить услугу. Отдельный фиксированный booking-FAB справа снизу остаётся доступен, как просил пользователь.
+  CHECK: `python design/v5_homepage_qa.py`
+  EXPECT: `V5_HOMEPAGE_PASS`
+  EVIDENCE: `V5_HOMEPAGE_PASS branches=2 widths=9`: welcome image is sourced clinic space, not a doctor portrait; no service selector or booking CTA is embedded in either hero.
+
+- [x] G22: на всех страницах клиники остаётся видимой плавающая нижнеправая кнопка записи; она открывает выбор способов в текущем документе, остаётся внутри viewport на всех девяти ширинах и не перекрывает управляющие элементы/текст критических блоков.
+  CHECK: `python design/v5_homepage_qa.py`
+  EXPECT: `V5_HOMEPAGE_PASS`
+  EVIDENCE: `V2_ARCHITECTURE_PASS floatingBookingPages=40`; `V5_HOMEPAGE_PASS floatingBookingBounds=18` (2 branches × 9 widths); `V5_BOOKING_PASS explicitChoices=phone+DentalPRO+WhatsApp+Telegram earlyRedirects=0`; full responsive matrix `492/492`, overflow `0`.
+
+- [x] G23: на обеих главных доступна лента всех пяти специалистов с touch-swipe, доступными кнопками влево/вправо, ролью, стажем и переходом к исходному профильному разделу с подтверждённым образованием/документами; отсутствующие сертификаты не выдумываются.
+  CHECK: `python design/v5_homepage_qa.py`
+  EXPECT: `V5_HOMEPAGE_PASS`
+  EVIDENCE: `V5_HOMEPAGE_PASS doctorCards=10 profiles=10 swipe=2`; verified role/experience shown on cards; source-backed profile education and document/certificate sections verified without adding records.
+
+- [x] G24: финальная desktop-версия каждой главной показана целиком по высоте при ширине 1440 px; опубликованы настоящие browser full-page captures и связанные ссылки из отчёта и индекса.
+  CHECK: `python design/v5_homepage_qa.py`
+  EXPECT: `V5_HOMEPAGE_PASS`
+  EVIDENCE: two Chromium full-page screenshots `1440×4699` exist and are linked at the bottom of the report and in the V5 screenshot-index section; `V5_HOMEPAGE_PASS desktopFullPage=2`.
+
+
+- [ ] G25: финальная V5-версия опубликована только в отдельную дизайн-ветку и остаётся в открытом Draft PR; `main`, tech, Pages и production неизменны.
+  CHECK: `python design/draft_safety_qa.py`
+  EXPECT: `DRAFT_SAFETY_PASS`
+  EVIDENCE: pending
+
+Проверка безопасности проводится после последнего commit/push, чтобы сравнивать окончательные local/remote refs.

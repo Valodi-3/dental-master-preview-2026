@@ -1038,3 +1038,73 @@ button { color: inherit; }
   .dialog-intro { font-size: .81rem; }
   .booking-choice-message { gap: 7px 9px; }
 }
+
+
+/* Iteration 5: persistent appointment access, outside the welcome copy. */
+.booking-fab {
+  position: fixed;
+  z-index: 90;
+  right: max(16px, env(safe-area-inset-right, 0px));
+  bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 13px;
+  min-width: 152px;
+  min-height: 54px;
+  padding: 7px 8px 7px 18px;
+  border: 1px solid rgba(236, 220, 170, .68);
+  border-radius: 999px;
+  color: #18372f;
+  background: linear-gradient(145deg, #ead9a5 0%, #d4bb7a 100%);
+  box-shadow: 0 11px 30px rgba(7, 24, 19, .28), inset 0 1px 0 rgba(255, 255, 255, .58);
+  font: inherit;
+  font-size: .86rem;
+  font-weight: 720;
+  letter-spacing: .01em;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+.booking-fab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 36px rgba(7, 24, 19, .34), inset 0 1px 0 rgba(255, 255, 255, .62);
+}
+.booking-fab:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+.booking-fab-arrow {
+  display: grid;
+  width: 37px;
+  height: 37px;
+  place-items: center;
+  border-radius: 50%;
+  color: #f5f0de;
+  background: #173b32;
+  font-size: 1.02rem;
+  line-height: 1;
+}
+@media (max-width: 600px) {
+  .booking-fab {
+    right: max(12px, env(safe-area-inset-right, 0px));
+    bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+    min-width: 141px;
+    min-height: 49px;
+    gap: 10px;
+    padding-left: 15px;
+    font-size: .81rem;
+  }
+  .booking-fab-arrow { width: 33px; height: 33px; }
+}
+@media (max-width: 350px) {
+  .booking-fab { right: 10px; min-width: 136px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .booking-fab { transition: none; }
+  .booking-fab:hover { transform: none; }
+}
+@media print {
+  .booking-fab { display: none !important; }
+}

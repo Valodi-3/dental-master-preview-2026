@@ -100,10 +100,13 @@ def route_graph() -> dict:
     bad_h1: list[str] = []
     bad_ids: list[str] = []
     form_pages: list[str] = []
+    missing_floating_booking: list[str] = []
     page_meta: dict[str, dict] = {}
     for page in all_pages:
         source, parser = inspect_html(page)
         rel = page.relative_to(ROOT).as_posix()
+        if page != V2 / "index.html" and not ('class="booking-fab"' in source and 'data-open-booking' in source and 'aria-controls="booking-dialog"' in source and 'id="booking-dialog"' in source):
+            missing_floating_booking.append(rel)
         if parser.forms:
             form_pages.append(rel)
         if len(parser.headings) != 1 or not parser.headings[0].strip():
@@ -131,12 +134,13 @@ def route_graph() -> dict:
     assert_true(not bad_h1, f"pages without exactly one H1: {bad_h1}")
     assert_true(not bad_ids, f"duplicate HTML IDs: {bad_ids}")
     assert_true(not form_pages, f"unexpected forms in V2 static build: {form_pages}")
+    assert_true(not missing_floating_booking, f"clinic pages missing fixed booking trigger/dialog: {missing_floating_booking}")
     counts: dict[str, int] = {}
     for meta in page_meta.values():
         counts[meta["page"]] = counts.get(meta["page"], 0) + 1
     expected_types = {"chooser": 1, "home": 2, "directions": 2, "service": 20, "doctors": 2, "doctor": 10, "prices": 2, "contacts": 2}
     assert_true(counts == expected_types, f"page type counts differ: {counts}")
-    return {"routes": len(all_pages), "pageTypes": counts, "brokenLinks": len(broken), "pages": page_meta}
+    return {"routes": len(all_pages), "pageTypes": counts, "brokenLinks": len(broken), "floatingBookingPages": len(all_pages) - 1, "pages": page_meta}
 
 
 def run_architecture() -> None:
@@ -299,7 +303,7 @@ def run_evidence() -> None:
     assert_true(metrics.get("overflowCount") == 0, f"responsive overflow remains: {metrics.get('overflowCount')}")
     assert_true(metrics.get("routeChecks") == 41 * 9, "not all 41 routes were exercised at each viewport")
     assert_true(metrics.get("zoomChecks") == 41 * 3, "not all 41 routes were exercised with 200% text at three viewport widths")
-    required = ["v2-mobile-home", "v2-desktop-home", "v2-mobile-directions", "v2-desktop-service", "v2-mobile-doctors", "v2-desktop-doctor", "v2-mobile-prices", "v2-desktop-contacts", "v2-before-after-mobile", "v2-before-after-desktop"]
+    required = ["v2-mobile-home", "v2-desktop-home", "v2-mobile-directions", "v2-desktop-service", "v2-mobile-doctors", "v2-desktop-doctor", "v2-mobile-prices", "v2-desktop-contacts", "v2-before-after-mobile", "v2-before-after-desktop", "v2-full-home-prokshino-1440", "v2-full-home-ispanskie-1440", "v2-home-doctors-prokshino-390", "v2-home-doctors-prokshino-1440", "v2-home-doctors-ispanskie-390", "v2-home-doctors-ispanskie-1440"]
     names = "\n".join(path.name for path in screenshots)
     missing = [token for token in required if token not in names]
     assert_true(not missing, f"page-type/old-new screenshot evidence missing: {missing}")
