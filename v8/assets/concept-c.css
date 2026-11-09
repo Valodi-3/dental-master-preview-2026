@@ -1,0 +1,887 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   CONCEPT C: INTERACTIVE EXPERIENCE (PATIENT-CENTRIC CONFIGURATOR)
+   Crisp Swiss Clinical, Snow & Teal Palette, Frictionless Diagnostic Journey
+   ========================================================================== */
+
+:root {
+  --cc-bg: #f7faf9;
+  --cc-surface: #ffffff;
+  --cc-surface-alt: #edf5f2;
+  --cc-surface-dark: #102420;
+  --cc-teal: #0d8269;
+  --cc-teal-dark: #085e4c;
+  --cc-teal-light: #e6f6f1;
+  --cc-coral: #e06d53;
+  --cc-coral-light: #fef0ec;
+  --cc-text-main: #142421;
+  --cc-text-muted: #5e736e;
+  --cc-text-dim: #94a6a2;
+  --cc-border: #dde8e4;
+  --cc-border-strong: #b6d4cb;
+  --cc-shadow-sm: 0 2px 8px rgba(13, 130, 105, 0.05);
+  --cc-shadow-md: 0 8px 24px rgba(13, 130, 105, 0.08);
+  --cc-shadow-lg: 0 16px 40px rgba(16, 36, 32, 0.12);
+  --cc-radius-lg: 20px;
+  --cc-radius-md: 14px;
+  --cc-radius-sm: 8px;
+}
+
+body.concept-c {
+  background-color: var(--cc-bg);
+  color: var(--cc-text-main);
+  font-family: var(--v8-sans);
+  background-image: 
+    radial-gradient(circle at 100% 0%, rgba(13, 130, 105, 0.06), transparent 35%),
+    radial-gradient(circle at 0% 50%, rgba(224, 109, 83, 0.04), transparent 30%);
+}
+
+.cc-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+/* Header */
+.cc-header {
+  padding: 22px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--cc-border);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 40px; /* Below concept switcher */
+  z-index: 90;
+}
+
+.cc-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cc-brand-logo {
+  height: 38px;
+  width: auto;
+}
+
+.cc-branch-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--cc-teal);
+  background: var(--cc-teal-light);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid var(--cc-border-strong);
+}
+
+.cc-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.cc-nav a {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--cc-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cc-nav a:hover {
+  color: var(--cc-teal);
+}
+
+.cc-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cc-phone-link {
+  font-size: 0.94rem;
+  font-weight: 700;
+  color: var(--cc-text-main);
+  text-decoration: none;
+}
+
+.cc-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--cc-teal);
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: var(--cc-radius-sm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(13, 130, 105, 0.3);
+  transition: all 0.2s ease;
+}
+
+.cc-btn-primary:hover {
+  background: var(--cc-teal-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(13, 130, 105, 0.4);
+}
+
+.cc-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--cc-surface);
+  color: var(--cc-teal);
+  padding: 12px 22px;
+  border-radius: var(--cc-radius-sm);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1.5px solid var(--cc-teal);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cc-btn-secondary:hover {
+  background: var(--cc-teal-light);
+}
+
+/* ==========================================================================
+   Hero & Interactive Goal Configurator
+   ========================================================================== */
+
+.cc-hero {
+  padding: 48px 0 64px;
+}
+
+.cc-hero-header {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 36px;
+}
+
+.cc-hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cc-teal);
+  background: var(--cc-teal-light);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+}
+
+.cc-hero-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--cc-text-main);
+  margin-bottom: 16px;
+}
+
+.cc-hero-title em {
+  font-family: var(--v8-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cc-teal);
+}
+
+.cc-hero-lead {
+  font-size: 1.1rem;
+  color: var(--cc-text-muted);
+  line-height: 1.6;
+}
+
+/* Patient Goal Chips */
+.cc-goal-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.cc-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cc-surface);
+  color: var(--cc-text-main);
+  border: 1.5px solid var(--cc-border);
+  padding: 10px 18px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--cc-shadow-sm);
+  user-select: none;
+}
+
+.cc-chip-icon {
+  font-size: 1rem;
+}
+
+.cc-chip:hover {
+  border-color: var(--cc-teal);
+  transform: translateY(-2px);
+  box-shadow: var(--cc-shadow-md);
+}
+
+.cc-chip.is-active {
+  background: var(--cc-surface-dark);
+  color: #ffffff;
+  border-color: var(--cc-surface-dark);
+  box-shadow: 0 8px 20px rgba(16, 36, 32, 0.2);
+}
+
+.cc-chip.is-active .cc-chip-icon {
+  filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
+
+/* Live Dynamic Calculation Stage Card */
+.cc-calc-stage {
+  background: var(--cc-surface);
+  border-radius: var(--cc-radius-lg);
+  border: 1px solid var(--cc-border);
+  box-shadow: var(--cc-shadow-lg);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  transition: transform 0.3s ease;
+}
+
+.cc-calc-body {
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cc-calc-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cc-calc-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cc-coral);
+  background: var(--cc-coral-light);
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.cc-calc-title {
+  font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--cc-text-main);
+}
+
+.cc-calc-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--cc-text-muted);
+  margin-bottom: 28px;
+}
+
+/* Live Clinical Metrics Grid */
+.cc-calc-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px 0;
+  border-top: 1px solid var(--cc-border);
+  border-bottom: 1px solid var(--cc-border);
+  margin-bottom: 28px;
+}
+
+.cc-spec-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cc-spec-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cc-text-dim);
+}
+
+.cc-spec-value {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--cc-text-main);
+}
+
+/* Assigned Specialist Snippet */
+.cc-calc-doctor-box {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--cc-surface-alt);
+  padding: 14px 18px;
+  border-radius: var(--cc-radius-md);
+  margin-bottom: 28px;
+}
+
+.cc-calc-doctor-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ffffff;
+  box-shadow: var(--cc-shadow-sm);
+  background: #cbd5e1;
+}
+
+.cc-calc-doctor-info {
+  flex: 1;
+}
+
+.cc-calc-doctor-name {
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: var(--cc-text-main);
+}
+
+.cc-calc-doctor-role {
+  font-size: 0.8rem;
+  color: var(--cc-text-muted);
+}
+
+.cc-calc-doctor-tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--cc-teal);
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  border: 1px solid var(--cc-border-strong);
+}
+
+/* Actions Row */
+.cc-calc-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.cc-calc-price-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.cc-calc-price-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--cc-text-dim);
+}
+
+.cc-calc-price-val {
+  font-size: 1.7rem;
+  font-weight: 900;
+  color: var(--cc-teal);
+  letter-spacing: -0.02em;
+}
+
+.cc-calc-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Image Visual Stage Right */
+.cc-calc-visual {
+  position: relative;
+  background: #102420;
+  min-height: 480px;
+  overflow: hidden;
+}
+
+.cc-calc-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+.cc-calc-visual-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(16, 36, 32, 0.1) 0%, rgba(16, 36, 32, 0.7) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px;
+  color: #ffffff;
+}
+
+.cc-visual-quote {
+  font-family: var(--v8-serif);
+  font-size: 1.35rem;
+  font-style: italic;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.cc-visual-cite {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   Equipment & Precision Highlights (3 Pillars)
+   ========================================================================== */
+
+.cc-precision-section {
+  padding: 64px 0 80px;
+}
+
+.cc-section-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 48px;
+}
+
+.cc-section-kicker {
+  font-size: 0.76rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--cc-teal);
+  margin-bottom: 10px;
+}
+
+.cc-section-title {
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--cc-text-main);
+}
+
+.cc-pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.cc-pillar-card {
+  background: var(--cc-surface);
+  border-radius: var(--cc-radius-md);
+  border: 1px solid var(--cc-border);
+  padding: 32px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.cc-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--cc-shadow-md);
+  border-color: var(--cc-border-strong);
+}
+
+.cc-pillar-num {
+  font-family: var(--v8-serif);
+  font-size: 2.2rem;
+  font-style: italic;
+  color: var(--cc-teal);
+  margin-bottom: 12px;
+}
+
+.cc-pillar-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: var(--cc-text-main);
+}
+
+.cc-pillar-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--cc-text-muted);
+  flex: 1;
+}
+
+/* ==========================================================================
+   Doctor Roster Deck
+   ========================================================================== */
+
+.cc-team-section {
+  padding: 64px 0 80px;
+  background: var(--cc-surface-alt);
+  border-top: 1px solid var(--cc-border);
+  border-bottom: 1px solid var(--cc-border);
+}
+
+.cc-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.cc-doctor-card {
+  background: var(--cc-surface);
+  border-radius: var(--cc-radius-md);
+  border: 1px solid var(--cc-border);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cc-doctor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--cc-shadow-md);
+}
+
+.cc-doc-media {
+  position: relative;
+  aspect-ratio: 4 / 4.5;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.cc-doc-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.cc-doctor-card:hover .cc-doc-media img {
+  transform: scale(1.03);
+}
+
+.cc-doc-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(16, 36, 32, 0.8);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  letter-spacing: 0.04em;
+}
+
+.cc-doc-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cc-doc-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--cc-text-main);
+  margin-bottom: 6px;
+}
+
+.cc-doc-specialty {
+  font-size: 0.85rem;
+  color: var(--cc-teal);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cc-doc-bio {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--cc-text-muted);
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.cc-doc-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 16px;
+  border-top: 1px solid var(--cc-border);
+}
+
+.cc-doc-exp {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--cc-text-dim);
+}
+
+.cc-doc-book-btn {
+  background: transparent;
+  border: 1px solid var(--cc-teal);
+  color: var(--cc-teal);
+  padding: 8px 14px;
+  border-radius: var(--cc-radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cc-doc-book-btn:hover {
+  background: var(--cc-teal);
+  color: #ffffff;
+}
+
+/* ==========================================================================
+   Trust & Patient Assurance Banner
+   ========================================================================== */
+
+.cc-assurance-strip {
+  padding: 40px 0;
+  background: var(--cc-surface-dark);
+  color: #ffffff;
+}
+
+.cc-assurance-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.cc-assurance-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cc-assurance-icon {
+  font-size: 1.8rem;
+  color: #26e6b3;
+}
+
+.cc-assurance-text strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.cc-assurance-text span {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.cc-footer {
+  background: #ffffff;
+  border-top: 1px solid var(--cc-border);
+  padding: 60px 0 32px;
+}
+
+.cc-footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.cc-footer-brand-p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--cc-text-muted);
+  margin-top: 12px;
+  max-width: 320px;
+}
+
+.cc-footer-col h4 {
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cc-text-main);
+  margin-bottom: 16px;
+}
+
+.cc-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cc-footer-col a {
+  font-size: 0.88rem;
+  color: var(--cc-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cc-footer-col a:hover {
+  color: var(--cc-teal);
+}
+
+.cc-footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 28px;
+  border-top: 1px solid var(--cc-border);
+  font-size: 0.8rem;
+  color: var(--cc-text-dim);
+}
+
+/* ==========================================================================
+   Responsive Adaptations (Tablet & Mobile 390px)
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .cc-calc-stage {
+    grid-template-columns: 1fr;
+  }
+  
+  .cc-calc-visual {
+    min-height: 320px;
+    order: -1;
+  }
+  
+  .cc-pillars-grid,
+  .cc-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cc-assurance-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .cc-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cc-header {
+    padding: 14px 0;
+  }
+
+  .cc-nav,
+  .cc-header-actions .cc-phone-link {
+    display: none;
+  }
+
+  .cc-hero {
+    padding: 28px 0 44px;
+  }
+
+  .cc-hero-title {
+    font-size: 2rem;
+  }
+
+  .cc-hero-lead {
+    font-size: 0.95rem;
+  }
+
+  .cc-goal-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .cc-goal-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cc-chip {
+    white-space: nowrap;
+    font-size: 0.82rem;
+    padding: 8px 14px;
+    flex-shrink: 0;
+  }
+
+  .cc-calc-body {
+    padding: 24px 18px;
+  }
+
+  .cc-calc-title {
+    font-size: 1.45rem;
+  }
+
+  .cc-calc-specs {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .cc-calc-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .cc-calc-cta-group {
+    flex-direction: column;
+  }
+
+  .cc-calc-cta-group .cc-btn-primary,
+  .cc-calc-cta-group .cc-btn-secondary {
+    width: 100%;
+  }
+
+  .cc-pillars-grid,
+  .cc-team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-assurance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-footer-bottom {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+}

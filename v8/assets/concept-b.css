@@ -1,0 +1,636 @@
+@charset "utf-8";
+
+/* ==========================================================================
+   CONCEPT B: LUXURY EDITORIAL
+   Vogue & Kinfolk Aesthetics, Asymmetric Layouts, Cormorant Garamond & Manrope
+   Inspired by REGINA (agrrbeauty.com)
+   ========================================================================== */
+
+:root {
+  --cb-paper: #f8f6f0;
+  --cb-surface: #ffffff;
+  --cb-ink: #1c2820;
+  --cb-ink-dark: #0f1813;
+  --cb-muted: #56635a;
+  --cb-line: #dad6ca;
+  --cb-line-subtle: #eae7dd;
+  --cb-gold: #9d7d4e;
+  --cb-gold-soft: #fcf9f2;
+  --cb-radius-lg: 20px;
+  --cb-radius-md: 12px;
+}
+
+body.concept-b {
+  background-color: var(--cb-paper);
+  color: var(--cb-ink);
+  font-family: var(--v8-sans);
+}
+
+.cb-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+/* Header */
+.cb-header {
+  padding: 28px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--cb-line);
+}
+
+.cb-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cb-brand-title {
+  display: flex;
+  flex-direction: column;
+}
+
+.cb-brand-title strong {
+  font-size: 0.96rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--cb-ink-dark);
+}
+
+.cb-brand-title small {
+  font-size: 0.72rem;
+  color: var(--cb-muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cb-nav {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.cb-nav a {
+  font-size: 0.88rem;
+  color: var(--cb-muted);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: color 0.2s;
+}
+
+.cb-nav a:hover {
+  color: var(--cb-ink);
+}
+
+.cb-btn-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cb-ink);
+  color: #ffffff !important;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 12px 26px;
+  border-radius: 9999px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.cb-btn-dark:hover {
+  background: var(--cb-ink-dark);
+  transform: translateY(-2px);
+}
+
+.cb-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--cb-ink) !important;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 11px 24px;
+  border-radius: 9999px;
+  border: 1px solid var(--cb-ink);
+  transition: all 0.2s;
+}
+
+.cb-btn-outline:hover {
+  background: var(--cb-ink);
+  color: #ffffff !important;
+}
+
+/* Hero Section */
+.cb-hero {
+  padding: 70px 0 90px;
+}
+
+.cb-hero-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.cb-editorial-issue {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cb-gold);
+  margin-bottom: 24px;
+}
+
+.cb-editorial-issue i {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--cb-gold);
+}
+
+.cb-hero h1 {
+  font-size: clamp(2.6rem, 4.8vw, 4.3rem);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+  color: var(--cb-ink-dark);
+  margin-bottom: 24px;
+}
+
+.cb-hero h1 em {
+  font-family: var(--v8-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cb-gold);
+  display: block;
+}
+
+.cb-hero-lead {
+  font-size: clamp(1.02rem, 1.3vw, 1.18rem);
+  color: var(--cb-muted);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+
+.cb-hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.cb-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  background: #ffffff;
+  border: 1px solid var(--cb-line);
+  border-radius: 9999px;
+  color: var(--cb-ink);
+}
+
+.cb-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Portrait Hero Frame (REGINA Inspired) */
+.cb-portrait-frame {
+  position: relative;
+  background: #ffffff;
+  padding: 14px;
+  border-radius: var(--cb-radius-lg);
+  border: 1px solid var(--cb-line);
+  box-shadow: 0 24px 60px rgba(28, 40, 32, 0.08);
+}
+
+.cb-portrait-inner {
+  position: relative;
+  border-radius: var(--cb-radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+}
+
+.cb-portrait-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--v8-ease);
+}
+
+.cb-portrait-frame:hover img {
+  transform: scale(1.03);
+}
+
+.cb-portrait-caption {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--cb-muted);
+  padding: 0 4px;
+}
+
+.cb-portrait-caption span {
+  font-family: var(--v8-serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--cb-gold);
+}
+
+/* REGINA-Style Discovery Services Section */
+.cb-section {
+  padding: 90px 0;
+  border-top: 1px solid var(--cb-line);
+}
+
+.cb-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.cb-section-head h2 {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--cb-ink-dark);
+}
+
+.cb-section-head h2 em {
+  font-family: var(--v8-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cb-gold);
+}
+
+.cb-discovery-grid {
+  display: grid;
+  grid-template-columns: 440px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.cb-floating-portrait {
+  position: sticky;
+  top: 100px;
+  background: #ffffff;
+  padding: 16px;
+  border-radius: var(--cb-radius-lg);
+  border: 1px solid var(--cb-line);
+  box-shadow: 0 20px 50px rgba(28, 40, 32, 0.06);
+}
+
+.cb-floating-img {
+  border-radius: var(--cb-radius-md);
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+}
+
+.cb-floating-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.35s ease;
+}
+
+.cb-floating-caption {
+  margin-top: 14px;
+  font-family: var(--v8-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--cb-ink);
+  text-align: center;
+}
+
+/* Editorial Index Entries */
+.cb-directory-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--cb-line);
+}
+
+.cb-entry-item {
+  padding: 24px 0;
+  border-bottom: 1px solid var(--cb-line);
+  cursor: pointer;
+  transition: all 0.2s var(--v8-ease);
+}
+
+.cb-entry-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cb-entry-title {
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+}
+
+.cb-entry-num {
+  font-family: var(--v8-serif);
+  font-size: 1.25rem;
+  font-style: italic;
+  color: var(--cb-gold);
+}
+
+.cb-entry-title h3 {
+  font-size: 1.35rem;
+  font-weight: 650;
+  color: var(--cb-ink-dark);
+  transition: color 0.2s;
+}
+
+.cb-entry-item:hover .cb-entry-title h3,
+.cb-entry-item.is-active .cb-entry-title h3 {
+  color: var(--cb-gold);
+}
+
+.cb-entry-price {
+  font-size: 1rem;
+  font-weight: 750;
+  color: var(--cb-ink);
+}
+
+.cb-entry-details {
+  margin-top: 14px;
+  padding-left: 44px;
+  font-size: 0.9rem;
+  color: var(--cb-muted);
+  line-height: 1.6;
+}
+
+.cb-entry-actions {
+  margin-top: 14px;
+  padding-left: 44px;
+  display: flex;
+  gap: 12px;
+}
+
+/* Doctors Section (Minimalist Monograph) */
+.cb-monograph-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.cb-monograph-card {
+  background: #ffffff;
+  border: 1px solid var(--cb-line);
+  border-radius: var(--cb-radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(28, 40, 32, 0.04);
+  transition: transform 0.3s var(--v8-ease), box-shadow 0.3s;
+}
+
+.cb-monograph-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 60px rgba(28, 40, 32, 0.09);
+}
+
+.cb-monograph-photo {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--cb-paper);
+}
+
+.cb-monograph-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--v8-ease);
+}
+
+.cb-monograph-card:hover .cb-monograph-photo img {
+  transform: scale(1.04);
+}
+
+.cb-monograph-copy {
+  padding: 24px;
+}
+
+.cb-mono-index {
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  color: var(--cb-gold);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.cb-monograph-copy h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--cb-ink-dark);
+  margin-bottom: 6px;
+}
+
+.cb-mono-role {
+  font-size: 0.82rem;
+  color: var(--cb-muted);
+  line-height: 1.45;
+  margin-bottom: 14px;
+}
+
+.cb-mono-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--cb-line-subtle);
+  font-size: 0.82rem;
+}
+
+.cb-mono-stat strong {
+  color: var(--cb-gold);
+  font-weight: 800;
+}
+
+/* Luxury Editorial Modal */
+dialog.cb-modal {
+  padding: 0;
+  border: none;
+  background: transparent;
+  max-width: 600px;
+  width: min(600px, calc(100% - 32px));
+  margin: auto;
+}
+
+.cb-modal-box {
+  background: #ffffff;
+  border: 1px solid var(--cb-line);
+  border-radius: var(--cb-radius-lg);
+  padding: 36px 32px;
+  box-shadow: 0 30px 90px rgba(28, 40, 32, 0.2);
+  color: var(--cb-ink);
+}
+
+.cb-modal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--cb-line);
+}
+
+.cb-modal-head h2 {
+  font-size: 1.45rem;
+  font-weight: 700;
+}
+
+.cb-modal-head h2 em {
+  font-family: var(--v8-serif);
+  font-style: italic;
+  font-weight: 400;
+  color: var(--cb-gold);
+}
+
+.cb-modal-close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cb-paper);
+  border: 1px solid var(--cb-line);
+  color: var(--cb-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.cb-modal-service-pill {
+  background: var(--cb-gold-soft);
+  border: 1px solid rgba(157, 125, 78, 0.3);
+  border-radius: var(--cb-radius-md);
+  padding: 12px 16px;
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cb-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.cb-modal-card {
+  background: var(--cb-paper);
+  border: 1px solid var(--cb-line);
+  border-radius: var(--cb-radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cb-modal-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--cb-ink-dark);
+}
+
+.cb-modal-card a.phone-num {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--cb-ink-dark);
+}
+
+.cb-modal-messengers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: var(--cb-paper);
+  border: 1px solid var(--cb-line);
+  border-radius: var(--cb-radius-md);
+  font-size: 0.82rem;
+  color: var(--cb-muted);
+}
+
+.cb-msg-links {
+  display: flex;
+  gap: 8px;
+}
+
+.cb-msg-links a {
+  padding: 6px 14px;
+  background: #ffffff;
+  border-radius: 9999px;
+  border: 1px solid var(--cb-line);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--cb-ink);
+}
+
+/* Responsive Mobile (390px) */
+@media (max-width: 1024px) {
+  .cb-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .cb-discovery-grid {
+    grid-template-columns: 1fr;
+  }
+  .cb-floating-portrait {
+    position: static;
+  }
+  .cb-monograph-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .cb-container {
+    padding: 0 20px;
+  }
+  .cb-nav {
+    display: none;
+  }
+  .cb-hero {
+    padding: 30px 0 50px;
+  }
+  .cb-hero h1 {
+    font-size: clamp(2rem, 8vw, 2.7rem);
+  }
+  .cb-monograph-grid {
+    grid-template-columns: 1fr;
+  }
+  .cb-modal-grid {
+    grid-template-columns: 1fr;
+  }
+  .cb-entry-details,
+  .cb-entry-actions {
+    padding-left: 0;
+  }
+  
+  dialog.cb-modal {
+    position: fixed !important;
+    inset: auto 0 0 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 88dvh !important;
+    border-radius: 24px 24px 0 0 !important;
+  }
+  .cb-modal-box {
+    border-radius: 24px 24px 0 0 !important;
+    padding: 24px 20px 36px !important;
+  }
+}

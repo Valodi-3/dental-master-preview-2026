@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Dental Master V8 — Концепт C: Interactive Experience (Прокшино)</title>
+  <meta name="description" content="Концепт C: Интерактивный конфигуратор целей лечения. Мгновенный расчет стоимости, подбор врача и времени приема в клинике Dental Master Прокшино.">
+  <link rel="stylesheet" href="assets/shared-v8.css">
+  <link rel="stylesheet" href="assets/concept-c.css">
+</head>
+<body class="concept-c">
+
+  <!-- Concept Switcher Top Bar -->
+  <aside class="v8-concept-switcher" aria-label="Переключение концепций V8">
+    <div class="v8-switcher-brand">
+      <strong>DENTAL MASTER V8</strong>
+      <span>ПРЕВЬЮ</span>
+      <small style="color: #8ea39b; margin-left: 6px;">Филиал: Прокшино</small>
+    </div>
+    <nav class="v8-switcher-nav">
+      <a href="concept-a.html" class="v8-switch-link">A: Cinematic Clinical</a>
+      <a href="concept-b.html" class="v8-switch-link">B: Luxury Editorial</a>
+      <a href="concept-c.html" class="v8-switch-link is-active" aria-current="page">C: Interactive Experience</a>
+      <a href="index.html" class="v8-switch-link v8-switch-hub">Все 3 концепта →</a>
+    </nav>
+  </aside>
+
+  <!-- Header -->
+  <header class="cc-header">
+    <div class="cc-container" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+      <div class="cc-brand">
+        <img src="../design/assets/prokshino/logo.png" alt="Dental Master" class="cc-brand-logo">
+        <span class="cc-branch-badge">Прокшино</span>
+      </div>
+
+      <nav class="cc-nav">
+        <a href="#configurator">Конфигуратор</a>
+        <a href="#precision">Технологии</a>
+        <a href="#team">Врачи</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+
+      <div class="cc-header-actions">
+        <a href="tel:+79045199697" class="cc-phone-link">+7 (904) 519-96-97</a>
+        <button type="button" class="cc-btn-primary" data-open-booking data-service-name="Быстрая запись на прием">
+          Записаться онлайн
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero & Interactive Goal Configurator -->
+    <section id="configurator" class="cc-hero" data-concept="interactive">
+      <div class="cc-container">
+        <div class="cc-hero-header">
+          <div class="cc-hero-kicker">
+            <span>Интерактивный навигатор лечения</span>
+          </div>
+          <h1 class="cc-hero-title">Что для вас <em>в приоритете?</em></h1>
+          <p class="cc-hero-lead">
+            Выберите задачу — система мгновенно рассчитает прозрачный ориентир стоимости, подберет профильного эксперта клиники и длительность визита.
+          </p>
+        </div>
+
+        <!-- Patient Goal Selection Chips -->
+        <div class="cc-goal-bar" role="tablist" aria-label="Цели лечения">
+          <button type="button" class="cc-chip is-active" role="tab" aria-selected="true"
+            data-goal-chip
+            data-title="Имплантация зуба под ключ"
+            data-desc="Компьютерная 3D-навигация, индивидуальный хирургический шаблон, оригинальный титановый имплантат и циркониевая коронка с пожизненной гарантией."
+            data-price="от 35 000 ₽"
+            data-doctor="Даниелян Артем Артурович"
+            data-role="Главврач · Хирург-имплантолог, 15+ лет"
+            data-doctor-img="../design/assets/doctors/danielyan.jpg"
+            data-duration="45-60 минут"
+            data-img="../design/assets/prokshino/treatment.webp"
+            data-service-name="Имплантация под ключ">
+            <span class="cc-chip-icon">🦷</span>
+            <span>Имплантация зубов</span>
+          </button>
+
+          <button type="button" class="cc-chip" role="tab" aria-selected="false"
+            data-goal-chip
+            data-title="Лечение каналов под микроскопом Carl Zeiss"
+            data-desc="Оптическое увеличение 25x. Находим скрытые микроканалы, извлекаем обломки инструментов и спасаем зубы, приговоренные к удалению."
+            data-price="от 6 500 ₽"
+            data-doctor="Карапетян Карен Сергеевич"
+            data-role="Стоматолог-терапевт, микроскопист, 12+ лет"
+            data-doctor-img="../design/assets/doctors/karapetyan.jpg"
+            data-duration="60 минут"
+            data-img="../design/assets/prokshino/microscope.webp"
+            data-service-name="Лечение под микроскопом Zeiss">
+            <span class="cc-chip-icon">🔬</span>
+            <span>Микроскоп Carl Zeiss</span>
+          </button>
+
+          <button type="button" class="cc-chip" role="tab" aria-selected="false"
+            data-goal-chip
+            data-title="Исправление прикуса элайнерами и брекетами"
+            data-desc="Цифровой сетап перемещения зубов 3D ClinCheck. Незаметные прозрачные каппы или премиальная керамическая брекет-система Damon."
+            data-price="от 140 000 ₽"
+            data-doctor="Фиашева Диана Аслановна"
+            data-role="Стоматолог-ортодонт, 8+ лет"
+            data-doctor-img="../design/assets/doctors/fiasheva.webp"
+            data-duration="40 минут"
+            data-img="../design/assets/prokshino/orthodontics.webp"
+            data-service-name="Ортодонтия и элайнеры">
+            <span class="cc-chip-icon">✨</span>
+            <span>Элайнеры и прикус</span>
+          </button>
+
+          <button type="button" class="cc-chip" role="tab" aria-selected="false"
+            data-goal-chip
+            data-title="Керамические виниры ручной работы E.max"
+            data-desc="Индивидуальное воспроизведение природного микрорельефа эмали и прозрачности режущего края. Минимальное препарирование."
+            data-price="от 32 000 ₽"
+            data-doctor="Наджафов Аслан Заурович"
+            data-role="Стоматолог-ортопед, хирург, 10+ лет"
+            data-doctor-img="../design/assets/doctors/nadzhafov.webp"
+            data-duration="50 минут"
+            data-img="../design/assets/prokshino/hero-clinic.webp"
+            data-service-name="Керамические виниры E.max">
+            <span class="cc-chip-icon">💎</span>
+            <span>Виниры E.max</span>
+          </button>
+
+          <button type="button" class="cc-chip" role="tab" aria-selected="false"
+            data-goal-chip
+            data-title="Срочная помощь при острой зубной боли"
+            data-desc="Прием в день обращения без ожидания в очереди. Точечная цифровая рентген-диагностика, эффективная анестезия и купирование боли."
+            data-price="от 4 500 ₽"
+            data-doctor="Карапетян Карен Сергеевич"
+            data-role="Дежурный стоматолог-терапевт"
+            data-doctor-img="../design/assets/doctors/karapetyan.jpg"
+            data-duration="30-45 минут"
+            data-img="../design/assets/prokshino/treatment.webp"
+            data-service-name="Неотложная помощь при боли">
+            <span class="cc-chip-icon">⚡</span>
+            <span>Острая боль / Экстренно</span>
+          </button>
+        </div>
+
+        <!-- Dynamic Calculation Stage Card -->
+        <div class="cc-calc-stage">
+          <div class="cc-calc-body">
+            <div>
+              <div class="cc-calc-top">
+                <span class="cc-calc-status-badge">● Конфигурация сформирована</span>
+                <span style="font-size: 0.8rem; font-weight: 700; color: var(--cc-teal);">Прокшино</span>
+              </div>
+
+              <h2 class="cc-calc-title" data-goal-title>Имплантация зуба под ключ</h2>
+              <p class="cc-calc-desc" data-goal-desc>
+                Компьютерная 3D-навигация, индивидуальный хирургический шаблон, оригинальный титановый имплантат и циркониевая коронка с пожизненной гарантией.
+              </p>
+            </div>
+
+            <!-- Metrics Specs -->
+            <div class="cc-calc-specs">
+              <div class="cc-spec-item">
+                <span class="cc-spec-label">Длительность приема</span>
+                <span class="cc-spec-value" data-goal-duration>45-60 минут</span>
+              </div>
+              <div class="cc-spec-item">
+                <span class="cc-spec-label">Диагностика в визите</span>
+                <span class="cc-spec-value">3D-КТ + Осмотр</span>
+              </div>
+              <div class="cc-spec-item">
+                <span class="cc-spec-label">Гарантия клиники</span>
+                <span class="cc-spec-value">Пожизненная</span>
+              </div>
+            </div>
+
+            <!-- Assigned Doctor Snippet -->
+            <div class="cc-calc-doctor-box">
+              <img src="../design/assets/doctors/danielyan.jpg" alt="Ведущий специалист" class="cc-calc-doctor-avatar" data-goal-doctor-img>
+              <div class="cc-calc-doctor-info">
+                <div class="cc-calc-doctor-name" data-goal-doctor>Даниелян Артем Артурович</div>
+                <div class="cc-calc-doctor-role" data-goal-doctor-role>Главврач · Хирург-имплантолог, 15+ лет</div>
+              </div>
+              <span class="cc-calc-doctor-tag">Ведущий врач</span>
+            </div>
+
+            <!-- Actions Row -->
+            <div class="cc-calc-actions" data-hero-cta>
+              <div class="cc-calc-price-wrap">
+                <span class="cc-calc-price-label">Ориентир стоимости:</span>
+                <span class="cc-calc-price-val" data-goal-price>от 35 000 ₽</span>
+              </div>
+
+              <div class="cc-calc-cta-group">
+                <button type="button" class="cc-btn-primary" data-open-booking data-goal-book data-service-name="Имплантация зуба под ключ" data-service-price="от 35 000 ₽">
+                  Записаться по этой конфигурации
+                </button>
+                <a href="tel:+79045199697" class="cc-btn-secondary">
+                  Позвонить
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Stage Right -->
+          <div class="cc-calc-visual">
+            <img src="../design/assets/prokshino/treatment.webp" alt="Процедура" data-goal-image>
+            <div class="cc-calc-visual-overlay">
+              <p class="cc-visual-quote">«Мы лечим точно, предсказуемо и без лишних манипуляций.»</p>
+              <span class="cc-visual-cite">Команда Dental Master Прокшино</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Precision Pillars -->
+    <section id="precision" class="cc-precision-section">
+      <div class="cc-container">
+        <div class="cc-section-header">
+          <div class="cc-section-kicker">Оснащение экспертного уровня</div>
+          <h2 class="cc-section-title">Технологии, исключающие врачебную ошибку</h2>
+        </div>
+
+        <div class="cc-pillars-grid">
+          <div class="cc-pillar-card">
+            <div class="cc-pillar-num">01</div>
+            <h3 class="cc-pillar-title">Микроскопы Carl Zeiss</h3>
+            <p class="cc-pillar-desc">
+              Немецкая оптика с увеличением до 25 крат. Позволяет обнаружить микротрещины корня и спасти зубы со сложной анатомией каналов.
+            </p>
+          </div>
+
+          <div class="cc-pillar-card">
+            <div class="cc-pillar-num">02</div>
+            <h3 class="cc-pillar-title">Компьютерная томография 3D</h3>
+            <p class="cc-pillar-desc">
+              Сверхточный цифровой томограф с минимальной лучевой нагрузкой. Послойный снимок челюсти за 14 секунд прямо в клинике.
+            </p>
+          </div>
+
+          <div class="cc-pillar-card">
+            <div class="cc-pillar-num">03</div>
+            <h3 class="cc-pillar-title">Электронная карта DentalPRO</h3>
+            <p class="cc-pillar-desc">
+              Прозрачные протоколы, фотопротокол каждого этапа и доступ к снимкам и плану лечения со смартфона без бумажной волокиты.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Doctors Team Grid -->
+    <section id="team" class="cc-team-section">
+      <div class="cc-container">
+        <div class="cc-section-header">
+          <div class="cc-section-kicker">Клиническая команда</div>
+          <h2 class="cc-section-title">Врачи клиники в Прокшино</h2>
+        </div>
+
+        <div class="cc-team-grid">
+          <!-- Doctor 1 -->
+          <article class="cc-doctor-card">
+            <div class="cc-doc-media">
+              <img src="../design/assets/doctors/danielyan.jpg" alt="Даниелян Артем Артурович">
+              <span class="cc-doc-badge">Стаж 15+ лет</span>
+            </div>
+            <div class="cc-doc-content">
+              <h3 class="cc-doc-name">Даниелян Артем Артурович</h3>
+              <p class="cc-doc-specialty">Главный врач · Хирург-имплантолог</p>
+              <p class="cc-doc-bio">
+                Специалист высшей квалификации по сложной костной пластике, синус-лифтингу и тотальной реабилитации All-on-4 / All-on-6.
+              </p>
+              <div class="cc-doc-footer">
+                <span class="cc-doc-exp">Опыт: 15+ лет</span>
+                <button type="button" class="cc-doc-book-btn" data-open-booking data-service-name="Запись к Даниеляну А. А.">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 2 -->
+          <article class="cc-doctor-card">
+            <div class="cc-doc-media">
+              <img src="../design/assets/doctors/nadzhafov.webp" alt="Наджафов Аслан Заурович">
+              <span class="cc-doc-badge">Стаж 10+ лет</span>
+            </div>
+            <div class="cc-doc-content">
+              <h3 class="cc-doc-name">Наджафов Аслан Заурович</h3>
+              <p class="cc-doc-specialty">Стоматолог-хирург · Ортопед</p>
+              <p class="cc-doc-bio">
+                Эксперт по бережному атравматичному удалению зубов мудрости и эстетическому протезированию безметалловыми коронками E.max.
+              </p>
+              <div class="cc-doc-footer">
+                <span class="cc-doc-exp">Опыт: 10+ лет</span>
+                <button type="button" class="cc-doc-book-btn" data-open-booking data-service-name="Запись к Наджафову А. З.">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Doctor 3 -->
+          <article class="cc-doctor-card">
+            <div class="cc-doc-media">
+              <img src="../design/assets/doctors/fiasheva.webp" alt="Фиашева Диана Аслановна">
+              <span class="cc-doc-badge">Стаж 8+ лет</span>
+            </div>
+            <div class="cc-doc-content">
+              <h3 class="cc-doc-name">Фиашева Диана Аслановна</h3>
+              <p class="cc-doc-specialty">Стоматолог-ортодонт</p>
+              <p class="cc-doc-bio">
+                Сертифицированный специалист по ортодонтии на элайнерах Spark и брекетах Damon. Лечение нарушений прикуса у детей и взрослых.
+              </p>
+              <div class="cc-doc-footer">
+                <span class="cc-doc-exp">Опыт: 8+ лет</span>
+                <button type="button" class="cc-doc-book-btn" data-open-booking data-service-name="Запись к Фиашевой Д. А.">
+                  Записаться
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patient Assurance Strip -->
+    <section class="cc-assurance-strip">
+      <div class="cc-container">
+        <div class="cc-assurance-grid">
+          <div class="cc-assurance-item">
+            <span class="cc-assurance-icon">✓</span>
+            <div class="cc-assurance-text">
+              <strong>Фиксированный план</strong>
+              <span>Цена не меняется в процессе</span>
+            </div>
+          </div>
+
+          <div class="cc-assurance-item">
+            <span class="cc-assurance-icon">★</span>
+            <div class="cc-assurance-text">
+              <strong>Официальная гарантия</strong>
+              <span>Оформление договора и паспорта зуба</span>
+            </div>
+          </div>
+
+          <div class="cc-assurance-item">
+            <span class="cc-assurance-icon">⏱</span>
+            <div class="cc-assurance-text">
+              <strong>Прием по записи</strong>
+              <span>Без задержек и живых очередей</span>
+            </div>
+          </div>
+
+          <div class="cc-assurance-item">
+            <span class="cc-assurance-icon">📍</span>
+            <div class="cc-assurance-text">
+              <strong>4 мин от метро</strong>
+              <span>ЖК «Прокшино», удобный подъезд</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modern Accessible Booking Modal (<dialog>) -->
+  <dialog class="ca-modal" data-booking-modal aria-labelledby="cc-modal-title">
+    <div class="ca-modal-box" style="border-radius: var(--cc-radius-lg); border-color: var(--cc-border);">
+      <div class="ca-modal-head">
+        <h3 id="cc-modal-title" style="color: var(--cc-text-main);">Запись на прием в Прокшино</h3>
+        <button type="button" class="ca-modal-close" data-close-modal aria-label="Закрыть окно">✕</button>
+      </div>
+
+      <div class="ca-modal-service-pill" data-modal-service-display hidden style="background: var(--cc-teal-light); border-color: var(--cc-border-strong);">
+        <strong style="color: var(--cc-teal);">Конфигурация:</strong>
+        <span data-modal-service-name style="color: var(--cc-text-main);">Консультация</span>
+        <span style="color: var(--cc-teal-dark); font-weight: 800; margin-left: 6px;" data-modal-service-price></span>
+      </div>
+
+      <p style="font-size: 0.92rem; color: var(--cc-text-muted); margin-bottom: 20px;">
+        Выберите подходящий способ бронирования даты и времени:
+      </p>
+
+      <div class="ca-modal-options">
+        <div class="ca-modal-card" style="background: var(--cc-surface-alt); border-color: var(--cc-border);">
+          <h4 style="color: var(--cc-text-main);">Прямой звонок администратору</h4>
+          <a href="tel:+79045199697" class="phone-num" style="color: var(--cc-teal);">+7 (904) 519-96-97</a>
+          <button type="button" class="ca-copy-btn" data-copy-phone style="color: var(--cc-text-main); border-color: var(--cc-border);">
+            📋 Скопировать телефон
+          </button>
+          <div class="ca-copy-status" data-copy-status aria-live="polite"></div>
+        </div>
+
+        <div class="ca-modal-card" style="background: var(--cc-surface-alt); border-color: var(--cc-border);">
+          <h4 style="color: var(--cc-text-main);">Онлайн-расписание клиники</h4>
+          <a href="https://stomatolog-ispanskie-kvartaly.ru/booking/" target="_blank" rel="noopener noreferrer" class="ca-dentalpro-btn" style="background: var(--cc-teal);">
+            Открыть электронный календарь DentalPRO →
+          </a>
+        </div>
+
+        <div class="ca-modal-messengers" style="background: var(--cc-surface-alt); border-color: var(--cc-border);">
+          <h4 style="color: var(--cc-text-main);">Написать в мессенджер:</h4>
+          <div class="ca-msg-links">
+            <a href="https://wa.me/79045199697" target="_blank" rel="noopener noreferrer" style="border-color: var(--cc-border-strong); color: var(--cc-text-main);">WhatsApp</a>
+            <a href="https://t.me/dentalmaster_bot" target="_blank" rel="noopener noreferrer" style="border-color: var(--cc-border-strong); color: var(--cc-text-main);">Telegram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Mobile Floating Smart Booking FAB -->
+  <button type="button" class="v8-fab" data-open-booking data-service-name="Быстрая запись" aria-label="Записаться на прием">
+    <span>Записаться</span>
+  </button>
+
+  <script src="assets/v8.js"></script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Dental Master V8 — 3 Концепции Дизайна (Презентация)</title>
+  <meta name="description" content="Презентация 3 принципиально новых дизайн-концепций Dental Master V8: Cinematic Clinical, Luxury Editorial (REGINA) и Interactive Experience.">
+  <link rel="stylesheet" href="assets/shared-v8.css">
+  <style>
+    :root {
+      --hub-bg: #091210;
+      --hub-card: #0f1f1b;
+      --hub-card-hover: #152b25;
+      --hub-border: rgba(255, 255, 255, 0.1);
+      --hub-text: #ecf3f0;
+      --hub-muted: #8ca39b;
+      --hub-accent: #1fe0aa;
+      --hub-gold: #d4af37;
+    }
+
+    body.hub-page {
+      background-color: var(--hub-bg);
+      color: var(--hub-text);
+      font-family: var(--v8-sans);
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(31, 224, 170, 0.12), transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(212, 175, 55, 0.08), transparent 40%);
+    }
+
+    .hub-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .hub-header {
+      padding: 40px 0 24px;
+      text-align: center;
+      border-bottom: 1px solid var(--hub-border);
+    }
+
+    .hub-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--hub-gold);
+      background: rgba(212, 175, 55, 0.12);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      border: 1px solid rgba(212, 175, 55, 0.25);
+      margin-bottom: 18px;
+    }
+
+    .hub-title {
+      font-size: clamp(2.4rem, 5vw, 4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hub-title em {
+      font-family: var(--v8-serif);
+      font-style: italic;
+      font-weight: 400;
+      color: var(--hub-accent);
+    }
+
+    .hub-lead {
+      font-size: 1.15rem;
+      color: var(--hub-muted);
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Comparison Cards Grid */
+    .hub-matrix {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      padding: 48px 0 64px;
+    }
+
+    .hub-card {
+      background: var(--hub-card);
+      border: 1px solid var(--hub-border);
+      border-radius: 20px;
+      padding: 36px 30px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .hub-card:hover {
+      transform: translateY(-6px);
+      background: var(--hub-card-hover);
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45);
+    }
+
+    .hub-card-letter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .hub-card-a .hub-card-letter {
+      background: rgba(31, 224, 170, 0.15);
+      color: #1fe0aa;
+      border: 1px solid rgba(31, 224, 170, 0.3);
+    }
+
+    .hub-card-b .hub-card-letter {
+      background: rgba(212, 175, 55, 0.15);
+      color: #d4af37;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+    }
+
+    .hub-card-c .hub-card-letter {
+      background: rgba(13, 130, 105, 0.25);
+      color: #26e6b3;
+      border: 1px solid rgba(13, 130, 105, 0.4);
+    }
+
+    .hub-card-title {
+      font-size: 1.6rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      letter-spacing: -0.02em;
+    }
+
+    .hub-card-subtitle {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--hub-muted);
+      margin-bottom: 18px;
+    }
+
+    .hub-card-desc {
+      font-size: 0.95rem;
+      color: var(--hub-muted);
+      line-height: 1.6;
+      margin-bottom: 24px;
+      flex: 1;
+    }
+
+    .hub-card-traits {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border-top: 1px solid var(--hub-border);
+      padding-top: 20px;
+    }
+
+    .hub-card-traits li {
+      font-size: 0.88rem;
+      color: var(--hub-text);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .hub-card-traits li strong {
+      color: #ffffff;
+    }
+
+    .hub-card-traits li span.dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--hub-accent);
+      flex-shrink: 0;
+    }
+
+    .hub-card-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+
+    .hub-card-a .hub-card-btn {
+      background: #1fe0aa;
+      color: #071713;
+      box-shadow: 0 4px 18px rgba(31, 224, 170, 0.3);
+    }
+    .hub-card-a .hub-card-btn:hover {
+      background: #3ff2c0;
+      transform: translateY(-2px);
+    }
+
+    .hub-card-b .hub-card-btn {
+      background: #d4af37;
+      color: #1c2820;
+      box-shadow: 0 4px 18px rgba(212, 175, 55, 0.3);
+    }
+    .hub-card-b .hub-card-btn:hover {
+      background: #e6c559;
+      transform: translateY(-2px);
+    }
+
+    .hub-card-c .hub-card-btn {
+      background: #0d8269;
+      color: #ffffff;
+      box-shadow: 0 4px 18px rgba(13, 130, 105, 0.35);
+    }
+    .hub-card-c .hub-card-btn:hover {
+      background: #109e80;
+      transform: translateY(-2px);
+    }
+
+    /* Architectural Notes Section */
+    .hub-notes {
+      padding: 40px 0 80px;
+      border-top: 1px solid var(--hub-border);
+    }
+
+    .hub-notes-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .hub-note-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--hub-border);
+      border-radius: 16px;
+      padding: 24px;
+    }
+
+    .hub-note-item h4 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .hub-note-item p {
+      font-size: 0.88rem;
+      color: var(--hub-muted);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1024px) {
+      .hub-matrix,
+      .hub-notes-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body class="hub-page">
+
+  <!-- Concept Switcher Top Bar -->
+  <aside class="v8-concept-switcher" aria-label="Переключение концепций V8">
+    <div class="v8-switcher-brand">
+      <strong>DENTAL MASTER V8</strong>
+      <span>ХАБ КОНЦЕПЦИЙ</span>
+    </div>
+    <nav class="v8-switcher-nav">
+      <a href="concept-a.html" class="v8-switch-link">A: Cinematic Clinical</a>
+      <a href="concept-b.html" class="v8-switch-link">B: Luxury Editorial</a>
+      <a href="concept-c.html" class="v8-switch-link">C: Interactive Experience</a>
+      <a href="index.html" class="v8-switch-link is-active" aria-current="page">Все концепты</a>
+    </nav>
+  </aside>
+
+  <main>
+    <header class="hub-header">
+      <div class="hub-container">
+        <div class="hub-kicker">★ Редизайн концепций 2026</div>
+        <h1 class="hub-title">Три визуальные парадигмы <em>Dental Master V8</em></h1>
+        <p class="hub-lead">
+          Полный уход от шаблонных медицинских лендингов. Три самостоятельных архитектурных решения мирового уровня для филиала Прокшино. Оцените каждое на ПК и смартфоне.
+        </p>
+      </div>
+    </header>
+
+    <div class="hub-container">
+      <section class="hub-matrix">
+        <!-- Card Concept A -->
+        <article class="hub-card hub-card-a">
+          <div class="hub-card-letter">A</div>
+          <h2 class="hub-card-title">Cinematic Clinical</h2>
+          <div class="hub-card-subtitle">Высокотехнологичный бренд · Carl Zeiss</div>
+          <p class="hub-card-desc">
+            Иммерсивный темный интерфейс (Obsidian Emerald & Mint). Широкоформатная визуальная сцена, стеклянные плашки оптики Zeiss и сплит-конфигуратор услуг с мгновенным переключением.
+          </p>
+          <ul class="hub-card-traits">
+            <li><span class="dot"></span> <strong>Оптика Zeiss:</strong> Акцент на 25x увеличение и микрохирургию</li>
+            <li><span class="dot"></span> <strong>Интерактив:</strong> Widescreen Stage с переключением 5 процедур</li>
+            <li><span class="dot"></span> <strong>Мобильность:</strong> Компактный 1-й экран 390px, smart FAB</li>
+          </ul>
+          <a href="concept-a.html" class="hub-card-btn">
+            Открыть Концепт A →
+          </a>
+        </article>
+
+        <!-- Card Concept B -->
+        <article class="hub-card hub-card-b">
+          <div class="hub-card-letter">B</div>
+          <h2 class="hub-card-title">Luxury Editorial</h2>
+          <div class="hub-card-subtitle">Ателье здоровья · В стиле REGINA</div>
+          <p class="hub-card-desc">
+            Атмосфера закрытого швейцарского ателье. Теплая фактура благородной бумаги, италийская типографика Cormorant Garamond, плавающий портретный фрейм и нумерованный каталог процедур.
+          </p>
+          <ul class="hub-card-traits">
+            <li><span class="dot"></span> <strong>ДНК REGINA:</strong> Floating portrait frame с динамической сменой фото</li>
+            <li><span class="dot"></span> <strong>Типографика:</strong> Журнальная верстка, тонкие линии, монографии врачей</li>
+            <li><span class="dot"></span> <strong>Приватность:</strong> Атмосфера клубного доверия и спокойствия</li>
+          </ul>
+          <a href="concept-b.html" class="hub-card-btn">
+            Открыть Концепт B →
+          </a>
+        </article>
+
+        <!-- Card Concept C -->
+        <article class="hub-card hub-card-c">
+          <div class="hub-card-letter">C</div>
+          <h2 class="hub-card-title">Interactive Experience</h2>
+          <div class="hub-card-subtitle">Пациент-центричный конфигуратор</div>
+          <p class="hub-card-desc">
+            Швейцарский чистый клинический стиль (Snow & Vivid Teal). Первый экран начинается с вопроса «Что для вас в приоритете?» и мгновенно формирует персональный расчет стоимости, врача и времени визита.
+          </p>
+          <ul class="hub-card-traits">
+            <li><span class="dot"></span> <strong>UX пользы:</strong> Моментальный расчет параметров без чтения простыней</li>
+            <li><span class="dot"></span> <strong>Подбор врача:</strong> Автоматическая привязка профильного хирурга/ортодонта</li>
+            <li><span class="dot"></span> <strong>Запись в 1 клик:</strong> Предустановленная конфигурация в окне записи</li>
+          </ul>
+          <a href="concept-c.html" class="hub-card-btn">
+            Открыть Концепт C →
+          </a>
+        </article>
+      </section>
+
+      <!-- Technical Guarantees -->
+      <section class="hub-notes">
+        <div class="hub-notes-grid">
+          <div class="hub-note-item">
+            <h4>📱 Проверено на 390 px и 1440 px</h4>
+            <p>
+              Каждый концепт протестирован без горизонтального скролла, с адаптированными touch-кнопками, скрываемым FAB и идеальной читаемостью.
+            </p>
+          </div>
+          <div class="hub-note-item">
+            <h4>🔒 Изолированный Preview</h4>
+            <p>
+              Концепции V8 развернуты в отдельной ветке и на независимом хостинге, не затрагивая боевые сайты WordPress и PR #3.
+            </p>
+          </div>
+          <div class="hub-note-item">
+            <h4>⚡ Чистый стек без зависимостей</h4>
+            <p>
+              Нативный семантический HTML5, чистый CSS без тяжелых фреймворков и модульный JS c поддержкой стандарта Web Accessibility.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
