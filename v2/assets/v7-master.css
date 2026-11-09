@@ -2610,8 +2610,12 @@ dialog[open]::backdrop {
     max-width: 100%;
   }
   
+  body.v2-page .service-selector,
+  body.v2-page.clinic-prokshino .service-selector,
+  body.v2-page.clinic-ispanskie .service-selector,
   .service-selector {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 28px !important;
   }
   
   .gallery-grid {
@@ -2789,6 +2793,40 @@ dialog[open]::backdrop {
     flex-direction: column;
     align-items: flex-start;
     gap: 14px;
+  }
+
+  body.v2-page .service-selector,
+  body.v2-page.clinic-prokshino .service-selector,
+  body.v2-page.clinic-ispanskie .service-selector,
+  .service-selector {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  body.v2-page .selector-column,
+  .selector-column {
+    padding: 16px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .selector-column-head {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .selector-column-head h3,
+  .selector-column-head h4 {
+    font-size: 0.88rem !important;
+    white-space: nowrap !important;
+  }
+
+  .selector-column-head .section-index {
+    font-size: 0.72rem !important;
+    white-space: nowrap !important;
   }
   
   /* Horizontal Scrollable Categories on Mobile */
