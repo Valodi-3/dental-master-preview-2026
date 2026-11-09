@@ -32,13 +32,11 @@ PR [#1, `feat(tech): Dental Master Technical Foundation 2026`](https://github.co
 
 Текущая GitHub Pages репозитория публична, опубликована из `main`/корня. Безопасного отдельного Pages-preview на этом же настроенном target не обнаружено. Переключать source/build этой Pages-сборки небезопасно: это заменило бы действующий preview. PR Antigravity остаётся независимым и открытым. До отдельного изолированного hosting-проекта результат готовится как self-contained V2 static build; публичная ссылка на новый живой сайт не будет заявляться без изолированного origin.
 
-
 ## QA re-check and responsive/asset regression context
 
 On 9 November 2026, the current tech branch was fetched read-only and verified at commit `72ad9a3` (the preceding branch commit is `a1607f7`). Its 30-case runner and existing `tests/qa-report.json` are available at [the tech branch](https://github.com/Valodi-3/dental-master-preview-2026/tree/tech/dental-master-foundation-2026/tests); the committed report states **27 passed / 3 failed**. It reports a 36px Prokshino overflow at 1024px, absent booking trigger, and three external Spanish doctor-photo paths.
 
 The design branch's first direct Playwright geometry pass recorded `documentElement.scrollWidth === window.innerWidth` on both root pages at 390, 768, 1024, 1440 and 1920px (no horizontal overflow). Its Spanish roster already points to five local files under `design/assets/doctors/`, all of which exist and are sourced from clinic-published portraits. The first run of the unchanged foundation test runner against the actual local design branch produced **25/30**: all 18 viewport tests passed; the design branch lacked the required root booking modal/trigger on both pages and a root-page quick-search control, and the runner counted below-fold lazy local portraits as broken because it did not scroll them into view. No technical test or `app.js` change is part of this repair; the final unmodified-suite run is recorded separately.
-
 
 ## Final root-page regression run
 
@@ -50,7 +48,6 @@ The tech branch's existing 27/30 report called the three below-fold portraits br
 
 The 36px Prokshino overflow **was** reproduced in the untouched tech commit at 1024px (`scrollWidth=1060`, viewport 1024). The separate design branch already fixed it before this regression patch: pre-patch DOM checks and the final runner both measure 0px at 1024px and the other requested widths. This repair therefore preserves its responsive CSS instead of applying a no-op rewrite. Baseline and final screenshots are in `design/v2qa/screenshots/`.
 
-
 ## Final review and publication boundary
 
-GitHub API/CLI verification confirms [PR #2](https://github.com/Valodi-3/dental-master-preview-2026/pull/2) is `OPEN · Draft`, base `main`, head `design/manus-dental-master-2026`, merge timestamp `null`. The design remote and local final head are both `0f85c775b75421ec95d8980ce1ad5371930eb3ac`. Remote `main` stayed at `9a99dc7baa6484bbec8b1823152f60a59bdbae2e`; remote tech stayed at `72ad9a3de2668eb2fa7e3f3034a844f0d085fe69`. Original PR #1 remains open, draft and unmerged. The PR diff and staged/committed change set contain no `app.js` or tech-test changes; no production site, GitHub Pages setting or deployment was touched.
+GitHub API/CLI verification confirms [PR #2](https://github.com/Valodi-3/dental-master-preview-2026/pull/2) is `OPEN · Draft`, base `main`, head `design/manus-dental-master-2026`, merge timestamp `null`. After the final push, the local `HEAD` and remote design branch were verified equal with `git rev-parse` and `git ls-remote`; the exact current revision is visible in the linked PR. Remote `main` stayed at `9a99dc7baa6484bbec8b1823152f60a59bdbae2e`; remote tech stayed at `72ad9a3de2668eb2fa7e3f3034a844f0d085fe69`. Original PR #1 remains open, draft and unmerged. The PR diff and staged/committed change set contain no `app.js` or tech-test changes; no production site, GitHub Pages setting or deployment was touched.
