@@ -1,0 +1,179 @@
+{
+  "testedAt": "2026-11-09T06:24:41.484Z",
+  "baseUrl": "http://127.0.0.1:8765",
+  "summary": {
+    "totalTests": 30,
+    "passed": 27,
+    "failed": 3
+  },
+  "pages": {
+    "prokshino.html": {
+      "name": "ДантистЪ Прокшино",
+      "file": "prokshino.html",
+      "url": "http://127.0.0.1:8765/prokshino.html",
+      "viewports": {
+        "320": {
+          "status": "PASS"
+        },
+        "360": {
+          "status": "PASS"
+        },
+        "375": {
+          "status": "PASS"
+        },
+        "390": {
+          "status": "PASS"
+        },
+        "430": {
+          "status": "PASS"
+        },
+        "768": {
+          "status": "PASS"
+        },
+        "1024": {
+          "status": "FAIL",
+          "overflowPx": 36,
+          "violatingElements": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "header-actions",
+              "right": 1060,
+              "width": 299,
+              "overflowPx": 36
+            },
+            {
+              "tag": "button",
+              "id": null,
+              "className": "btn btn-primary btn-glow",
+              "right": 1060,
+              "width": 223,
+              "overflowPx": 36
+            },
+            {
+              "tag": "svg",
+              "id": null,
+              "className": "[object SVGAnimatedString]",
+              "right": 1037,
+              "width": 15,
+              "overflowPx": 13
+            },
+            {
+              "tag": "path",
+              "id": null,
+              "className": "[object SVGAnimatedString]",
+              "right": 1034,
+              "width": 9,
+              "overflowPx": 10
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "hero-ambient-glow",
+              "right": 1144,
+              "width": 600,
+              "overflowPx": 120
+            }
+          ]
+        },
+        "1440": {
+          "status": "PASS"
+        },
+        "1920": {
+          "status": "PASS"
+        }
+      },
+      "functionalChecks": {
+        "zeroLocalhost": {
+          "status": "PASS"
+        },
+        "imageIntegrity": {
+          "status": "PASS"
+        },
+        "modalAccessibility": {
+          "status": "FAIL",
+          "details": {
+            "exists": false
+          }
+        },
+        "zeroFakeForms": {
+          "status": "PASS"
+        },
+        "searchFilter": {
+          "status": "PASS",
+          "note": "Search evaluated"
+        },
+        "mobileDrawer": {
+          "status": "PASS",
+          "branchHref": "ispanskie.html"
+        }
+      }
+    },
+    "ispanskie.html": {
+      "name": "ДантистЪ Испанские кварталы",
+      "file": "ispanskie.html",
+      "url": "http://127.0.0.1:8765/ispanskie.html",
+      "viewports": {
+        "320": {
+          "status": "PASS"
+        },
+        "360": {
+          "status": "PASS"
+        },
+        "375": {
+          "status": "PASS"
+        },
+        "390": {
+          "status": "PASS"
+        },
+        "430": {
+          "status": "PASS"
+        },
+        "768": {
+          "status": "PASS"
+        },
+        "1024": {
+          "status": "PASS"
+        },
+        "1440": {
+          "status": "PASS"
+        },
+        "1920": {
+          "status": "PASS"
+        }
+      },
+      "functionalChecks": {
+        "zeroLocalhost": {
+          "status": "PASS"
+        },
+        "imageIntegrity": {
+          "status": "FAIL",
+          "broken": [
+            {
+              "src": "https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/anna-karapetyan-960.jpg",
+              "alt": "Карапетян Анна Артаковна — Врач-ортодонт"
+            },
+            {
+              "src": "https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/portrait-01.webp",
+              "alt": "Машрабова Азиза Махмудовна — Стоматолог-терапевт, детский стоматолог"
+            }
+          ]
+        },
+        "modalAccessibility": {
+          "status": "PASS"
+        },
+        "zeroFakeForms": {
+          "status": "PASS"
+        },
+        "searchFilter": {
+          "status": "PASS",
+          "note": "Search evaluated"
+        },
+        "mobileDrawer": {
+          "status": "PASS",
+          "branchHref": "prokshino.html"
+        }
+      }
+    }
+  }
+}
