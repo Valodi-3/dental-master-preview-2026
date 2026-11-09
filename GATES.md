@@ -90,7 +90,7 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
   EVIDENCE: `DRAFT_SAFETY_PASS branch=design/manus-dental-master-2026 pr=2 openDraft=true mainUnchanged=true techUnchanged=true protectedFiles=0`; worktree clean and local/remote design heads matched after push.
 
 - [x] G17: mobile/desktop design feels polished, inspired by the supplied editorial emerald reference without copying its portfolio layout or introducing irrelevant imagery.
-  EVIDENCE: final Prokshino emerald/champagne mobile and desktop, distinct warm Spanish Quarters collage, and both 390px three-choice phone dialogs were visually reviewed; genuine clinic assets and responsive controls confirmed.
+  EVIDENCE: historical iteration 3 only; its warm Spanish Quarters composition was superseded by G18–G19 after the user's 3/10 critique, and is not a claim about the current design. Three-way booking remains in G14/G19.
 
 
 Final artifacts for this iteration: [`layout-metrics.json`](design/v2qa/layout-metrics.json), [`premium-booking-choice-prokshino-390.png`](design/v2qa/screenshots/premium-booking-choice-prokshino-390.png), [`premium-booking-choice-ispanskie-390.png`](design/v2qa/screenshots/premium-booking-choice-ispanskie-390.png), and [`V2_SCREENSHOT_INDEX.md`](docs/V2_SCREENSHOT_INDEX.md).
@@ -109,7 +109,7 @@ G16 confirms the existing PR is open and Draft; no merge, production change, or 
   EXPECT: `V2_BROWSER_QA_PASS` и `NEW_DIRECTION_UX_PASS`
   EVIDENCE: final run `routes=41`, `routeChecks=369`, `zoomChecks=123`, `totalLayoutChecks=492`, `overflow=0`, `brokenImages=0`, `interactionErrors=0`; `NEW_DIRECTION_UX_PASS` for both branches at 320/390/1440, 3 booking choices, no early redirect; 62 screenshot files.
 
-- [ ] G20: новая итерация остаётся в отдельной дизайн-ветке и открытом Draft PR, а исходные защищённые refs/production не меняются.
+- [x] G20: новая итерация остаётся в отдельной дизайн-ветке и открытом Draft PR, а исходные защищённые refs/production не меняются.
   CHECK: `python design/draft_safety_qa.py`
   EXPECT: `DRAFT_SAFETY_PASS`
-  EVIDENCE: pending
+  EVIDENCE: `DRAFT_SAFETY_PASS branch=design/manus-dental-master-2026 pr=2 openDraft=true mainUnchanged=true techUnchanged=true protectedFiles=0`; `main=9a99dc7baa6484bbec8b1823152f60a59bdbae2e`, `tech=72ad9a3de2668eb2fa7e3f3034a844f0d085fe69`; PR #2 OPEN · Draft · base `main`, `mergedAt=null`; local/remote design heads matched and worktree was clean after push.
