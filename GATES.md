@@ -44,10 +44,10 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
   EXPECT: `V2_PREVIEW_PASS`
   EVIDENCE: `index.html` local entry, 41 routes; run `python -m http.server 4173 --bind 127.0.0.1`, then open `/` or `/v2/`. Existing Pages configuration was not changed.
 
-- [ ] G9: only the requested design branch is published and a Draft PR is opened to `main`; `main`, tech foundation, WordPress, current production, Pages settings and PR #1 are unchanged; no merge/deploy occurs.
+- [x] G9: only the requested design branch is published and a Draft PR is opened to `main`; `main`, tech foundation, WordPress, current production, Pages settings and PR #1 are unchanged; no merge/deploy occurs.
   CHECK: verify clean branch/remote SHA and `gh pr view --json isDraft,baseRefName,headRefName,url`.
   EXPECT: PR `isDraft=true`, base `main`, head `design/manus-dental-master-2026`, no merge or deployment.
-  EVIDENCE: pending final commit, push, and draft-PR verification.
+  EVIDENCE: [PR #2](https://github.com/Valodi-3/dental-master-preview-2026/pull/2) is `OPEN · Draft`, base `main`, head `design/manus-dental-master-2026`; remote/local branch SHA `0f85c775b75421ec95d8980ce1ad5371930eb3ac`. Remote `main` remains `9a99dc7baa6484bbec8b1823152f60a59bdbae2e`; tech remains `72ad9a3de2668eb2fa7e3f3034a844f0d085fe69`; PR #1 remains open/draft/unmerged; no `app.js` or test files are in the diff.
 
 - [x] G10: the exact 30-check Playwright suite from the updated tech branch passes against both root clinic pages; all nine widths include the requested 390, 768, 1024, 1440 and 1920px checks, every rendered image is loaded, each header trigger opens/closes a real booking dialog, and quick search returns sourced treatment rows.
   CHECK: `python .work/dental_regression/run_tech_qa.py --expect-30`

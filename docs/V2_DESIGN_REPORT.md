@@ -1,10 +1,12 @@
 # Dental Master V2 — итоговый дизайн и контроль качества
 
-**Статус:** готовая локально обслуживаемая статическая сборка на отдельной ветке `design/manus-dental-master-2026`.
+**Статус:** готовая локально обслуживаемая статическая сборка на отдельной ветке `design/manus-dental-master-2026`; Draft PR #2 открыт на проверку в `main`, без merge и deploy.
 
 **Локальная точка входа:** [`index.html`](../index.html) → V2 chooser (`v2/index.html`) → сайты двух филиалов. Страница V1 и концепты сохранены в архиве на локальном hub.
 
 **Ветка проекта:** [GitHub · design/manus-dental-master-2026](https://github.com/Valodi-3/dental-master-preview-2026/tree/design/manus-dental-master-2026). Это ссылка на исходники ветки, не на запущенный публичный сайт.
+
+**Draft PR:** [#2 — Dental Master V2 preview and regression fixes](https://github.com/Valodi-3/dental-master-preview-2026/pull/2), base `main`, head `design/manus-dental-master-2026`; состояние `OPEN · Draft`, не объединён.
 
 ## Результат
 
