@@ -1,0 +1,129 @@
+{
+  "tech_ref": "origin/tech/dental-master-foundation-2026",
+  "tech_commit": "72ad9a3de2668eb2fa7e3f3034a844f0d085fe69",
+  "tech_original_qa": {
+    "totalTests": 30,
+    "passed": 27,
+    "failed": 3
+  },
+  "tech_original_failures": {
+    "prokshino.html": {
+      "viewports": {
+        "1024": {
+          "status": "FAIL",
+          "overflowPx": 36,
+          "violatingElements": [
+            {
+              "tag": "div",
+              "id": null,
+              "className": "header-actions",
+              "right": 1060,
+              "width": 299,
+              "overflowPx": 36
+            },
+            {
+              "tag": "button",
+              "id": null,
+              "className": "btn btn-primary btn-glow",
+              "right": 1060,
+              "width": 223,
+              "overflowPx": 36
+            },
+            {
+              "tag": "svg",
+              "id": null,
+              "className": "[object SVGAnimatedString]",
+              "right": 1037,
+              "width": 15,
+              "overflowPx": 13
+            },
+            {
+              "tag": "path",
+              "id": null,
+              "className": "[object SVGAnimatedString]",
+              "right": 1034,
+              "width": 9,
+              "overflowPx": 10
+            },
+            {
+              "tag": "div",
+              "id": null,
+              "className": "hero-ambient-glow",
+              "right": 1144,
+              "width": 600,
+              "overflowPx": 120
+            }
+          ]
+        }
+      },
+      "functional": {
+        "modalAccessibility": {
+          "status": "FAIL",
+          "details": {
+            "exists": false,
+            "error": "Trigger element [data-booking-trigger] not found"
+          }
+        }
+      }
+    },
+    "ispanskie.html": {
+      "viewports": {},
+      "functional": {
+        "imageIntegrity": {
+          "status": "FAIL",
+          "broken": [
+            {
+              "src": "https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/portrait-02.webp",
+              "alt": "Наджафов Азер Этибарович — Главный врач, стоматолог-терапевт, ортопед, хирург"
+            },
+            {
+              "src": "https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/anna-karapetyan-960.jpg",
+              "alt": "Карапетян Анна Артаковна — Врач-ортодонт"
+            },
+            {
+              "src": "https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/portrait-01.webp",
+              "alt": "Машрабова Азиза Махмудовна — Стоматолог-терапевт, детский стоматолог"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "tech_screenshots": {
+    "prokshino_1024": {
+      "viewport": 1024,
+      "htmlScrollWidth": 1060,
+      "bodyScrollWidth": 1060,
+      "overflowPx": 36,
+      "headerActionsRight": 1060
+    },
+    "broken_portraits": []
+  },
+  "design_branch_final_qa": {
+    "totalTests": 30,
+    "passed": 30,
+    "failed": 0
+  },
+  "mobile_online_routes": {
+    "prokshino": {
+      "href": "https://dantist-prokshino.ru/online-zapis/",
+      "visible": true,
+      "label": "Открыть DentalPRO"
+    },
+    "ispanskie": {
+      "href": "https://dantist-prokshino.ru/online-zapis/",
+      "visible": true,
+      "label": "Онлайн-запись · Прокшино ↗"
+    }
+  },
+  "current_design_prepatch_measurement": "0px overflow at 390/768/1024/1440/1920 on both pages; captured in regression-before-metrics.json",
+  "final_screenshot_set": [
+    "tech-baseline-prokshino-1024.png",
+    "regression-after-prokshino-1024.png",
+    "tech-baseline-ispanskie-doctors-390.png",
+    "regression-after-ispanskie-doctors-390.png",
+    "regression-after-booking-prokshino-390.png",
+    "regression-after-booking-ispanskie-390.png",
+    "regression-after-quick-search-prokshino-390.png"
+  ]
+}

@@ -1,29 +1,55 @@
-# Gates: Dental Master Design 2026
+# Gates: Dental Master V2 and responsive/booking regression fixes
 
-OWNS: prokshino.html, prokshino.css, ispanskie.html, ispanskie.css, prices-prokshino.html, prices-ispanskie.html, concepts.html, design/**, docs/**
+OWNS: `index.html`, `prokshino.html`, `ispanskie.html`, `prokshino.css`, `ispanskie.css`, `design/**`, `docs/V2_*`, `v2/**`, `GATES.md`.
 
-Scope: Deliver two distinct, content-accurate clinic previews, three responsive Prokshino hero concepts, separate 254-item price catalogues, and measured responsive QA without changing Antigravity's technical files.
+Scope: Preserve the complete V1 visual design, local verified media and both 254-item price lists; keep V1 pages reachable from the V2-first local hub. Resolve or verify the reported issues against the actual design branch, execute the exact 30-case QA suite from `origin/tech/dental-master-foundation-2026` without modifying that foundation, and create a Draft PR only. Do not modify `app.js`, tech-branch tests, WordPress, production sites, `main`, Pages settings, or merge/deploy.
 
-- [x] G1: both clinic previews use verified source facts and real clinic photography
-  CHECK: python design/verify_design.py --static
-  EXPECT: STATIC_DESIGN_PASS
-  EVIDENCE: STATIC_DESIGN_PASS; official source URLs and verified content in docs/SOURCE_NOTES.md; official clinic, staff and gallery photos in design/assets/.
+- [x] G1: V2 chooser and both clinic sites expose a navigable multi-page information architecture; all 41 generated static routes and assets resolve.
+  CHECK: `python design/v2_verify.py --architecture`
+  EXPECT: `V2_ARCHITECTURE_PASS`
+  EVIDENCE: `routes=41`, all required page types, `brokenLinks=0` on the final check.
 
-- [x] G2: each standalone catalogue preserves all 254 services and its live search, filters, and expandable details
-  CHECK: python design/verify_design.py --catalogs
-  EXPECT: CATALOG_QA_PASS
-  EVIDENCE: CATALOG_QA_PASS; exact 254-row name/price comparison to both current production catalogues produced zero mismatches; row and category interaction checks pass.
+- [x] G2: V2 service selector consumes the canonical 254-item data, changes direction/procedure in place, displays only sourced prices, links to category detail pages, and does not diagnose or prescribe.
+  CHECK: `python design/v2_verify.py --selector-data`
+  EXPECT: `V2_SELECTOR_DATA_PASS`
+  EVIDENCE: `services=254`, `categories=10`, branch price differences `0`, local-catalogue mismatches `0`.
 
-- [x] G3: widths 320, 360, 375, 390, 430, 768, 1024, 1440, and 1920 have no unintended horizontal overflow or out-of-bounds content, with bounding-box evidence and section screenshots at 390px and 1440px
-  CHECK: python design/visual_qa.py --all
-  EXPECT: RESPONSIVE_QA_PASS
-  EVIDENCE: final browser run passed; 0 overflow, 0 out-of-bounds visible elements, 0 broken images across both main pages; both catalogues pass all nine widths. Evidence: design/qa/layout-metrics.json and 28 section captures.
+- [x] G3: booking choice flows expose real phone and verified DentalPRO links, preserve selected-interest context without claiming data transfer, and support Escape/outside close.
+  CHECK: `python design/v2_verify.py --booking`
+  EXPECT: `V2_BOOKING_PASS`
+  EVIDENCE: Verified DentalPRO, E.164 `tel:` number, labelled WhatsApp/Telegram, no fake forms. Root headers open the real in-page modal; Spanish Quarters labels its Prokshino online destination.
 
-- [x] G4: the three saved Prokshino concepts differ materially and show mobile and desktop composition
-  EVIDENCE: concepts.html and concepts.css; six concept section screenshots at 390px and 1440px, indexed in docs/SCREENSHOT_INDEX.md.
+- [x] G4: doctor index/profiles use sourced team facts and official/local portrait assets.
+  CHECK: `python design/v2_verify.py --doctors`
+  EXPECT: `V2_DOCTORS_PASS`
+  EVIDENCE: `doctors=5`, `profiles=10`, official portraits/certificate links verified; root Spanish roster has five loaded local portraits.
 
-- [x] G5: screenshots show a coherent visual result from hero through footer for both clinics at 390px and 1440px
-  EVIDENCE: 28 section screenshots plus full-page and header-inclusive viewport captures; docs/SCREENSHOT_INDEX.md.
+- [x] G5: each separate full price catalogue retains all 254 exact names/prices, categories, search and accessible details.
+  CHECK: `python design/v2_verify.py --catalogues`
+  EXPECT: `V2_CATALOGUES_PASS`
+  EVIDENCE: 254 exact rows per branch, zero name/price mismatches, ten categories, search and filters enabled.
 
-- [x] G6: only the requested design branch is published; production, main, and Antigravity-owned files remain unchanged
-  EVIDENCE: origin/design/manus-dental-master-2026 published and verified; working tree is clean; app.js is unchanged; no production or existing Pages settings were modified.
+- [x] G6: Chromium exercises the V2 selector, booking workflow and responsive routes at 320, 360, 375, 390, 430, 768, 1024, 1440 and 1920px, including 200% text scaling.
+  CHECK: `python design/v2_visual_qa.py`
+  EXPECT: `V2_BROWSER_QA_PASS`
+  EVIDENCE: final run: `routes=41`, `routeChecks=369`, `zoomChecks=123`, `totalLayoutChecks=492`, `overflow=0`, `brokenImages=0`, `interactionErrors=0`.
+
+- [x] G7: each major V2 page type has browser captures and old/new comparisons; source URLs/findings are recorded.
+  CHECK: `python design/v2_verify.py --evidence`
+  EXPECT: `V2_EVIDENCE_PASS`
+  EVIDENCE: `screenshots=50`, `measuredRoutes=369`, `zoomChecks=123`, nine widths; complete [screenshot index](docs/V2_SCREENSHOT_INDEX.md), source record `docs/V2_SOURCES.md`.
+
+- [x] G8: a complete openable local preview is provided; lack of isolated public hosting is documented.
+  CHECK: `python design/v2_verify.py --preview`
+  EXPECT: `V2_PREVIEW_PASS`
+  EVIDENCE: `index.html` local entry, 41 routes; run `python -m http.server 4173 --bind 127.0.0.1`, then open `/` or `/v2/`. Existing Pages configuration was not changed.
+
+- [ ] G9: only the requested design branch is published and a Draft PR is opened to `main`; `main`, tech foundation, WordPress, current production, Pages settings and PR #1 are unchanged; no merge/deploy occurs.
+  CHECK: verify clean branch/remote SHA and `gh pr view --json isDraft,baseRefName,headRefName,url`.
+  EXPECT: PR `isDraft=true`, base `main`, head `design/manus-dental-master-2026`, no merge or deployment.
+  EVIDENCE: pending final commit, push, and draft-PR verification.
+
+- [x] G10: the exact 30-check Playwright suite from the updated tech branch passes against both root clinic pages; all nine widths include the requested 390, 768, 1024, 1440 and 1920px checks, every rendered image is loaded, each header trigger opens/closes a real booking dialog, and quick search returns sourced treatment rows.
+  CHECK: `python .work/dental_regression/run_tech_qa.py --expect-30`
+  EXPECT: `TECH_QA_SUMMARY total=30 passed=30 failed=0`.
+  EVIDENCE: the unmodified suite passes 30/30; separate responsive smoke passes 10/10 requested page-width checks, 2/2 branch booking flows, six search states and 5/5 official local doctor portraits. Reports/screenshots: `design/v2qa/tech-root-qa-30-30.json`, `regression-validation.json`, `regression-comparison.json` and `screenshots/regression-*`.

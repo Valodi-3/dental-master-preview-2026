@@ -17,9 +17,9 @@
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="ДантистЪ Испанские кварталы — главная"><img src="design/assets/prokshino/logo.png" alt="ДантистЪ — стоматологическая клиника" width="213" height="44"><span class="brand-location">Испанские кварталы</span></a>
       <nav class="desktop-nav" aria-label="Основная навигация"><a href="#services">Направления</a><a href="#clinic">Пространство</a><a href="#doctors">Врачи</a><a href="prices-ispanskie.html">Прайс · 254</a><a href="#contacts">Контакты</a></nav>
-      <div class="header-actions"><a class="header-phone" href="tel:+79045199697">+7 (904) 519-96-97</a><a class="button button-primary header-booking" href="tel:+79045199697">Позвонить</a><button class="mobile-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button></div>
+      <div class="header-actions"><a class="header-phone" href="tel:+79045199697">+7 (904) 519-96-97</a><button class="button button-primary header-booking" type="button" data-booking-trigger aria-haspopup="dialog" aria-controls="booking-modal">Записаться</button><button class="mobile-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button></div>
     </div>
-    <nav class="mobile-drawer" id="mobile-nav" aria-label="Мобильное меню" aria-hidden="true"><a href="#services">Направления лечения</a><a href="#clinic">Клиника и фотографии</a><a href="#doctors">Врачи</a><a href="prices-ispanskie.html">Прайс · 254 услуги</a><a href="#contacts">Контакты и маршрут</a><div class="mobile-drawer-actions"><a class="button button-primary" href="tel:+79045199697">Позвонить в клинику</a><a class="button button-quiet" href="prices-ispanskie.html">Открыть прайс</a></div></nav>
+    <nav class="mobile-drawer" id="mobile-nav" aria-label="Мобильное меню" aria-hidden="true"><a href="#services">Направления лечения</a><a href="#clinic">Клиника и фотографии</a><a href="#doctors">Врачи</a><a href="prices-ispanskie.html">Прайс · 254 услуги</a><a href="#contacts">Контакты и маршрут</a><div class="mobile-drawer-actions"><a class="button button-primary" href="tel:+79045199697">Позвонить в клинику</a><a class="button button-primary" href="https://dantist-prokshino.ru/online-zapis/" target="_blank" rel="noopener noreferrer">Онлайн-запись · Прокшино ↗</a><a class="button button-quiet" href="prices-ispanskie.html">Открыть прайс</a></div></nav>
   </header>
 
   <main id="main-content">
@@ -29,6 +29,42 @@
         <div class="hero-collage"><figure class="collage-main"><img src="design/assets/ispanskie/gallery-2.jpg" alt="Врач помогает пациенту осмотреть улыбку в зеркале" width="824" height="549" fetchpriority="high"><figcaption>Внимательный разговор — часть приёма</figcaption></figure><figure class="collage-small"><img src="design/assets/ispanskie/gallery-5.jpg" alt="Стоматологическое кресло и оборудование в клинике" width="822" height="586" loading="lazy"><figcaption>Пространство клиники</figcaption></figure><div class="collage-note"><span>ДАНТИСТЪ</span><strong>Рядом с домом.<br>По делу и с заботой.</strong></div><span class="collage-number" aria-hidden="true">01</span></div>
       </div>
       <div class="container hero-bottomline"><span>Понятный план после осмотра</span><span>254 позиции в открытом прайсе</span><span>Запись по телефону</span></div>
+      <div class="quick-price-search" data-home-price-search aria-label="Быстрый поиск по официальному прайсу">
+        <div class="quick-price-search-inner">
+          <div class="quick-price-copy">
+            <p class="quick-price-kicker">ПРАЙС · 254 ПОЗИЦИИ</p>
+            <h2>Найдите цену<br><em>до визита.</em></h2>
+            <p>Примеры точных позиций из каталога. Врач определит план лечения после осмотра.</p>
+          </div>
+          <div class="quick-price-panel">
+            <label for="price-search">Быстрый поиск по прайсу</label>
+            <input id="price-search" type="search" autocomplete="off" placeholder="Например: кариес или пломба" aria-describedby="quick-price-status">
+            <div class="quick-price-results" aria-live="polite">
+          <article class="catalogue-item quick-price-item" data-home-price-row data-search="Лечение кариеса Восстановление зуба пломбой с использованием фотополимеров (1 поверхность)">
+            <span class="quick-price-category">Лечение кариеса</span>
+            <strong class="quick-price-name">Восстановление зуба пломбой с использованием фотополимеров (1 поверхность)</strong>
+            <span class="quick-price-value">4 950 ₽</span>
+            <a class="quick-price-link" href="prices-ispanskie.html#treatment">Позиция в прайсе <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="catalogue-item quick-price-item" data-home-price-row data-search="Лечение кариеса Восстановление зуба пломбой с использованием фотополимеров (2 поверхности)">
+            <span class="quick-price-category">Лечение кариеса</span>
+            <strong class="quick-price-name">Восстановление зуба пломбой с использованием фотополимеров (2 поверхности)</strong>
+            <span class="quick-price-value">5 500 ₽</span>
+            <a class="quick-price-link" href="prices-ispanskie.html#treatment">Позиция в прайсе <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="catalogue-item quick-price-item" data-home-price-row data-search="Лечение кариеса Восстановление зуба пломбой с использованием фотополимеров(3 поверхности)">
+            <span class="quick-price-category">Лечение кариеса</span>
+            <strong class="quick-price-name">Восстановление зуба пломбой с использованием фотополимеров(3 поверхности)</strong>
+            <span class="quick-price-value">6 050 ₽</span>
+            <a class="quick-price-link" href="prices-ispanskie.html#treatment">Позиция в прайсе <span aria-hidden="true">↗</span></a>
+          </article>
+            </div>
+            <p class="quick-price-empty" data-home-price-empty hidden>В быстрых примерах нет совпадений. <a href="prices-ispanskie.html">Откройте полный прайс на 254 услуги.</a></p>
+            <p class="quick-price-status" id="quick-price-status" data-home-price-status aria-live="polite">Быстрые примеры из официального прайса. Полный каталог — 254 услуги.</p>
+            <a class="quick-price-all" href="prices-ispanskie.html">Открыть все 254 позиции <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="services-section section-pad" id="services" data-qa-section="services">
@@ -50,11 +86,11 @@
     <section class="doctors-section section-pad" id="doctors" data-qa-section="doctors">
       <div class="container"><div class="clinic-head doctors-head"><div><p class="eyebrow">03 / Врачи</p><h2>Знакомство с<br><em>командой клиники.</em></h2></div><p>Профили, стаж и обучение показаны по опубликованным материалам клиники. Нажмите «Подробнее», чтобы открыть образование и документы.</p></div>
         <div class="doctor-roster">
-          <article class="doctor-card doctor-card-feature"><img src="design/assets/doctors/danielyan.jpg" alt="Арам Даниелян, стоматолог-хирург и имплантолог" width="853" height="1280" loading="lazy"><div class="doctor-card-copy"><span class="doctor-index">01 / ХИРУРГИЯ · ИМПЛАНТОЛОГИЯ</span><h3>Даниелян Арам Яковлевич</h3><p>Стоматолог-хирург, имплантолог, ортопед, терапевт · стаж 25 лет.</p><details class="doctor-details"><summary>Подробнее об образовании и курсах</summary><div><p>Практика: имплантация Osstem и Straumann. Дополнительное обучение по хирургическим и ортопедическим протоколам, препарированию под виниры и лечению корневых каналов с использованием микроскопа.</p><ul class="cert-list"><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-osstem.webp" target="_blank" rel="noopener noreferrer">Базовый хирургический курс Osstem, 2018 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-implantation.webp" target="_blank" rel="noopener noreferrer">Имплантация: хирургические и ортопедические протоколы, 2018 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-veneers.webp" target="_blank" rel="noopener noreferrer">Препарирование под виниры, 2021 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-endodontics.webp" target="_blank" rel="noopener noreferrer">Лечение корневых каналов под микроскопом ↗</a></li></ul></div></details><a class="doctor-call" href="tel:+79045199697">Записаться по телефону ↗</a></div></article>
-          <article class="doctor-card"><img src="design/assets/doctors/nadzhafov.webp" alt="Азер Наджафов, врач-стоматолог и хирург-имплантолог" width="794" height="1280" loading="lazy"><div class="doctor-card-copy"><span class="doctor-index">02 / ХИРУРГИЯ</span><h3>Наджафов Азер Этибарович</h3><p>Врач-стоматолог, хирург-имплантолог · стаж 10 лет.</p><details class="doctor-details"><summary>Подробнее об образовании</summary><div><p>РНИМУ им. Н. И. Пирогова, специальность «Стоматология», квалификация «врач-стоматолог». Дополнительное обучение по реставрации жевательной группы зубов, синус-лифтингу и удалениям.</p><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/nadzhafov-restoration.webp" target="_blank" rel="noopener noreferrer">Сертификат обучения, 2022 ↗</a></div></details></div></article>
-          <article class="doctor-card"><img src="design/assets/doctors/fiasheva.webp" alt="Диана Фиашева, стоматолог-ортодонт" width="900" height="1350" loading="lazy"><div class="doctor-card-copy"><span class="doctor-index">03 / ОРТОДОНТИЯ</span><h3>Фиашева Диана Андзоровна</h3><p>Стоматолог-ортодонт · стаж 7 лет.</p><details class="doctor-details"><summary>Подробнее об образовании</summary><div><p>МГМСУ им. А. И. Евдокимова, специальность «Стоматология», квалификация «врач-стоматолог».</p></div></details></div></article>
-          <article class="doctor-card"><img src="design/assets/doctors/karapetyan.jpg" alt="Анна Карапетян, стоматолог-терапевт" width="960" height="960" loading="lazy"><div class="doctor-card-copy"><span class="doctor-index">04 / ТЕРАПИЯ</span><h3>Карапетян Анна Арменаковна</h3><p>Стоматолог-терапевт · стаж более 10 лет.</p><details class="doctor-details"><summary>Подробнее о дополнительном обучении</summary><div><p>Художественная реставрация фронтальных зубов; клиническая эндодонтия; эндодонтическое перелечивание.</p><ul class="cert-list"><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-restoration-2021.jpg" target="_blank" rel="noopener noreferrer">Художественная реставрация, 2021 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-ultimate-endo-2021.jpg" target="_blank" rel="noopener noreferrer">Клиническая эндодонтия, 2021 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-endodontic-retreatment-2021.jpg" target="_blank" rel="noopener noreferrer">Эндодонтическое перелечивание, 2021 ↗</a></li></ul></div></details></div></article>
-          <article class="doctor-card"><img src="design/assets/doctors/mashrabova.jpg" alt="Амина Машрабова, врач-стоматолог" width="1000" height="1000" loading="lazy"><div class="doctor-card-copy"><span class="doctor-index">05 / СТОМАТОЛОГИЯ</span><h3>Машрабова Амина Мубораккадамовна</h3><p>Врач-стоматолог · стаж более 5 лет.</p><details class="doctor-details"><summary>Подробнее об образовании</summary><div><p>Диплом специалиста по стоматологии. Ординатура по стоматологии ортопедической.</p></div></details></div></article>
+          <article class="doctor-card doctor-card-feature"><img src="design/assets/doctors/danielyan.jpg" alt="Арам Даниелян, стоматолог-хирург и имплантолог" width="853" height="1280" loading="eager" fetchpriority="low"><div class="doctor-card-copy"><span class="doctor-index">01 / ХИРУРГИЯ · ИМПЛАНТОЛОГИЯ</span><h3>Даниелян Арам Яковлевич</h3><p>Стоматолог-хирург, имплантолог, ортопед, терапевт · стаж 25 лет.</p><details class="doctor-details"><summary>Подробнее об образовании и курсах</summary><div><p>Практика: имплантация Osstem и Straumann. Дополнительное обучение по хирургическим и ортопедическим протоколам, препарированию под виниры и лечению корневых каналов с использованием микроскопа.</p><ul class="cert-list"><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-osstem.webp" target="_blank" rel="noopener noreferrer">Базовый хирургический курс Osstem, 2018 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-implantation.webp" target="_blank" rel="noopener noreferrer">Имплантация: хирургические и ортопедические протоколы, 2018 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-veneers.webp" target="_blank" rel="noopener noreferrer">Препарирование под виниры, 2021 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-endodontics.webp" target="_blank" rel="noopener noreferrer">Лечение корневых каналов под микроскопом ↗</a></li></ul></div></details><a class="doctor-call" href="tel:+79045199697">Записаться по телефону ↗</a></div></article>
+          <article class="doctor-card"><img src="design/assets/doctors/nadzhafov.webp" alt="Азер Наджафов, врач-стоматолог и хирург-имплантолог" width="794" height="1280" loading="eager" fetchpriority="low"><div class="doctor-card-copy"><span class="doctor-index">02 / ХИРУРГИЯ</span><h3>Наджафов Азер Этибарович</h3><p>Врач-стоматолог, хирург-имплантолог · стаж 10 лет.</p><details class="doctor-details"><summary>Подробнее об образовании</summary><div><p>РНИМУ им. Н. И. Пирогова, специальность «Стоматология», квалификация «врач-стоматолог». Дополнительное обучение по реставрации жевательной группы зубов, синус-лифтингу и удалениям.</p><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/nadzhafov-restoration.webp" target="_blank" rel="noopener noreferrer">Сертификат обучения, 2022 ↗</a></div></details></div></article>
+          <article class="doctor-card"><img src="design/assets/doctors/fiasheva.webp" alt="Диана Фиашева, стоматолог-ортодонт" width="900" height="1350" loading="eager" fetchpriority="low"><div class="doctor-card-copy"><span class="doctor-index">03 / ОРТОДОНТИЯ</span><h3>Фиашева Диана Андзоровна</h3><p>Стоматолог-ортодонт · стаж 7 лет.</p><details class="doctor-details"><summary>Подробнее об образовании</summary><div><p>МГМСУ им. А. И. Евдокимова, специальность «Стоматология», квалификация «врач-стоматолог».</p></div></details></div></article>
+          <article class="doctor-card"><img src="design/assets/doctors/karapetyan.jpg" alt="Анна Карапетян, стоматолог-терапевт" width="960" height="960" loading="eager" fetchpriority="low"><div class="doctor-card-copy"><span class="doctor-index">04 / ТЕРАПИЯ</span><h3>Карапетян Анна Арменаковна</h3><p>Стоматолог-терапевт · стаж более 10 лет.</p><details class="doctor-details"><summary>Подробнее о дополнительном обучении</summary><div><p>Художественная реставрация фронтальных зубов; клиническая эндодонтия; эндодонтическое перелечивание.</p><ul class="cert-list"><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-restoration-2021.jpg" target="_blank" rel="noopener noreferrer">Художественная реставрация, 2021 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-ultimate-endo-2021.jpg" target="_blank" rel="noopener noreferrer">Клиническая эндодонтия, 2021 ↗</a></li><li><a href="https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-endodontic-retreatment-2021.jpg" target="_blank" rel="noopener noreferrer">Эндодонтическое перелечивание, 2021 ↗</a></li></ul></div></details></div></article>
+          <article class="doctor-card"><img src="design/assets/doctors/mashrabova.jpg" alt="Амина Машрабова, врач-стоматолог" width="1000" height="1000" loading="eager" fetchpriority="low"><div class="doctor-card-copy"><span class="doctor-index">05 / СТОМАТОЛОГИЯ</span><h3>Машрабова Амина Мубораккадамовна</h3><p>Врач-стоматолог · стаж более 5 лет.</p><details class="doctor-details"><summary>Подробнее об образовании</summary><div><p>Диплом специалиста по стоматологии. Ординатура по стоматологии ортопедической.</p></div></details></div></article>
         </div>
       </div>
     </section>
@@ -66,7 +102,30 @@
     <section class="contact-section section-pad" id="contacts" data-qa-section="contacts"><div class="container contact-card"><div class="contact-heading"><p class="eyebrow">06 / Контакты</p><h2>Встретимся<br><em>рядом с домом.</em></h2><p>г. Москва, Коммунарка,<br>ул. Магеллана, 5</p></div><div class="contact-facts"><div><span>Позвонить</span><a href="tel:+79045199697">+7 (904) 519-96-97</a></div><div><span>Часы работы</span><strong>Ежедневно · 09:00–21:00</strong></div><div><span>Маршрут</span><a href="https://yandex.ru/maps/?mode=routes&rtext=~55.590341%2C37.444222&rtt=auto&ruri=~ymapsbm1%3A%2F%2Forg%3Foid%3D130358164202" target="_blank" rel="noopener noreferrer">Построить маршрут ↗</a></div><a class="button button-primary" href="tel:+79045199697">Позвонить и записаться</a></div></div></section>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#top">ДантистЪ <span>Испанские кварталы</span></a><span>Демонстрационный дизайн · 2026</span><a href="prokshino.html">Филиал в Прокшино ↗</a></div></footer>
+  <div class="booking-modal-overlay" id="booking-modal" aria-hidden="true">
+    <section class="booking-modal-card" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Закрыть окно записи">×</button>
+      <p class="booking-modal-kicker">ДАНТИСТЪ · ИСПАНСКИЕ КВАРТАЛЫ</p>
+      <h2 class="booking-modal-title" id="booking-modal-title">Как вам удобнее<br><em>записаться?</em></h2>
+      <div class="selected-service-pill" id="selected-service-pill" style="display:none"><span>Вы выбрали</span><strong id="selected-service-name"></strong></div>
+      <div class="booking-choice-grid">
+        <a class="booking-choice booking-choice-online" href="https://dantist-prokshino.ru/online-zapis/" target="_blank" rel="noopener noreferrer">
+          <span class="booking-choice-kicker">ОНЛАЙН</span>
+          <strong>Открыть DentalPRO · Прокшино</strong>
+          <span>Перейти к расписанию <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="booking-choice booking-choice-phone" href="tel:+79045199697">
+          <span class="booking-choice-kicker">ПО ТЕЛЕФОНУ</span>
+          <strong>+7 (904) 519-96-97</strong>
+          <span>Позвонить в клинику</span>
+        </a>
+      </div>
+      <p class="booking-modal-note">Официальная онлайн-ссылка открывает расписание филиала Прокшино. Чтобы записаться именно в Испанские кварталы, позвоните в клинику.</p>
+      <p class="booking-modal-meta">Ежедневно · 09:00–21:00</p>
+    </section>
+  </div>
   <script src="app.js"></script>
   <script src="design/price-ui.js"></script>
+  <script src="design/home-price-search.js"></script>
 </body>
 </html>

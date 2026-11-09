@@ -1,0 +1,73 @@
+[
+  {
+    "slug": "aram-danielyan",
+    "name": "Даниелян Арам Яковлевич",
+    "shortName": "Арам Даниелян",
+    "role": "Стоматолог-хирург, имплантолог, ортопед, терапевт",
+    "experience": "25 лет",
+    "portrait": "design/assets/doctors/danielyan.jpg",
+    "practice": "Имплантация с применением систем Osstem и Straumann.",
+    "education": "На официальной странице опубликованы сведения о дополнительном обучении по имплантации, хирургическим и ортопедическим протоколам, препарированию под виниры и лечению корневых каналов под микроскопом.",
+    "certificates": [
+      {"title": "Osstem: базовый хирургический курс, 2018", "url": "https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-osstem.webp"},
+      {"title": "Имплантация: хирургические и ортопедические протоколы, 2018", "url": "https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-implantation.webp"},
+      {"title": "Препарирование под виниры, 2021", "url": "https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-veneers.webp"},
+      {"title": "Лечение корневых каналов под микроскопом", "url": "https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/danielyan-endodontics.webp"}
+    ],
+    "source": "https://dantist-prokshino.ru/"
+  },
+  {
+    "slug": "azer-nadzhafov",
+    "name": "Наджафов Азер Этибарович",
+    "shortName": "Азер Наджафов",
+    "role": "Врач-стоматолог, хирург-имплантолог",
+    "experience": "10 лет",
+    "portrait": "design/assets/doctors/nadzhafov.webp",
+    "practice": "На официальной странице указана хирургическая, имплантологическая и ортопедическая практика.",
+    "education": "РНИМУ им. Н. И. Пирогова; специальность «Стоматология», квалификация «врач-стоматолог». Дополнительное обучение: реставрация жевательной группы зубов, синус-лифтинг, удаления и ортопедическое препарирование.",
+    "certificates": [
+      {"title": "Реставрация жевательной группы зубов, 2022", "url": "https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/nadzhafov-restoration.webp"}
+    ],
+    "source": "https://dantist-prokshino.ru/"
+  },
+  {
+    "slug": "diana-fiasheva",
+    "name": "Фиашева Диана Андзоровна",
+    "shortName": "Диана Фиашева",
+    "role": "Стоматолог-ортодонт",
+    "experience": "7 лет",
+    "portrait": "design/assets/doctors/fiasheva.webp",
+    "practice": "Официальная страница клиники указывает специальность врача — стоматолог-ортодонт.",
+    "education": "МГМСУ им. А. И. Евдокимова; специальность «Стоматология», квалификация «врач-стоматолог».",
+    "certificates": [],
+    "source": "https://dantist-prokshino.ru/"
+  },
+  {
+    "slug": "anna-karapetyan",
+    "name": "Карапетян Анна Арменаковна",
+    "shortName": "Анна Карапетян",
+    "role": "Стоматолог-терапевт",
+    "experience": "Более 10 лет",
+    "portrait": "design/assets/doctors/karapetyan.jpg",
+    "practice": "На официальной странице указана терапевтическая стоматология и дополнительное обучение реставрации и эндодонтии.",
+    "education": "Опубликованы сведения о дополнительном обучении: художественная реставрация фронтальных зубов, клиническая эндодонтия и эндодонтическое перелечивание.",
+    "certificates": [
+      {"title": "Художественная реставрация фронтальных зубов, AVS school, Москва, 2021", "url": "https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-restoration-2021.jpg"},
+      {"title": "Ultimate Endo: клиническая эндодонтия, AVS school, Москва, 2021", "url": "https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-ultimate-endo-2021.jpg"},
+      {"title": "Эндодонтическое перелечивание, 2021", "url": "https://dantist-prokshino.ru/wp-content/themes/your-clean-template-3/studio-staff/certificates/karapetyan-endodontic-retreatment-2021.jpg"}
+    ],
+    "source": "https://dantist-prokshino.ru/"
+  },
+  {
+    "slug": "amina-mashrabova",
+    "name": "Машрабова Амина Мубораккадамовна",
+    "shortName": "Амина Машрабова",
+    "role": "Врач-стоматолог",
+    "experience": "Более 5 лет",
+    "portrait": "design/assets/doctors/mashrabova.jpg",
+    "practice": "На официальной странице размещены сведения о стоматологическом приёме и подготовке по ортопедической стоматологии.",
+    "education": "Диплом специалиста по стоматологии; ординатура по стоматологии ортопедической.",
+    "certificates": [],
+    "source": "https://dantist-prokshino.ru/"
+  }
+]

@@ -1,0 +1,124 @@
+[
+  {
+    "viewport": 390,
+    "htmlScrollWidth": 390,
+    "bodyScrollWidth": 390,
+    "pageHeight": 6722,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [
+      "design/assets/doctors/karapetyan.jpg"
+    ],
+    "zoom": false,
+    "branch": "prokshino",
+    "width": 390
+  },
+  {
+    "viewport": 768,
+    "htmlScrollWidth": 768,
+    "bodyScrollWidth": 768,
+    "pageHeight": 5038,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [],
+    "zoom": false,
+    "branch": "prokshino",
+    "width": 768
+  },
+  {
+    "viewport": 1024,
+    "htmlScrollWidth": 1024,
+    "bodyScrollWidth": 1024,
+    "pageHeight": 4672,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [],
+    "zoom": false,
+    "branch": "prokshino",
+    "width": 1024
+  },
+  {
+    "viewport": 1440,
+    "htmlScrollWidth": 1440,
+    "bodyScrollWidth": 1440,
+    "pageHeight": 5323,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [],
+    "zoom": false,
+    "branch": "prokshino",
+    "width": 1440
+  },
+  {
+    "viewport": 1920,
+    "htmlScrollWidth": 1920,
+    "bodyScrollWidth": 1920,
+    "pageHeight": 5323,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [],
+    "zoom": false,
+    "branch": "prokshino",
+    "width": 1920
+  },
+  {
+    "viewport": 390,
+    "htmlScrollWidth": 390,
+    "bodyScrollWidth": 390,
+    "pageHeight": 7950,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [],
+    "zoom": false,
+    "branch": "ispanskie",
+    "width": 390
+  },
+  {
+    "viewport": 768,
+    "htmlScrollWidth": 768,
+    "bodyScrollWidth": 768,
+    "pageHeight": 6215,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [],
+    "zoom": false,
+    "branch": "ispanskie",
+    "width": 768
+  },
+  {
+    "viewport": 1024,
+    "htmlScrollWidth": 1024,
+    "bodyScrollWidth": 1024,
+    "pageHeight": 6350,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [],
+    "zoom": false,
+    "branch": "ispanskie",
+    "width": 1024
+  },
+  {
+    "viewport": 1440,
+    "htmlScrollWidth": 1440,
+    "bodyScrollWidth": 1440,
+    "pageHeight": 7374,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [],
+    "zoom": false,
+    "branch": "ispanskie",
+    "width": 1440
+  },
+  {
+    "viewport": 1920,
+    "htmlScrollWidth": 1920,
+    "bodyScrollWidth": 1920,
+    "pageHeight": 7374,
+    "overflow": false,
+    "outOfBounds": [],
+    "brokenImages": [],
+    "zoom": false,
+    "branch": "ispanskie",
+    "width": 1920
+  }
+]

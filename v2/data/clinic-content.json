@@ -1,0 +1,101 @@
+{
+  "shared": {
+    "phone": "+7 (904) 519-96-97",
+    "tel": "tel:+79045199697",
+    "hours": "Ежедневно · 09:00–21:00",
+    "dentalpro": "https://dantist-prokshino.ru/online-zapis/",
+    "whatsapp": "https://wa.me/message/2WBFWCZJGHQDG1",
+    "telegram": "https://t.me/Stomatologiya1108",
+    "street": "Магеллана, 5",
+    "appointmentNote": "Выбранное направление показано здесь для ориентира и не передаётся в DentalPRO. Необходимые этапы и полную стоимость обсудите с врачом.",
+    "catalogNote": "В каталоге показаны отдельные позиции опубликованного прайса. Индивидуальный план лечения и его стоимость обсудите с врачом до начала лечения."
+  },
+  "branches": {
+    "prokshino": {
+      "key": "prokshino",
+      "name": "Прокшино",
+      "fullName": "ДантистЪ · Прокшино",
+      "navName": "Прокшино",
+      "address": "Москва, Коммунарка, проспект Магеллана, 5",
+      "style": "precision",
+      "eyebrow": "СТОМАТОЛОГИЯ · ПРОКШИНО",
+      "headline": "Сначала — ясный план.",
+      "lead": "Выберите интересующее направление, сравните конкретные позиции прайса и решите, как удобнее связаться с клиникой.",
+      "description": "Стоматология рядом с домом, открытый прейскурант и возможность записаться онлайн.",
+      "image": "design/assets/prokshino/hero-clinic.webp",
+      "imageAlt": "Врач обсуждает стоматологический снимок с пациентом",
+      "selectorImages": {
+        "consultations": "design/assets/prokshino/hero-clinic.webp",
+        "diagnostics": "design/assets/prokshino/hero-clinic.webp",
+        "anesthesia": "design/assets/prokshino/treatment.webp",
+        "hygiene": "design/assets/prokshino/hygiene.webp",
+        "treatment": "design/assets/prokshino/treatment.webp",
+        "endodontics": "design/assets/prokshino/microscope.webp",
+        "surgery": "design/assets/prokshino/treatment.webp",
+        "implantation": "design/assets/prokshino/hero-clinic.webp",
+        "prosthetics": "design/assets/prokshino/hero-clinic.webp",
+        "orthodontics": "design/assets/prokshino/orthodontics.webp"
+      },
+      "gallery": [
+        {"src": "design/assets/prokshino/hero-clinic.webp", "alt": "Врач вместе с пациентом изучает снимок"},
+        {"src": "design/assets/prokshino/hygiene.webp", "alt": "Профессиональная гигиена в кабинете клиники"},
+        {"src": "design/assets/prokshino/microscope.webp", "alt": "Стоматологическое оборудование для работы врача"}
+      ]
+    },
+    "ispanskie": {
+      "key": "ispanskie",
+      "name": "Испанские кварталы",
+      "fullName": "ДантистЪ · Испанские кварталы",
+      "navName": "Испанские кварталы",
+      "address": "Москва, Коммунарка, улица Магеллана, 5",
+      "style": "neighborhood",
+      "eyebrow": "СЕМЕЙНАЯ СТОМАТОЛОГИЯ · РЯДОМ С ДОМОМ",
+      "headline": "Выберите, с чего начать.",
+      "lead": "Спокойно изучите направления лечения, откройте цены отдельных процедур и выберите удобный способ записи.",
+      "description": "Семейная стоматология в Испанских кварталах. Чёткая информация о клинике и открытый прайс.",
+      "image": "design/assets/ispanskie/gallery-2.jpg",
+      "imageAlt": "Врач помогает пациенту осмотреть улыбку в зеркале",
+      "selectorImages": {
+        "consultations": "design/assets/ispanskie/hero-clinic.webp",
+        "diagnostics": "design/assets/ispanskie/hero-clinic.webp",
+        "anesthesia": "design/assets/ispanskie/treatment.webp",
+        "hygiene": "design/assets/ispanskie/hygiene.webp",
+        "treatment": "design/assets/ispanskie/treatment.webp",
+        "endodontics": "design/assets/ispanskie/treatment.webp",
+        "surgery": "design/assets/ispanskie/treatment.webp",
+        "implantation": "design/assets/ispanskie/hero-clinic.webp",
+        "prosthetics": "design/assets/ispanskie/hero-clinic.webp",
+        "orthodontics": "design/assets/ispanskie/orthodontics.jpg"
+      },
+      "gallery": [
+        {"src": "design/assets/ispanskie/gallery-2.jpg", "alt": "Врач помогает пациенту осмотреть улыбку"},
+        {"src": "design/assets/ispanskie/gallery-5.jpg", "alt": "Кресло и стоматологическое оборудование в кабинете"},
+        {"src": "design/assets/ispanskie/gallery-7.jpg", "alt": "Один из интерьеров клиники ДантистЪ"}
+      ]
+    }
+  },
+  "categoryDescriptions": {
+    "consultations": "Первичный приём и консультации специалистов. Изучите опубликованные позиции и обсудите с врачом интересующие вопросы.",
+    "diagnostics": "В каталоге опубликованы отдельные позиции диагностики. Какой вид исследования нужен, обсуждается со стоматологом.",
+    "anesthesia": "Прайс содержит отдельные варианты местного обезболивания. Подход к обезболиванию обсудите с врачом до процедуры.",
+    "hygiene": "Позиции профессиональной гигиены и профилактики указаны отдельно. Полный состав работ и стоимость уточните на приёме.",
+    "treatment": "Позиции терапевтического раздела опубликованного прайса. Конкретные этапы и стоимость врач обсудит после осмотра.",
+    "endodontics": "Раздел эндодонтии содержит отдельные позиции для лечения каналов. Уточните состав выбранной услуги и необходимые этапы у врача.",
+    "surgery": "В хирургическом разделе перечислены отдельные позиции прайса. Объём работы и предварительную стоимость врач объяснит на консультации.",
+    "implantation": "Позиции имплантационных этапов приведены отдельно. Цена отдельного этапа не является стоимостью полного плана лечения.",
+    "prosthetics": "Ортопедические позиции и стоимость опубликованы по отдельным этапам. Подходящий вариант восстановления обсуждается со стоматологом.",
+    "orthodontics": "В разделе собраны опубликованные позиции ортодонтии. Подходящий вариант и состав этапов определяет врач после консультации."
+  },
+  "featuredServiceIds": {
+    "consultations": ["svc_consultations_001", "svc_consultations_002", "svc_consultations_003"],
+    "diagnostics": ["svc_diagnostics_007", "svc_diagnostics_008"],
+    "anesthesia": ["svc_anesthesia_009", "svc_anesthesia_010", "svc_anesthesia_011"],
+    "hygiene": ["svc_hygiene_012", "svc_hygiene_013", "svc_hygiene_014"],
+    "treatment": ["svc_treatment_027", "svc_treatment_028", "svc_treatment_029"],
+    "endodontics": ["svc_endodontics_055", "svc_endodontics_048", "svc_endodontics_049"],
+    "surgery": ["svc_surgery_069", "svc_surgery_070", "svc_surgery_071"],
+    "implantation": ["svc_implantation_091", "svc_implantation_093", "svc_implantation_092"],
+    "prosthetics": ["svc_prosthetics_127", "svc_prosthetics_122", "svc_prosthetics_117"],
+    "orthodontics": ["svc_orthodontics_211", "svc_orthodontics_212"]
+  }
+}

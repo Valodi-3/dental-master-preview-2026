@@ -28,7 +28,7 @@
       </nav>
       <div class="header-actions">
         <a class="header-phone" href="tel:+79045199697">+7 (904) 519-96-97</a>
-        <a class="button button-primary header-booking" href="https://dantist-prokshino.ru/online-zapis/" target="_blank" rel="noopener noreferrer">Записаться</a>
+        <button class="button button-primary header-booking" type="button" data-booking-trigger aria-haspopup="dialog" aria-controls="booking-modal">Записаться</button>
         <button class="mobile-toggle" id="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span></button>
       </div>
     </div>
@@ -56,6 +56,42 @@
         </figure>
       </div>
       <div class="container hero-bottomline"><span>Честный каталог услуг</span><span>План лечения после осмотра</span><span>Запись в DentalPRO или по телефону</span></div>
+      <div class="quick-price-search" data-home-price-search aria-label="Быстрый поиск по официальному прайсу">
+        <div class="quick-price-search-inner">
+          <div class="quick-price-copy">
+            <p class="quick-price-kicker">ПРАЙС · 254 ПОЗИЦИИ</p>
+            <h2>Найдите цену<br><em>до визита.</em></h2>
+            <p>Примеры точных позиций из каталога. Врач определит план лечения после осмотра.</p>
+          </div>
+          <div class="quick-price-panel">
+            <label for="price-search">Быстрый поиск по прайсу</label>
+            <input id="price-search" type="search" autocomplete="off" placeholder="Например: кариес или пломба" aria-describedby="quick-price-status">
+            <div class="quick-price-results" aria-live="polite">
+          <article class="catalogue-item quick-price-item" data-home-price-row data-search="Лечение кариеса Восстановление зуба пломбой с использованием фотополимеров (1 поверхность)">
+            <span class="quick-price-category">Лечение кариеса</span>
+            <strong class="quick-price-name">Восстановление зуба пломбой с использованием фотополимеров (1 поверхность)</strong>
+            <span class="quick-price-value">4 950 ₽</span>
+            <a class="quick-price-link" href="prices-prokshino.html#treatment">Позиция в прайсе <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="catalogue-item quick-price-item" data-home-price-row data-search="Лечение кариеса Восстановление зуба пломбой с использованием фотополимеров (2 поверхности)">
+            <span class="quick-price-category">Лечение кариеса</span>
+            <strong class="quick-price-name">Восстановление зуба пломбой с использованием фотополимеров (2 поверхности)</strong>
+            <span class="quick-price-value">5 500 ₽</span>
+            <a class="quick-price-link" href="prices-prokshino.html#treatment">Позиция в прайсе <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="catalogue-item quick-price-item" data-home-price-row data-search="Лечение кариеса Восстановление зуба пломбой с использованием фотополимеров(3 поверхности)">
+            <span class="quick-price-category">Лечение кариеса</span>
+            <strong class="quick-price-name">Восстановление зуба пломбой с использованием фотополимеров(3 поверхности)</strong>
+            <span class="quick-price-value">6 050 ₽</span>
+            <a class="quick-price-link" href="prices-prokshino.html#treatment">Позиция в прайсе <span aria-hidden="true">↗</span></a>
+          </article>
+            </div>
+            <p class="quick-price-empty" data-home-price-empty hidden>В быстрых примерах нет совпадений. <a href="prices-prokshino.html">Откройте полный прайс на 254 услуги.</a></p>
+            <p class="quick-price-status" id="quick-price-status" data-home-price-status aria-live="polite">Быстрые примеры из официального прайса. Полный каталог — 254 услуги.</p>
+            <a class="quick-price-all" href="prices-prokshino.html">Открыть все 254 позиции <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="services-section section-pad" id="services" data-qa-section="services">
@@ -110,7 +146,30 @@
     </section>
   </main>
   <footer class="site-footer"><div class="container footer-inner"><a class="footer-brand" href="#top">ДантистЪ <span>Прокшино</span></a><span>Демонстрационный дизайн · 2026</span><a href="ispanskie.html">Испанские кварталы ↗</a></div></footer>
+  <div class="booking-modal-overlay" id="booking-modal" aria-hidden="true">
+    <section class="booking-modal-card" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Закрыть окно записи">×</button>
+      <p class="booking-modal-kicker">ДАНТИСТЪ · ПРОКШИНО</p>
+      <h2 class="booking-modal-title" id="booking-modal-title">Как вам удобнее<br><em>записаться?</em></h2>
+      <div class="selected-service-pill" id="selected-service-pill" style="display:none"><span>Вы выбрали</span><strong id="selected-service-name"></strong></div>
+      <div class="booking-choice-grid">
+        <a class="booking-choice booking-choice-online" href="https://dantist-prokshino.ru/online-zapis/" target="_blank" rel="noopener noreferrer">
+          <span class="booking-choice-kicker">ОНЛАЙН</span>
+          <strong>Открыть DentalPRO · Прокшино</strong>
+          <span>Перейти к расписанию <span aria-hidden="true">↗</span></span>
+        </a>
+        <a class="booking-choice booking-choice-phone" href="tel:+79045199697">
+          <span class="booking-choice-kicker">ПО ТЕЛЕФОНУ</span>
+          <strong>+7 (904) 519-96-97</strong>
+          <span>Позвонить в клинику</span>
+        </a>
+      </div>
+      <p class="booking-modal-note">Онлайн-ссылка ведёт в официальный сервис записи клиники Прокшино.</p>
+      <p class="booking-modal-meta">Ежедневно · 09:00–21:00</p>
+    </section>
+  </div>
   <script src="app.js"></script>
   <script src="design/price-ui.js"></script>
+  <script src="design/home-price-search.js"></script>
 </body>
 </html>

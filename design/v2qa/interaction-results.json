@@ -1,0 +1,94 @@
+{
+  "selectors": [
+    {
+      "branch": "prokshino",
+      "categoriesChanged": 10,
+      "categories": [
+        "consultations",
+        "diagnostics",
+        "anesthesia",
+        "hygiene",
+        "treatment",
+        "endodontics",
+        "surgery",
+        "implantation",
+        "prosthetics",
+        "orthodontics"
+      ]
+    },
+    {
+      "branch": "ispanskie",
+      "categoriesChanged": 10,
+      "categories": [
+        "consultations",
+        "diagnostics",
+        "anesthesia",
+        "hygiene",
+        "treatment",
+        "endodontics",
+        "surgery",
+        "implantation",
+        "prosthetics",
+        "orthodontics"
+      ]
+    }
+  ],
+  "catalogues": [
+    {
+      "branch": "prokshino",
+      "initialCount": "Показано 254 услуги",
+      "categoryFilterRows": 18,
+      "searchMatches": 1,
+      "detailsOpen": true
+    },
+    {
+      "branch": "ispanskie",
+      "initialCount": "Показано 254 услуги",
+      "categoryFilterRows": 18,
+      "searchMatches": 1,
+      "detailsOpen": true
+    }
+  ],
+  "menus": [
+    {
+      "branch": "prokshino",
+      "open": true,
+      "escapeRestoredFocus": true
+    },
+    {
+      "branch": "ispanskie",
+      "open": true,
+      "escapeRestoredFocus": true
+    }
+  ],
+  "booking": {
+    "prokshino": {
+      "branch": "prokshino",
+      "selectedServiceId": "svc_orthodontics_211",
+      "selectedServiceVisible": true,
+      "onlineBookingURL": "https://dantist-prokshino.ru/online-zapis/",
+      "onlineLinkLabel": "Продолжить в DentalPRO ↗",
+      "phoneE164": "tel:+79045199697",
+      "copyStatus": "",
+      "copied": true,
+      "escapeClose": true,
+      "outsideClose": true,
+      "externalBookingActivated": false,
+      "targetBlank": true
+    },
+    "ispanskie": {
+      "branch": "ispanskie",
+      "selectedServiceId": "svc_orthodontics_211",
+      "selectedServiceVisible": true,
+      "onlineBookingURL": "https://dantist-prokshino.ru/online-zapis/",
+      "onlineLinkLabel": "Открыть DentalPRO · Прокшино ↗",
+      "phoneE164": "tel:+79045199697",
+      "copyStatus": "Номер скопирован.",
+      "copied": true,
+      "escapeClose": true,
+      "outsideClose": true,
+      "externalBookingActivated": false,
+      "targetBlank": true
+    }
+  }
+}
