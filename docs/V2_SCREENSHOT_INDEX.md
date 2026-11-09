@@ -95,7 +95,7 @@
 **Цена в селекторе:** [финальный экран направления на 390 px](../design/v2qa/screenshots/v2-mobile-directions-prokshino-390.png); [автоматический отчёт — 168 цен без разрывов](../design/v2qa/polish-currency-results.json).
 
 
-## Новая editorial-подача и три способа связи
+## Итерация 3 — предыдущая editorial-подача и три способа связи
 
 - [Мобильная панель выбора записи · Прокшино · 390×844](../design/v2qa/screenshots/premium-booking-choice-prokshino-390.png)
 - [Мобильная панель выбора записи · Испанские кварталы · 390×844](../design/v2qa/screenshots/premium-booking-choice-ispanskie-390.png)
@@ -103,3 +103,15 @@
 - [Главная Испанских кварталов в отдельной тёплой композиции · mobile](../design/v2qa/screenshots/v2-mobile-home-ispanskie-390.png) · [desktop](../design/v2qa/screenshots/v2-desktop-home-ispanskie-1440.png)
 
 Объёмный hover — только лёгкий CSS `perspective`/`rotateY` над проверенными фото клиник. Внешние 3D- и анимационные библиотеки, сгенерированные фотографии и автозапуск связи не добавлялись. По «Записаться» сначала открывается эта панель: DentalPRO, предварительный телефонный шаг или самостоятельный переход в WhatsApp/Telegram.
+
+
+## Итерация 4 — переосмысление после оценки 3/10
+
+В этой части **до** — четыре сохранённых экрана непосредственно перед переработкой V4; **после** — текущая пересобранная версия. Всего отчётом проверено 62 PNG-свидетельства.
+
+| Филиал | До · mobile 390 px | После · mobile 390 px | До · desktop 1440 px | После · desktop 1440 px |
+|---|---|---|---|---|
+| Прокшино | [До](../design/v2qa/screenshots/v4-before-prokshino-mobile-390.png) | [V4](../design/v2qa/screenshots/v2-mobile-home-prokshino-390.png) | [До](../design/v2qa/screenshots/v4-before-prokshino-desktop-1440.png) | [V4](../design/v2qa/screenshots/v2-desktop-home-prokshino-1440.png) |
+| Испанские кварталы | [До](../design/v2qa/screenshots/v4-before-ispanskie-mobile-390.png) | [V4](../design/v2qa/screenshots/v2-mobile-home-ispanskie-390.png) | [До](../design/v2qa/screenshots/v4-before-ispanskie-desktop-1440.png) | [V4](../design/v2qa/screenshots/v2-desktop-home-ispanskie-1440.png) |
+
+**Полный mobile-page:** [Прокшино](../design/v2qa/screenshots/v2-full-home-prokshino-390.png) · [Испанские кварталы](../design/v2qa/screenshots/v2-full-home-ispanskie-390.png). **Сначала выбор способа записи:** [Прокшино, 390×844](../design/v2qa/screenshots/premium-booking-choice-prokshino-390.png) · [Испанские кварталы, 390×844](../design/v2qa/screenshots/premium-booking-choice-ispanskie-390.png).

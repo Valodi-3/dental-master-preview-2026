@@ -37,12 +37,14 @@ def motion_checks(browser, base: str) -> None:
         if branch == "prokshino":
             image = page.locator(".home-hero-image img")
             page.locator(".home-hero-image").hover()
+            page.wait_for_timeout(700)
             transform = image.evaluate("e => getComputedStyle(e).transform")
             if not transform.startswith("matrix3d("):
                 raise AssertionError(f"Prokshino pointer interaction does not create lightweight CSS depth: {transform}")
         else:
             page.locator(".family-photo-main").hover()
-            transform = page.locator(".family-photo-main").evaluate("e => getComputedStyle(e).transform")
+            page.wait_for_timeout(700)
+            transform = page.locator(".family-photo-main img").evaluate("e => getComputedStyle(e).transform")
             if not transform.startswith("matrix3d("):
                 raise AssertionError(f"Spanish Quarters photo stack lacks a CSS-only 3D hover: {transform}")
         page.emulate_media(reduced_motion="reduce")

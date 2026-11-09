@@ -37,7 +37,7 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
 - [x] G7: each major V2 page type has browser captures and old/new comparisons; source URLs/findings are recorded.
   CHECK: `python design/v2_verify.py --evidence`
   EXPECT: `V2_EVIDENCE_PASS`
-  EVIDENCE: `screenshots=56` including six preserved visual-polish before-state captures, `measuredRoutes=369`, `zoomChecks=123`, nine widths; complete [screenshot index](docs/V2_SCREENSHOT_INDEX.md), source record `docs/V2_SOURCES.md`.
+  EVIDENCE: `screenshots=62` including ten preserved visual-polish before-state captures, `measuredRoutes=369`, `zoomChecks=123`, nine widths; complete [screenshot index](docs/V2_SCREENSHOT_INDEX.md), source record `docs/V2_SOURCES.md`.
 
 - [x] G8: a complete openable local preview is provided; lack of isolated public hosting is documented.
   CHECK: `python design/v2_verify.py --preview`
@@ -61,7 +61,7 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
   EXPECT: visible branch-specific composition, readable body text and controls at phone size, stable hero/cards, no repeated-homepage clone; save visual review and changed-section evidence in `docs/V2_DESIGN_REPORT.md`.
   EVIDENCE: desktop/mobile before-and-after screenshots and full mobile pages are indexed in `docs/V2_SCREENSHOT_INDEX.md`; Prokshino now has a deep-green clinical hero and nonrepeating treatment/gallery imagery, while Spanish Quarters has an independently composed warm arch collage.
 
-- [x] G12: polish does not regress the route/data/booking architecture or responsive contract.
+- [x] G12: after visual polish, all 41 routes, source data, booking flows, catalogues and responsive layouts remain correct.
   CHECK: `python design/build_v2.py`; `python design/v2_verify.py --architecture --selector-data --booking --doctors --catalogues --preview --evidence`; `python design/v2_visual_qa.py`; `python design/verify_design.py --static`; `python design/verify_design.py --catalogs`; `python design/polish_currency_qa.py`.
   EXPECT: all named commands exit zero; 41 routes, 254 correct services per branch, and browser checks stay at `overflow=0`, `brokenImages=0`, `interactionErrors=0`.
   EVIDENCE: final Chromium run `routeChecks=369`, `zoomChecks=123`, `totalLayoutChecks=492`, all error counters zero; source/catalogue gates pass; currency regression passes `cases=6`, `categoryChipPriceLabels=168`, `failures=0` (`design/v2qa/polish-currency-results.json`).
@@ -82,7 +82,7 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
 - [x] G15: every generated route and the interactive UX remain responsive after rebuilding the premium visual system.
   CHECK: `python design/build_v2.py` followed by `python design/v2_visual_qa.py` and `python design/new_direction_qa.py --motion --booking`
   EXPECT: `V2_BROWSER_QA_PASS` and `NEW_DIRECTION_UX_PASS`
-  EVIDENCE: `V2_BROWSER_QA_PASS routes=41 viewports=9 routeChecks=369 zoomChecks=123 totalLayoutChecks=492 screenshots=41 overflow=0 brokenImages=0 interactionErrors=0`; static/evidence gate sees 58 screenshots; 254 exact catalogue rows per branch; 168 selector prices without wraps.
+  EVIDENCE: `V2_BROWSER_QA_PASS routes=41 viewports=9 routeChecks=369 zoomChecks=123 totalLayoutChecks=492 screenshots=41 overflow=0 brokenImages=0 interactionErrors=0`; static/evidence gate sees 62 screenshots; 254 exact catalogue rows per branch; 168 selector prices without wraps.
 
 - [x] G16: the project remains an unmerged Draft on the isolated design branch; main and technical foundation SHAs remain unchanged.
   CHECK: `python design/draft_safety_qa.py`
@@ -97,3 +97,19 @@ Final artifacts for this iteration: [`layout-metrics.json`](design/v2qa/layout-m
 
 Design review and before/after comparisons are documented in `docs/V2_DESIGN_REPORT.md` and `docs/V2_SCREENSHOT_INDEX.md`.
 G16 confirms the existing PR is open and Draft; no merge, production change, or Pages-setting change was made.
+
+
+## Итерация 4 — пересмотр арт-дирекшна по оценке пользователя «3/10»
+
+- [x] G18: главные страницы демонстрируют цельную premium editorial-арт-дирекшн, соотнесённую с референсом пользователя: глубокая изумрудная сцена, тонкие детали, выразительная сетка и фото как композиционный центр; это не просто зелёная заливка с увеличенным заголовком.
+  EVIDENCE: 390px/1440px итоговые скриншоты проверены вручную: wordmark без белого прямоугольника, крупные подлинные портреты врача вместо перекрывающихся collage-инсетов; композиции филиалов идут в разных направлениях, читаемые подписи и hero-кнопки; четыре pre-V4 скриншота сохранены для сравнения.
+
+- [x] G19: mobile/desktop-иерархия, короткий путь к услугам/врачам/записи, кнопки и реальные локальные фотографии визуально и технически работают без переполнений.
+  CHECK: `python design/build_v2.py` затем `python design/v2_visual_qa.py` и `python design/new_direction_qa.py --motion --booking`
+  EXPECT: `V2_BROWSER_QA_PASS` и `NEW_DIRECTION_UX_PASS`
+  EVIDENCE: final run `routes=41`, `routeChecks=369`, `zoomChecks=123`, `totalLayoutChecks=492`, `overflow=0`, `brokenImages=0`, `interactionErrors=0`; `NEW_DIRECTION_UX_PASS` for both branches at 320/390/1440, 3 booking choices, no early redirect; 62 screenshot files.
+
+- [ ] G20: новая итерация остаётся в отдельной дизайн-ветке и открытом Draft PR, а исходные защищённые refs/production не меняются.
+  CHECK: `python design/draft_safety_qa.py`
+  EXPECT: `DRAFT_SAFETY_PASS`
+  EVIDENCE: pending
