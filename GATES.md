@@ -25,5 +25,5 @@ Scope: Deliver two distinct, content-accurate clinic previews, three responsive 
 - [x] G5: screenshots show a coherent visual result from hero through footer for both clinics at 390px and 1440px
   EVIDENCE: 28 section screenshots plus full-page and header-inclusive viewport captures; docs/SCREENSHOT_INDEX.md.
 
-- [ ] G6: only the requested design branch is published; production, main, and Antigravity-owned files remain unchanged
-  EVIDENCE: pending
+- [x] G6: only the requested design branch is published; production, main, and Antigravity-owned files remain unchanged
+  EVIDENCE: origin/design/manus-dental-master-2026 published and verified; working tree is clean; app.js is unchanged; no production or existing Pages settings were modified.
