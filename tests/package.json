@@ -1,0 +1,11 @@
+{
+  "name": "dental-qa-suite",
+  "version": "1.0.0",
+  "description": "Automated Multi-Viewport, Layout Integrity and Functional QA Suite for Dental VNext 2026",
+  "scripts": {
+    "test": "node run-qa-suite.cjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.49.0"
+  }
+}

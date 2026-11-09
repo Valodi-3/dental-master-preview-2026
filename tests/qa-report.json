@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-11-09T06:24:41.484Z",
+  "testedAt": "2026-11-09T06:57:11.486Z",
   "baseUrl": "http://127.0.0.1:8765",
   "summary": {
     "totalTests": 30,
@@ -93,7 +93,8 @@
         "modalAccessibility": {
           "status": "FAIL",
           "details": {
-            "exists": false
+            "exists": false,
+            "error": "Trigger element [data-booking-trigger] not found"
           }
         },
         "zeroFakeForms": {
@@ -101,7 +102,7 @@
         },
         "searchFilter": {
           "status": "PASS",
-          "note": "Search evaluated"
+          "matchingRows": 254
         },
         "mobileDrawer": {
           "status": "PASS",
@@ -150,6 +151,10 @@
           "status": "FAIL",
           "broken": [
             {
+              "src": "https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/portrait-02.webp",
+              "alt": "Наджафов Азер Этибарович — Главный врач, стоматолог-терапевт, ортопед, хирург"
+            },
+            {
               "src": "https://stomatolog-ispanskie-kvartaly.ru/wp-content/themes/your-clean-template-3/studio-staff/portraits/anna-karapetyan-960.jpg",
               "alt": "Карапетян Анна Артаковна — Врач-ортодонт"
             },
@@ -167,7 +172,7 @@
         },
         "searchFilter": {
           "status": "PASS",
-          "note": "Search evaluated"
+          "matchingRows": 254
         },
         "mobileDrawer": {
           "status": "PASS",
