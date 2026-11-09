@@ -65,3 +65,39 @@ Scope: Preserve the complete V1 visual design, local verified media and both 254
   CHECK: `python design/build_v2.py`; `python design/v2_verify.py --architecture --selector-data --booking --doctors --catalogues --preview --evidence`; `python design/v2_visual_qa.py`; `python design/verify_design.py --static`; `python design/verify_design.py --catalogs`; `python design/polish_currency_qa.py`.
   EXPECT: all named commands exit zero; 41 routes, 254 correct services per branch, and browser checks stay at `overflow=0`, `brokenImages=0`, `interactionErrors=0`.
   EVIDENCE: final Chromium run `routeChecks=369`, `zoomChecks=123`, `totalLayoutChecks=492`, all error counters zero; source/catalogue gates pass; currency regression passes `cases=6`, `categoryChipPriceLabels=168`, `failures=0` (`design/v2qa/polish-currency-results.json`).
+
+
+## Iteration: client reference — premium atmosphere, transitions, three-way appointment
+
+- [x] G13: the new premium interaction layer uses authentic local clinic assets and lightweight CSS only; transitions honor reduced-motion preferences and no heavy 3D/runtime dependency is added.
+  CHECK: `python design/new_direction_qa.py --motion`
+  EXPECT: `NEW_DIRECTION_MOTION_PASS`
+  EVIDENCE: `NEW_DIRECTION_MOTION_PASS localAssets=true css3d=true heavyRuntime=false reducedMotion=true`; local media/assets only, CSS perspective/rotateY disabled in reduced-motion mode.
+
+- [x] G14: clicking any primary “Записаться” control opens an in-page choice dialog first, with explicit DentalPRO, phone and official messaging choices; no method is started until the visitor chooses its final action.
+  CHECK: `python design/new_direction_qa.py --booking`
+  EXPECT: `NEW_DIRECTION_BOOKING_PASS`
+  EVIDENCE: `NEW_DIRECTION_BOOKING_PASS explicitChoices=3 branches=2 widths=320,390,1440 earlyRedirects=0`; call/copy controls, official WhatsApp/Telegram URLs, Spanish-to-Prokshino disclosure, Escape and all unscrolled phone-sheet actions verified at 844px.
+
+- [x] G15: every generated route and the interactive UX remain responsive after rebuilding the premium visual system.
+  CHECK: `python design/build_v2.py` followed by `python design/v2_visual_qa.py` and `python design/new_direction_qa.py --motion --booking`
+  EXPECT: `V2_BROWSER_QA_PASS` and `NEW_DIRECTION_UX_PASS`
+  EVIDENCE: `V2_BROWSER_QA_PASS routes=41 viewports=9 routeChecks=369 zoomChecks=123 totalLayoutChecks=492 screenshots=41 overflow=0 brokenImages=0 interactionErrors=0`; static/evidence gate sees 58 screenshots; 254 exact catalogue rows per branch; 168 selector prices without wraps.
+
+- [ ] G16: the project remains an unmerged Draft on the isolated design branch; main and technical foundation SHAs remain unchanged.
+  CHECK: `python design/draft_safety_qa.py`
+  EXPECT: `DRAFT_SAFETY_PASS`
+  EVIDENCE: pending
+
+- [x] G17: mobile/desktop design feels polished, inspired by the supplied editorial emerald reference without copying its portfolio layout or introducing irrelevant imagery.
+  EVIDENCE: final Prokshino emerald/champagne mobile and desktop, distinct warm Spanish Quarters collage, and both 390px three-choice phone dialogs were visually reviewed; genuine clinic assets and responsive controls confirmed.
+
+
+Final artifacts for this iteration: [`layout-metrics.json`](design/v2qa/layout-metrics.json), [`premium-booking-choice-prokshino-390.png`](design/v2qa/screenshots/premium-booking-choice-prokshino-390.png), [`premium-booking-choice-ispanskie-390.png`](design/v2qa/screenshots/premium-booking-choice-ispanskie-390.png), and [`V2_SCREENSHOT_INDEX.md`](docs/V2_SCREENSHOT_INDEX.md).
+
+Design review and before/after comparisons are documented in `docs/V2_DESIGN_REPORT.md` and `docs/V2_SCREENSHOT_INDEX.md`.
+Publication integrity remains a separate check under G16 and has not yet been certified in this ledger.
+
+
+Design review and before/after comparisons are documented in `docs/V2_DESIGN_REPORT.md` and `docs/V2_SCREENSHOT_INDEX.md`.
+Publication integrity remains a separate check under G16 and has not yet been certified in this ledger.
