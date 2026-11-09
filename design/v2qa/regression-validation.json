@@ -1,0 +1,158 @@
+{
+  "requested_widths": [
+    390,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "responsive": [
+    {
+      "innerWidth": 390,
+      "htmlScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "overflowPx": 0,
+      "bookingButton": "none",
+      "branch": "prokshino",
+      "width": 390
+    },
+    {
+      "innerWidth": 768,
+      "htmlScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflowPx": 0,
+      "bookingButton": "flex",
+      "branch": "prokshino",
+      "width": 768
+    },
+    {
+      "innerWidth": 1024,
+      "htmlScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "overflowPx": 0,
+      "bookingButton": "flex",
+      "branch": "prokshino",
+      "width": 1024
+    },
+    {
+      "innerWidth": 1440,
+      "htmlScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "overflowPx": 0,
+      "bookingButton": "flex",
+      "branch": "prokshino",
+      "width": 1440
+    },
+    {
+      "innerWidth": 1920,
+      "htmlScrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "overflowPx": 0,
+      "bookingButton": "flex",
+      "branch": "prokshino",
+      "width": 1920
+    },
+    {
+      "innerWidth": 390,
+      "htmlScrollWidth": 390,
+      "bodyScrollWidth": 390,
+      "overflowPx": 0,
+      "bookingButton": "none",
+      "branch": "ispanskie",
+      "width": 390
+    },
+    {
+      "innerWidth": 768,
+      "htmlScrollWidth": 768,
+      "bodyScrollWidth": 768,
+      "overflowPx": 0,
+      "bookingButton": "flex",
+      "branch": "ispanskie",
+      "width": 768
+    },
+    {
+      "innerWidth": 1024,
+      "htmlScrollWidth": 1024,
+      "bodyScrollWidth": 1024,
+      "overflowPx": 0,
+      "bookingButton": "flex",
+      "branch": "ispanskie",
+      "width": 1024
+    },
+    {
+      "innerWidth": 1440,
+      "htmlScrollWidth": 1440,
+      "bodyScrollWidth": 1440,
+      "overflowPx": 0,
+      "bookingButton": "flex",
+      "branch": "ispanskie",
+      "width": 1440
+    },
+    {
+      "innerWidth": 1920,
+      "htmlScrollWidth": 1920,
+      "bodyScrollWidth": 1920,
+      "overflowPx": 0,
+      "bookingButton": "flex",
+      "branch": "ispanskie",
+      "width": 1920
+    }
+  ],
+  "booking": {
+    "prokshino": {
+      "trigger": "data-booking-trigger",
+      "dialog_open": true,
+      "dentalpro_href": "https://dantist-prokshino.ru/online-zapis/",
+      "phone_href": "tel:+79045199697",
+      "branch_note": "Онлайн-ссылка ведёт в официальный сервис записи клиники Прокшино."
+    },
+    "ispanskie": {
+      "trigger": "data-booking-trigger",
+      "dialog_open": true,
+      "dentalpro_href": "https://dantist-prokshino.ru/online-zapis/",
+      "phone_href": "tel:+79045199697",
+      "branch_note": "Официальная онлайн-ссылка открывает расписание филиала Прокшино. Чтобы записаться именно в Испанские кварталы, позвоните в клинику."
+    }
+  },
+  "doctor_images": {
+    "count": 5,
+    "all_loaded": true,
+    "sources": [
+      {
+        "src": "design/assets/doctors/danielyan.jpg",
+        "complete": true,
+        "naturalWidth": 853,
+        "loading": "eager"
+      },
+      {
+        "src": "design/assets/doctors/nadzhafov.webp",
+        "complete": true,
+        "naturalWidth": 794,
+        "loading": "eager"
+      },
+      {
+        "src": "design/assets/doctors/fiasheva.webp",
+        "complete": true,
+        "naturalWidth": 900,
+        "loading": "eager"
+      },
+      {
+        "src": "design/assets/doctors/karapetyan.jpg",
+        "complete": true,
+        "naturalWidth": 960,
+        "loading": "eager"
+      },
+      {
+        "src": "design/assets/doctors/mashrabova.jpg",
+        "complete": true,
+        "naturalWidth": 1000,
+        "loading": "eager"
+      }
+    ]
+  },
+  "tech_suite": {
+    "totalTests": 30,
+    "passed": 30,
+    "failed": 0
+  }
+}

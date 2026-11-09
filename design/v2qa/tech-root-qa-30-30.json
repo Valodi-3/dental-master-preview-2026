@@ -1,0 +1,123 @@
+{
+  "testedAt": "2026-11-09T07:58:49.049Z",
+  "baseUrl": "http://127.0.0.1:55422",
+  "summary": {
+    "totalTests": 30,
+    "passed": 30,
+    "failed": 0
+  },
+  "pages": {
+    "prokshino.html": {
+      "name": "ДантистЪ Прокшино",
+      "file": "prokshino.html",
+      "url": "http://127.0.0.1:55422/prokshino.html",
+      "viewports": {
+        "320": {
+          "status": "PASS"
+        },
+        "360": {
+          "status": "PASS"
+        },
+        "375": {
+          "status": "PASS"
+        },
+        "390": {
+          "status": "PASS"
+        },
+        "430": {
+          "status": "PASS"
+        },
+        "768": {
+          "status": "PASS"
+        },
+        "1024": {
+          "status": "PASS"
+        },
+        "1440": {
+          "status": "PASS"
+        },
+        "1920": {
+          "status": "PASS"
+        }
+      },
+      "functionalChecks": {
+        "zeroLocalhost": {
+          "status": "PASS"
+        },
+        "imageIntegrity": {
+          "status": "PASS"
+        },
+        "modalAccessibility": {
+          "status": "PASS"
+        },
+        "zeroFakeForms": {
+          "status": "PASS"
+        },
+        "searchFilter": {
+          "status": "PASS",
+          "matchingRows": 3
+        },
+        "mobileDrawer": {
+          "status": "PASS",
+          "branchHref": "prices-prokshino.html"
+        }
+      }
+    },
+    "ispanskie.html": {
+      "name": "ДантистЪ Испанские кварталы",
+      "file": "ispanskie.html",
+      "url": "http://127.0.0.1:55422/ispanskie.html",
+      "viewports": {
+        "320": {
+          "status": "PASS"
+        },
+        "360": {
+          "status": "PASS"
+        },
+        "375": {
+          "status": "PASS"
+        },
+        "390": {
+          "status": "PASS"
+        },
+        "430": {
+          "status": "PASS"
+        },
+        "768": {
+          "status": "PASS"
+        },
+        "1024": {
+          "status": "PASS"
+        },
+        "1440": {
+          "status": "PASS"
+        },
+        "1920": {
+          "status": "PASS"
+        }
+      },
+      "functionalChecks": {
+        "zeroLocalhost": {
+          "status": "PASS"
+        },
+        "imageIntegrity": {
+          "status": "PASS"
+        },
+        "modalAccessibility": {
+          "status": "PASS"
+        },
+        "zeroFakeForms": {
+          "status": "PASS"
+        },
+        "searchFilter": {
+          "status": "PASS",
+          "matchingRows": 3
+        },
+        "mobileDrawer": {
+          "status": "PASS",
+          "branchHref": "prices-ispanskie.html"
+        }
+      }
+    }
+  }
+}

@@ -1,207 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <title>ДантистЪ — Презентационный центр VNext 2026</title>
-  <style>
-    :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --border: #334155;
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --prokshino: #00a896;
-      --ispanskie: #f38d68;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 20px;
-    }
-    .header {
-      text-align: center;
-      max-width: 680px;
-      margin-bottom: 40px;
-    }
-    .badge {
-      display: inline-block;
-      padding: 6px 14px;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      border-radius: 999px;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: #38bdf8;
-      margin-bottom: 16px;
-    }
-    h1 {
-      font-size: 34px;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      margin-bottom: 12px;
-    }
-    p.lead {
-      font-size: 16px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 24px;
-      width: 100%;
-      max-width: 900px;
-      margin-bottom: 32px;
-    }
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 32px;
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-      text-decoration: none;
-      color: inherit;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-    }
-    .card-prokshino:hover {
-      border-color: var(--prokshino);
-    }
-    .card-ispanskie:hover {
-      border-color: var(--ispanskie);
-    }
-    .card-tag {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 12px;
-    }
-    .card-prokshino .card-tag { color: var(--prokshino); }
-    .card-ispanskie .card-tag { color: var(--ispanskie); }
-    h2 {
-      font-size: 24px;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-    .card-desc {
-      font-size: 14.5px;
-      color: var(--text-muted);
-      line-height: 1.55;
-      margin-bottom: 24px;
-      flex: 1;
-    }
-    .card-features {
-      list-style: none;
-      font-size: 13.5px;
-      color: #cbd5e1;
-      margin-bottom: 28px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    .card-features li::before {
-      content: "✓ ";
-      color: #38bdf8;
-      font-weight: bold;
-    }
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 24px;
-      border-radius: 10px;
-      font-size: 15px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.2s ease;
-    }
-    .btn-prokshino {
-      background: var(--prokshino);
-      color: #ffffff;
-    }
-    .btn-prokshino:hover {
-      background: #028e7e;
-    }
-    .btn-ispanskie {
-      background: var(--ispanskie);
-      color: #ffffff;
-    }
-    .btn-ispanskie:hover {
-      background: #dc714a;
-    }
-    .footer {
-      text-align: center;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-    .footer a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-  </style>
+  <meta name="theme-color" content="#1b4034">
+  <title>ДантистЪ — дизайн-preview двух клиник</title>
+  <meta name="description" content="Изолированный preview связанных стоматологических сайтов ДантистЪ — Прокшино и Испанские кварталы.">
+  <link rel="stylesheet" href="v2/assets/v2.css">
+  <link rel="stylesheet" href="v2/assets/reference-v6.css">
 </head>
-<body>
-  <div class="header">
-    <span class="badge">Dental Master 2026 · Release Candidate</span>
-    <h1>Стоматологические клиники ДантистЪ</h1>
-    <p class="lead">
-      Интерактивные черновики нового поколения для демонстрации клиентам. Полный каталог 10 направлений (254 позиции), проверенные врачи, лицензии, мобильная адаптация и интеграция записи.
-    </p>
-  </div>
-
-  <div class="grid">
-    <!-- Prokshino Card -->
-    <a href="prokshino.html" class="card card-prokshino">
-      <span class="card-tag">Клиника №1 · Основное отделение</span>
-      <h2>ДантистЪ Прокшино</h2>
-      <p class="card-desc">
-        Флагманский сайт клиники. Фирменный клинический стиль (глубокий бирюзовый), 5 врачей-экспертов, полная 3D-диагностика, имплантация Osstem/Straumann.
-      </p>
-      <ul class="card-features">
-        <li>Полный каталог: 10 разделов · 254 позиции</li>
-        <li>Сертифицированные врачи и дипломы</li>
-        <li>Прямой модуль онлайн-записи DentalPRO</li>
-        <li>100% готовность для мобильных и ПК</li>
-      </ul>
-      <span class="btn btn-prokshino">Открыть черновик Прокшино ↗</span>
-    </a>
-
-    <!-- Ispanskie Kvartaly Card -->
-    <a href="ispanskie.html" class="card card-ispanskie">
-      <span class="card-tag">Клиника №2 · Районное отделение</span>
-      <h2>ДантистЪ Испанские кварталы</h2>
-      <p class="card-desc">
-        Локальный проект для жителей ЖК «Испанские кварталы». Тёплая терракотовая палитра, нейтральная маршрутизация, согласованная контактная линия.
-      </p>
-      <ul class="card-features">
-        <li>Адаптирован для жителей Испанских кварталов</li>
-        <li>Полный каталог цен (254 утверждённые позиции)</li>
-        <li>Корректные юридические реквизиты ООО «ДантистЪ»</li>
-        <li>Быстрый заказ звонка и интеграция расписания</li>
-      </ul>
-      <span class="btn btn-ispanskie">Открыть черновик Испанские кварталы ↗</span>
-    </a>
-  </div>
-
-  <div class="footer">
-    <p>© 2026 ДантистЪ · Разработка Dental Master VNext · <a href="https://github.com/Valodi-3/dental-master-preview-2026" target="_blank" rel="noopener">GitHub Репозиторий проекта</a></p>
-  </div>
+<body class="page-project-hub">
+  <div class="project-topbar"><div class="shell"><span>ДАНТИСТЪ · ДИЗАЙН-ПРЕДПРОСМОТР</span><a href="https://github.com/Valodi-3/dental-master-preview-2026/tree/design/manus-dental-master-2026">изолированная ветка · Draft ↗</a></div></div>
+  <main>
+    <header class="project-intro shell">
+      <p class="eyebrow">ДВА ФИЛИАЛА · ДВЕ СВЯЗАННЫЕ КЛИНИКИ</p>
+      <h1>Добро пожаловать<br><em>в ДантистЪ.</em></h1>
+      <p>Выберите филиал, чтобы открыть его многостраничный preview. Внутри доступны направления, реальные позиции прайса, профили врачей и проверенные способы связи.</p>
+    </header>
+    <section class="project-status-band shell" aria-label="Статус предпросмотра">
+      <div><p class="eyebrow">ЛОКАЛЬНАЯ ДИЗАЙН-ВЕТКА · НЕ PRODUCTION</p><h2>Обе версии — для просмотра целиком</h2><p>Это черновик дизайна. Опубликованный сайт, GitHub Pages и производственные данные не заменялись.</p></div>
+      <a class="button button-primary" href="v2/index.html">Выбрать филиал ↗</a>
+    </section>
+    <section class="project-branches shell" aria-label="Сайты клиник">
+      <article class="project-branch">
+        <a href="v2/prokshino/index.html" aria-label="Открыть сайт ДантистЪ Прокшино"><img src="design/assets/prokshino/hero-clinic.webp" alt="Приём и обсуждение стоматологического снимка в клинике Прокшино" width="1000" height="667"></a>
+        <div class="project-branch-copy"><p class="eyebrow">01 · ПРОКШИНО</p><h2>Спокойно.<br>Понятно.<br>По делу.</h2><p>Сайт филиала с навигацией по услугам, карточками врачей, прайсом и отдельной записью по вашему выбору.</p><a class="button button-primary" href="v2/prokshino/index.html">Открыть филиал ↗</a><div class="project-branch-links"><a href="v2/prokshino/directions/index.html">Направления</a><a href="v2/prokshino/doctors/index.html">Врачи</a><a href="v2/prokshino/prices/index.html">Прайс</a><a href="v2/prokshino/contacts/index.html">Контакты</a></div></div>
+      </article>
+      <article class="project-branch">
+        <a href="v2/ispanskie/index.html" aria-label="Открыть сайт ДантистЪ Испанские кварталы"><img src="design/assets/ispanskie/hero-clinic.webp" alt="Клиническое пространство ДантистЪ в Испанских кварталах" width="1000" height="667"></a>
+        <div class="project-branch-copy"><p class="eyebrow">02 · ИСПАНСКИЕ КВАРТАЛЫ</p><h2>Своя клиника.<br>Рядом с домом.</h2><p>Самостоятельная редакционная композиция филиала с теми же проверенными данными и понятными вариантами связи.</p><a class="button button-primary" href="v2/ispanskie/index.html">Открыть филиал ↗</a><div class="project-branch-links"><a href="v2/ispanskie/directions/index.html">Направления</a><a href="v2/ispanskie/doctors/index.html">Врачи</a><a href="v2/ispanskie/prices/index.html">Прайс</a><a href="v2/ispanskie/contacts/index.html">Контакты</a></div></div>
+      </article>
+    </section>
+    <details class="project-archive shell"><summary>Предыдущая версия V1 и сохранённые концепции</summary><div class="project-archive-links"><a href="prokshino.html">V1 · Прокшино</a><a href="prices-prokshino.html">V1 · Прайс Прокшино</a><a href="ispanskie.html">V1 · Испанские кварталы</a><a href="prices-ispanskie.html">V1 · Прайс Испанских кварталов</a><a href="concepts.html">Три старые концепции</a></div></details>
+  </main>
+  <footer class="project-footer"><div class="shell">Preview в отдельной дизайн-ветке · не live-сайт · не объединено с main</div></footer>
 </body>
 </html>

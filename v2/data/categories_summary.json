@@ -1,0 +1,72 @@
+{
+  "consultations": {
+    "title": "Консультации и первичный приём",
+    "count": 6,
+    "minPrice": 660,
+    "maxPrice": 5000,
+    "differencesCount": 0
+  },
+  "diagnostics": {
+    "title": "Рентгенодиагностика и КТ",
+    "count": 2,
+    "minPrice": 550,
+    "maxPrice": 770,
+    "differencesCount": 0
+  },
+  "anesthesia": {
+    "title": "Анестезия",
+    "count": 3,
+    "minPrice": 440,
+    "maxPrice": 1320,
+    "differencesCount": 0
+  },
+  "hygiene": {
+    "title": "Профессиональная гигиена и профилактика",
+    "count": 11,
+    "minPrice": 165,
+    "maxPrice": 6000,
+    "differencesCount": 0
+  },
+  "treatment": {
+    "title": "Терапевтическая стоматология (лечение кариеса)",
+    "count": 25,
+    "minPrice": 165,
+    "maxPrice": 8800,
+    "differencesCount": 0
+  },
+  "endodontics": {
+    "title": "Эндодонтическое лечение (лечение каналов)",
+    "count": 19,
+    "minPrice": 880,
+    "maxPrice": 9350,
+    "differencesCount": 0
+  },
+  "surgery": {
+    "title": "Хирургическая стоматология и удаление",
+    "count": 24,
+    "minPrice": 660,
+    "maxPrice": 12100,
+    "differencesCount": 0
+  },
+  "implantation": {
+    "title": "Дентальная имплантация",
+    "count": 18,
+    "minPrice": 660,
+    "maxPrice": 66000,
+    "differencesCount": 0
+  },
+  "prosthetics": {
+    "title": "Ортопедическая стоматология (протезирование)",
+    "count": 66,
+    "minPrice": 880,
+    "maxPrice": 396000,
+    "differencesCount": 0
+  },
+  "orthodontics": {
+    "title": "Ортодонтия (прикус, элайнеры, брекеты)",
+    "count": 80,
+    "minPrice": 500,
+    "maxPrice": 300000,
+    "differencesCount": 0
+  }
+}

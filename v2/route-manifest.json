@@ -1,0 +1,59 @@
+{
+  "entry": "index.html",
+  "branches": {
+    "prokshino": {
+      "home": "prokshino/index.html",
+      "directions": "prokshino/directions/index.html",
+      "services": [
+        "prokshino/services/consultations.html",
+        "prokshino/services/diagnostics.html",
+        "prokshino/services/anesthesia.html",
+        "prokshino/services/hygiene.html",
+        "prokshino/services/treatment.html",
+        "prokshino/services/endodontics.html",
+        "prokshino/services/surgery.html",
+        "prokshino/services/implantation.html",
+        "prokshino/services/prosthetics.html",
+        "prokshino/services/orthodontics.html"
+      ],
+      "doctors": [
+        "prokshino/doctors/index.html",
+        "prokshino/doctors/aram-danielyan.html",
+        "prokshino/doctors/azer-nadzhafov.html",
+        "prokshino/doctors/diana-fiasheva.html",
+        "prokshino/doctors/anna-karapetyan.html",
+        "prokshino/doctors/amina-mashrabova.html"
+      ],
+      "prices": "prokshino/prices/index.html",
+      "contacts": "prokshino/contacts/index.html"
+    },
+    "ispanskie": {
+      "home": "ispanskie/index.html",
+      "directions": "ispanskie/directions/index.html",
+      "services": [
+        "ispanskie/services/consultations.html",
+        "ispanskie/services/diagnostics.html",
+        "ispanskie/services/anesthesia.html",
+        "ispanskie/services/hygiene.html",
+        "ispanskie/services/treatment.html",
+        "ispanskie/services/endodontics.html",
+        "ispanskie/services/surgery.html",
+        "ispanskie/services/implantation.html",
+        "ispanskie/services/prosthetics.html",
+        "ispanskie/services/orthodontics.html"
+      ],
+      "doctors": [
+        "ispanskie/doctors/index.html",
+        "ispanskie/doctors/aram-danielyan.html",
+        "ispanskie/doctors/azer-nadzhafov.html",
+        "ispanskie/doctors/diana-fiasheva.html",
+        "ispanskie/doctors/anna-karapetyan.html",
+        "ispanskie/doctors/amina-mashrabova.html"
+      ],
+      "prices": "ispanskie/prices/index.html",
+      "contacts": "ispanskie/contacts/index.html"
+    }
+  },
+  "serviceCount": 254,
+  "source": "tech/dental-master-foundation-2026@a1607f79c28aafb7d2ee73818cdd5d996f7f5d3f"
+}

@@ -1,0 +1,1121 @@
+{
+  "viewports": [
+    320,
+    360,
+    375,
+    390,
+    430,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "pages": {
+    "prokshino": [
+      {
+        "viewport": 320,
+        "htmlScrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "pageHeight": 7082,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 360,
+        "htmlScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "pageHeight": 6831,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 375,
+        "htmlScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "pageHeight": 6695,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 390,
+        "htmlScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "pageHeight": 6722,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 430,
+        "htmlScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "pageHeight": 6693,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 768,
+        "htmlScrollWidth": 768,
+        "bodyScrollWidth": 768,
+        "pageHeight": 5038,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 1024,
+        "htmlScrollWidth": 1024,
+        "bodyScrollWidth": 1024,
+        "pageHeight": 4672,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 1440,
+        "htmlScrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "pageHeight": 5323,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 1920,
+        "htmlScrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "pageHeight": 5323,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          }
+        ],
+        "brokenImages": []
+      }
+    ],
+    "ispanskie": [
+      {
+        "viewport": 320,
+        "htmlScrollWidth": 320,
+        "bodyScrollWidth": 320,
+        "pageHeight": 8141,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 320,
+            "width": 320
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 360,
+        "htmlScrollWidth": 360,
+        "bodyScrollWidth": 360,
+        "pageHeight": 7921,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 360,
+            "width": 360
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 375,
+        "htmlScrollWidth": 375,
+        "bodyScrollWidth": 375,
+        "pageHeight": 7945,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 375,
+            "width": 375
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 390,
+        "htmlScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "pageHeight": 7950,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 390,
+            "width": 390
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 430,
+        "htmlScrollWidth": 430,
+        "bodyScrollWidth": 430,
+        "pageHeight": 8162,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 430,
+            "width": 430
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 768,
+        "htmlScrollWidth": 768,
+        "bodyScrollWidth": 768,
+        "pageHeight": 6215,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 768,
+            "width": 768
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 1024,
+        "htmlScrollWidth": 1024,
+        "bodyScrollWidth": 1024,
+        "pageHeight": 6350,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 1024,
+            "width": 1024
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 1440,
+        "htmlScrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "pageHeight": 7374,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 1440,
+            "width": 1440
+          }
+        ],
+        "brokenImages": []
+      },
+      {
+        "viewport": 1920,
+        "htmlScrollWidth": 1920,
+        "bodyScrollWidth": 1920,
+        "pageHeight": 7374,
+        "overflow": false,
+        "outOfBounds": [],
+        "sections": [
+          {
+            "name": "hero",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "services",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "clinic",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "doctors",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "visit",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "prices",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          },
+          {
+            "name": "contacts",
+            "left": 0,
+            "right": 1920,
+            "width": 1920
+          }
+        ],
+        "brokenImages": []
+      }
+    ]
+  },
+  "catalogs": {
+    "prokshino": [
+      {
+        "viewport": 320,
+        "scrollWidth": 320,
+        "pageHeight": 19948,
+        "overflow": false
+      },
+      {
+        "viewport": 360,
+        "scrollWidth": 360,
+        "pageHeight": 18213,
+        "overflow": false
+      },
+      {
+        "viewport": 375,
+        "scrollWidth": 375,
+        "pageHeight": 17914,
+        "overflow": false
+      },
+      {
+        "viewport": 390,
+        "scrollWidth": 390,
+        "pageHeight": 17578,
+        "overflow": false
+      },
+      {
+        "viewport": 430,
+        "scrollWidth": 430,
+        "pageHeight": 22000,
+        "overflow": false
+      },
+      {
+        "viewport": 768,
+        "scrollWidth": 768,
+        "pageHeight": 16955,
+        "overflow": false
+      },
+      {
+        "viewport": 1024,
+        "scrollWidth": 1024,
+        "pageHeight": 16259,
+        "overflow": false
+      },
+      {
+        "viewport": 1440,
+        "scrollWidth": 1440,
+        "pageHeight": 16163,
+        "overflow": false
+      },
+      {
+        "viewport": 1920,
+        "scrollWidth": 1920,
+        "pageHeight": 16163,
+        "overflow": false
+      }
+    ],
+    "ispanskie": [
+      {
+        "viewport": 320,
+        "scrollWidth": 320,
+        "pageHeight": 19948,
+        "overflow": false
+      },
+      {
+        "viewport": 360,
+        "scrollWidth": 360,
+        "pageHeight": 18213,
+        "overflow": false
+      },
+      {
+        "viewport": 375,
+        "scrollWidth": 375,
+        "pageHeight": 17914,
+        "overflow": false
+      },
+      {
+        "viewport": 390,
+        "scrollWidth": 390,
+        "pageHeight": 17578,
+        "overflow": false
+      },
+      {
+        "viewport": 430,
+        "scrollWidth": 430,
+        "pageHeight": 22000,
+        "overflow": false
+      },
+      {
+        "viewport": 768,
+        "scrollWidth": 768,
+        "pageHeight": 16955,
+        "overflow": false
+      },
+      {
+        "viewport": 1024,
+        "scrollWidth": 1024,
+        "pageHeight": 16259,
+        "overflow": false
+      },
+      {
+        "viewport": 1440,
+        "scrollWidth": 1440,
+        "pageHeight": 16163,
+        "overflow": false
+      },
+      {
+        "viewport": 1920,
+        "scrollWidth": 1920,
+        "pageHeight": 16163,
+        "overflow": false
+      }
+    ]
+  },
+  "old_reference": {
+    "prokshino": "captured: old_prokshino_mobile_390.png, old_prokshino_desktop_1440.png",
+    "ispanskie": "captured: old_ispanskie_mobile_390.png, old_ispanskie_desktop_1440.png"
+  },
+  "section_screenshots": [
+    "design\\qa\\screenshots\\prokshino_mobile_390_hero.png",
+    "design\\qa\\screenshots\\prokshino_mobile_390_services.png",
+    "design\\qa\\screenshots\\prokshino_mobile_390_clinic.png",
+    "design\\qa\\screenshots\\prokshino_mobile_390_doctors.png",
+    "design\\qa\\screenshots\\prokshino_mobile_390_visit.png",
+    "design\\qa\\screenshots\\prokshino_mobile_390_prices.png",
+    "design\\qa\\screenshots\\prokshino_mobile_390_contacts.png",
+    "design\\qa\\screenshots\\prokshino_desktop_1440_hero.png",
+    "design\\qa\\screenshots\\prokshino_desktop_1440_services.png",
+    "design\\qa\\screenshots\\prokshino_desktop_1440_clinic.png",
+    "design\\qa\\screenshots\\prokshino_desktop_1440_doctors.png",
+    "design\\qa\\screenshots\\prokshino_desktop_1440_visit.png",
+    "design\\qa\\screenshots\\prokshino_desktop_1440_prices.png",
+    "design\\qa\\screenshots\\prokshino_desktop_1440_contacts.png",
+    "design\\qa\\screenshots\\ispanskie_mobile_390_hero.png",
+    "design\\qa\\screenshots\\ispanskie_mobile_390_services.png",
+    "design\\qa\\screenshots\\ispanskie_mobile_390_clinic.png",
+    "design\\qa\\screenshots\\ispanskie_mobile_390_doctors.png",
+    "design\\qa\\screenshots\\ispanskie_mobile_390_visit.png",
+    "design\\qa\\screenshots\\ispanskie_mobile_390_prices.png",
+    "design\\qa\\screenshots\\ispanskie_mobile_390_contacts.png",
+    "design\\qa\\screenshots\\ispanskie_desktop_1440_hero.png",
+    "design\\qa\\screenshots\\ispanskie_desktop_1440_services.png",
+    "design\\qa\\screenshots\\ispanskie_desktop_1440_clinic.png",
+    "design\\qa\\screenshots\\ispanskie_desktop_1440_doctors.png",
+    "design\\qa\\screenshots\\ispanskie_desktop_1440_visit.png",
+    "design\\qa\\screenshots\\ispanskie_desktop_1440_prices.png",
+    "design\\qa\\screenshots\\ispanskie_desktop_1440_contacts.png"
+  ]
+}

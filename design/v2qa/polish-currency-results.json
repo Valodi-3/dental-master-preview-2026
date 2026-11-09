@@ -1,0 +1,38 @@
+[
+  {
+    "branch": "prokshino",
+    "width": 320,
+    "chips": 28,
+    "brokenPriceLabels": []
+  },
+  {
+    "branch": "prokshino",
+    "width": 360,
+    "chips": 28,
+    "brokenPriceLabels": []
+  },
+  {
+    "branch": "prokshino",
+    "width": 390,
+    "chips": 28,
+    "brokenPriceLabels": []
+  },
+  {
+    "branch": "ispanskie",
+    "width": 320,
+    "chips": 28,
+    "brokenPriceLabels": []
+  },
+  {
+    "branch": "ispanskie",
+    "width": 360,
+    "chips": 28,
+    "brokenPriceLabels": []
+  },
+  {
+    "branch": "ispanskie",
+    "width": 390,
+    "chips": 28,
+    "brokenPriceLabels": []
+  }
+]

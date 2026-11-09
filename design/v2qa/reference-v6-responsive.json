@@ -1,0 +1,4431 @@
+{
+  "status": "PASS",
+  "routes": 41,
+  "widths": [
+    320,
+    360,
+    375,
+    390,
+    430,
+    768,
+    1024,
+    1440,
+    1920
+  ],
+  "checks": 369,
+  "horizontalOverflow": 0,
+  "brokenImages": 0,
+  "v6Stylesheet": true,
+  "bookingButtonBounds": "inside viewport on every clinic page",
+  "screenshots": {
+    "v6-full-home-prokshino-390.png": [
+      390,
+      4707
+    ],
+    "v6-full-home-ispanskie-390.png": [
+      390,
+      4644
+    ],
+    "v6-home-prokshino-desktop-1440.png": [
+      1440,
+      900
+    ],
+    "v6-full-home-prokshino-1440.png": [
+      1440,
+      4855
+    ],
+    "v6-home-ispanskie-desktop-1440.png": [
+      1440,
+      900
+    ],
+    "v6-full-home-ispanskie-1440.png": [
+      1440,
+      4780
+    ]
+  },
+  "metrics": [
+    {
+      "route": "chooser",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": null
+    },
+    {
+      "route": "home-prokshino",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-prokshino",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-consultations",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-diagnostics",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-anesthesia",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-hygiene",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-treatment",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-endodontics",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-surgery",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-implantation",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-prosthetics",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-orthodontics",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-prokshino",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-aram-danielyan",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-azer-nadzhafov",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-diana-fiasheva",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-anna-karapetyan",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-amina-mashrabova",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-prokshino",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-prokshino",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "home-ispanskie",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-ispanskie",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-consultations",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-diagnostics",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-anesthesia",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-hygiene",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-treatment",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-endodontics",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-surgery",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-implantation",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-prosthetics",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-orthodontics",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-ispanskie",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-aram-danielyan",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-azer-nadzhafov",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-diana-fiasheva",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-anna-karapetyan",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-amina-mashrabova",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-ispanskie",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-ispanskie",
+      "width": 320,
+      "scrollWidth": 320,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 168,
+        "right": 308,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "chooser",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": null
+    },
+    {
+      "route": "home-prokshino",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-prokshino",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-consultations",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-diagnostics",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-anesthesia",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-hygiene",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-treatment",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-endodontics",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-surgery",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-implantation",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-prosthetics",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-orthodontics",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-prokshino",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-aram-danielyan",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-azer-nadzhafov",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-diana-fiasheva",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-anna-karapetyan",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-amina-mashrabova",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-prokshino",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-prokshino",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "home-ispanskie",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-ispanskie",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-consultations",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-diagnostics",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-anesthesia",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-hygiene",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-treatment",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-endodontics",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-surgery",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-implantation",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-prosthetics",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-orthodontics",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-ispanskie",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-aram-danielyan",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-azer-nadzhafov",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-diana-fiasheva",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-anna-karapetyan",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-amina-mashrabova",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-ispanskie",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-ispanskie",
+      "width": 360,
+      "scrollWidth": 360,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 208,
+        "right": 348,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "chooser",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": null
+    },
+    {
+      "route": "home-prokshino",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-prokshino",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-consultations",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-diagnostics",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-anesthesia",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-hygiene",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-treatment",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-endodontics",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-surgery",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-implantation",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-prosthetics",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-orthodontics",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-prokshino",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-aram-danielyan",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-azer-nadzhafov",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-diana-fiasheva",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-anna-karapetyan",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-amina-mashrabova",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-prokshino",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-prokshino",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "home-ispanskie",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-ispanskie",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-consultations",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-diagnostics",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-anesthesia",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-hygiene",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-treatment",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-endodontics",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-surgery",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-implantation",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-prosthetics",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-orthodontics",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-ispanskie",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-aram-danielyan",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-azer-nadzhafov",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-diana-fiasheva",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-anna-karapetyan",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-amina-mashrabova",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-ispanskie",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-ispanskie",
+      "width": 375,
+      "scrollWidth": 375,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 223,
+        "right": 363,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "chooser",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": null
+    },
+    {
+      "route": "home-prokshino",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-prokshino",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-consultations",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-diagnostics",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-anesthesia",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-hygiene",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-treatment",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-endodontics",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-surgery",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-implantation",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-prosthetics",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-orthodontics",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-prokshino",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-aram-danielyan",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-azer-nadzhafov",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-diana-fiasheva",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-anna-karapetyan",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-amina-mashrabova",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-prokshino",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-prokshino",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "home-ispanskie",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-ispanskie",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-consultations",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-diagnostics",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-anesthesia",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-hygiene",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-treatment",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-endodontics",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-surgery",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-implantation",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-prosthetics",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-orthodontics",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-ispanskie",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-aram-danielyan",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-azer-nadzhafov",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-diana-fiasheva",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-anna-karapetyan",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-amina-mashrabova",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-ispanskie",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-ispanskie",
+      "width": 390,
+      "scrollWidth": 390,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 238,
+        "right": 378,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "chooser",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": null
+    },
+    {
+      "route": "home-prokshino",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-prokshino",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-consultations",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-diagnostics",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-anesthesia",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-hygiene",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-treatment",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-endodontics",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-surgery",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-implantation",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-prosthetics",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-prokshino-orthodontics",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-prokshino",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-aram-danielyan",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-azer-nadzhafov",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-diana-fiasheva",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-anna-karapetyan",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-prokshino-amina-mashrabova",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-prokshino",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-prokshino",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "home-ispanskie",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "directions-ispanskie",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-consultations",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-diagnostics",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-anesthesia",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-hygiene",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-treatment",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-endodontics",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-surgery",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-implantation",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-prosthetics",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "service-ispanskie-orthodontics",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctors-ispanskie",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-aram-danielyan",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-azer-nadzhafov",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-diana-fiasheva",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-anna-karapetyan",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "doctor-ispanskie-amina-mashrabova",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "prices-ispanskie",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "contacts-ispanskie",
+      "width": 430,
+      "scrollWidth": 430,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 278,
+        "right": 418,
+        "bottom": 888
+      }
+    },
+    {
+      "route": "chooser",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": null
+    },
+    {
+      "route": "home-prokshino",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "directions-prokshino",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-consultations",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-diagnostics",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-anesthesia",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-hygiene",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-treatment",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-endodontics",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-surgery",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-implantation",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-prosthetics",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-orthodontics",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctors-prokshino",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-aram-danielyan",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-azer-nadzhafov",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-diana-fiasheva",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-anna-karapetyan",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-amina-mashrabova",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "prices-prokshino",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "contacts-prokshino",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "home-ispanskie",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "directions-ispanskie",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-consultations",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-diagnostics",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-anesthesia",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-hygiene",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-treatment",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-endodontics",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-surgery",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-implantation",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-prosthetics",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-orthodontics",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctors-ispanskie",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-aram-danielyan",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-azer-nadzhafov",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-diana-fiasheva",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-anna-karapetyan",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-amina-mashrabova",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "prices-ispanskie",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "contacts-ispanskie",
+      "width": 768,
+      "scrollWidth": 768,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 589.15625,
+        "right": 746,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "chooser",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": null
+    },
+    {
+      "route": "home-prokshino",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "directions-prokshino",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-consultations",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-diagnostics",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-anesthesia",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-hygiene",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-treatment",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-endodontics",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-surgery",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-implantation",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-prosthetics",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-orthodontics",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctors-prokshino",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-aram-danielyan",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-azer-nadzhafov",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-diana-fiasheva",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-anna-karapetyan",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-amina-mashrabova",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "prices-prokshino",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "contacts-prokshino",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "home-ispanskie",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "directions-ispanskie",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-consultations",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-diagnostics",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-anesthesia",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-hygiene",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-treatment",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-endodontics",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-surgery",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-implantation",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-prosthetics",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-orthodontics",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctors-ispanskie",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-aram-danielyan",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-azer-nadzhafov",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-diana-fiasheva",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-anna-karapetyan",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-amina-mashrabova",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "prices-ispanskie",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "contacts-ispanskie",
+      "width": 1024,
+      "scrollWidth": 1024,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 845.15625,
+        "right": 1002,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "chooser",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": null
+    },
+    {
+      "route": "home-prokshino",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "directions-prokshino",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-consultations",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-diagnostics",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-anesthesia",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-hygiene",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-treatment",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-endodontics",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-surgery",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-implantation",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-prosthetics",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-orthodontics",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctors-prokshino",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-aram-danielyan",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-azer-nadzhafov",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-diana-fiasheva",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-anna-karapetyan",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-amina-mashrabova",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "prices-prokshino",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "contacts-prokshino",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "home-ispanskie",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "directions-ispanskie",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-consultations",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-diagnostics",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-anesthesia",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-hygiene",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-treatment",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-endodontics",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-surgery",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-implantation",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-prosthetics",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-orthodontics",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctors-ispanskie",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-aram-danielyan",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-azer-nadzhafov",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-diana-fiasheva",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-anna-karapetyan",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-amina-mashrabova",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "prices-ispanskie",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "contacts-ispanskie",
+      "width": 1440,
+      "scrollWidth": 1440,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1261.15625,
+        "right": 1418,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "chooser",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": null
+    },
+    {
+      "route": "home-prokshino",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "directions-prokshino",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-consultations",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-diagnostics",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-anesthesia",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-hygiene",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-treatment",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-endodontics",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-surgery",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-implantation",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-prosthetics",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-prokshino-orthodontics",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctors-prokshino",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-aram-danielyan",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-azer-nadzhafov",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-diana-fiasheva",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-anna-karapetyan",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-prokshino-amina-mashrabova",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "prices-prokshino",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "contacts-prokshino",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "home-ispanskie",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "directions-ispanskie",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-consultations",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-diagnostics",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-anesthesia",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-hygiene",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-treatment",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-endodontics",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-surgery",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-implantation",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-prosthetics",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "service-ispanskie-orthodontics",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctors-ispanskie",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-aram-danielyan",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-azer-nadzhafov",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-diana-fiasheva",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-anna-karapetyan",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "doctor-ispanskie-amina-mashrabova",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "prices-ispanskie",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    },
+    {
+      "route": "contacts-ispanskie",
+      "width": 1920,
+      "scrollWidth": 1920,
+      "paperToken": "#e8dfd1",
+      "bookingBounds": {
+        "position": "fixed",
+        "left": 1741.15625,
+        "right": 1898,
+        "bottom": 880
+      }
+    }
+  ]
+}

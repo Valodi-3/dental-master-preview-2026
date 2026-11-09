@@ -1,0 +1,230 @@
+{
+  "status": "PASS",
+  "acceptance": {
+    "welcomeFirst": true,
+    "noBookingInHeroOrNav": true,
+    "floatingBooking": true,
+    "doctorCards": 5,
+    "touchSwipe": true,
+    "sourceLinkedEducationAndCertificates": true,
+    "fullDesktopScreenshots": true
+  },
+  "branches": [
+    {
+      "branch": "prokshino",
+      "welcomePhoto": "design/assets/prokshino/hero-clinic.webp",
+      "homeSectionOrder": [
+        "clinic-space",
+        "clinic-team",
+        "service-selection"
+      ],
+      "doctorCards": 5,
+      "touchSwipe": true,
+      "profileDetails": [
+        {
+          "slug": "aram-danielyan",
+          "education": true,
+          "certificates": 4
+        },
+        {
+          "slug": "azer-nadzhafov",
+          "education": true,
+          "certificates": 1
+        },
+        {
+          "slug": "diana-fiasheva",
+          "education": true,
+          "certificates": 0
+        },
+        {
+          "slug": "anna-karapetyan",
+          "education": true,
+          "certificates": 3
+        },
+        {
+          "slug": "amina-mashrabova",
+          "education": true,
+          "certificates": 0
+        }
+      ],
+      "floatingButtonAtNineWidths": [
+        {
+          "width": 320,
+          "height": 844,
+          "left": 168,
+          "right": 308,
+          "bottom": 832
+        },
+        {
+          "width": 360,
+          "height": 844,
+          "left": 208,
+          "right": 348,
+          "bottom": 832
+        },
+        {
+          "width": 375,
+          "height": 844,
+          "left": 223,
+          "right": 363,
+          "bottom": 832
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "left": 238,
+          "right": 378,
+          "bottom": 832
+        },
+        {
+          "width": 430,
+          "height": 844,
+          "left": 278,
+          "right": 418,
+          "bottom": 832
+        },
+        {
+          "width": 768,
+          "height": 900,
+          "left": 589.2,
+          "right": 746,
+          "bottom": 880
+        },
+        {
+          "width": 1024,
+          "height": 900,
+          "left": 845.2,
+          "right": 1002,
+          "bottom": 880
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "left": 1261.2,
+          "right": 1418,
+          "bottom": 880
+        },
+        {
+          "width": 1920,
+          "height": 900,
+          "left": 1741.2,
+          "right": 1898,
+          "bottom": 880
+        }
+      ],
+      "fullDesktopScreenshot": "design/v2qa/screenshots/v2-full-home-prokshino-1440.png",
+      "fullDesktopDimensions": [
+        1440,
+        4855
+      ]
+    },
+    {
+      "branch": "ispanskie",
+      "welcomePhoto": "design/assets/ispanskie/gallery-5.jpg",
+      "homeSectionOrder": [
+        "clinic-space",
+        "clinic-team",
+        "service-selection"
+      ],
+      "doctorCards": 5,
+      "touchSwipe": true,
+      "profileDetails": [
+        {
+          "slug": "aram-danielyan",
+          "education": true,
+          "certificates": 4
+        },
+        {
+          "slug": "azer-nadzhafov",
+          "education": true,
+          "certificates": 1
+        },
+        {
+          "slug": "diana-fiasheva",
+          "education": true,
+          "certificates": 0
+        },
+        {
+          "slug": "anna-karapetyan",
+          "education": true,
+          "certificates": 3
+        },
+        {
+          "slug": "amina-mashrabova",
+          "education": true,
+          "certificates": 0
+        }
+      ],
+      "floatingButtonAtNineWidths": [
+        {
+          "width": 320,
+          "height": 844,
+          "left": 168,
+          "right": 308,
+          "bottom": 832
+        },
+        {
+          "width": 360,
+          "height": 844,
+          "left": 208,
+          "right": 348,
+          "bottom": 832
+        },
+        {
+          "width": 375,
+          "height": 844,
+          "left": 223,
+          "right": 363,
+          "bottom": 832
+        },
+        {
+          "width": 390,
+          "height": 844,
+          "left": 238,
+          "right": 378,
+          "bottom": 832
+        },
+        {
+          "width": 430,
+          "height": 844,
+          "left": 278,
+          "right": 418,
+          "bottom": 832
+        },
+        {
+          "width": 768,
+          "height": 900,
+          "left": 589.2,
+          "right": 746,
+          "bottom": 880
+        },
+        {
+          "width": 1024,
+          "height": 900,
+          "left": 845.2,
+          "right": 1002,
+          "bottom": 880
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "left": 1261.2,
+          "right": 1418,
+          "bottom": 880
+        },
+        {
+          "width": 1920,
+          "height": 900,
+          "left": 1741.2,
+          "right": 1898,
+          "bottom": 880
+        }
+      ],
+      "fullDesktopScreenshot": "design/v2qa/screenshots/v2-full-home-ispanskie-1440.png",
+      "fullDesktopDimensions": [
+        1440,
+        4780
+      ]
+    }
+  ]
+}
