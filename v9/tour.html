@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Фотоэкскурсия — Клиника ДантистЪ Прокшино</title>
+  <meta name="description" content="Фотоэкскурсия по стоматологической клинике ДантистЪ в Прокшино. Кабинеты, немецкие микроскопы Carl Zeiss, зона ожидания и оборудование.">
+  <link rel="stylesheet" href="assets/v9-master.css">
+  <style>
+    body.tour-page {
+      background-color: #051310;
+      color: #f0f5f2;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tour-app-header {
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--v9-border);
+      background: rgba(7, 23, 19, 0.95);
+      backdrop-filter: blur(12px);
+    }
+
+    .tour-back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--v9-text-muted);
+      transition: color 0.2s ease;
+    }
+
+    .tour-back-btn:hover {
+      color: #ffffff;
+    }
+
+    .tour-chapter-bar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--v9-border-subtle);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .tour-chapter-bar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tour-chap-btn {
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--v9-text-muted);
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--v9-border);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .tour-chap-btn:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
+    }
+
+    .tour-chap-btn.is-active {
+      background: var(--v9-mint);
+      color: #071713;
+      border-color: var(--v9-mint);
+      font-weight: 700;
+    }
+
+    /* Central Interactive Scene */
+    .tour-scene-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .tour-scene-stage {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      max-height: 68vh;
+      border-radius: var(--v9-radius-lg);
+      overflow: hidden;
+      background: #000000;
+      border: 1px solid var(--v9-border);
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.7);
+    }
+
+    .tour-photo-layer {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.4s var(--v9-ease), transform 0.5s var(--v9-ease);
+      transform: scale(1.02);
+      pointer-events: none;
+    }
+
+    .tour-photo-layer.is-active {
+      opacity: 1;
+      transform: scale(1);
+      pointer-events: auto;
+    }
+
+    .tour-scene-vignette {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, transparent 40%, rgba(0, 0, 0, 0.75) 100%);
+      pointer-events: none;
+    }
+
+    .tour-scene-caption-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 32px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .tour-caption-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tour-kicker {
+      font-size: 0.74rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--v9-gold-light);
+      margin-bottom: 4px;
+    }
+
+    .tour-photo-title {
+      font-family: var(--v9-serif);
+      font-size: clamp(1.4rem, 2.4vw, 2rem);
+      font-weight: 500;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .tour-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tour-ctrl-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(7, 23, 19, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--v9-border);
+      color: #ffffff;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .tour-ctrl-btn:hover {
+      background: var(--v9-mint);
+      color: #071713;
+      transform: scale(1.08);
+    }
+
+    .tour-app-footer {
+      padding: 18px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--v9-border);
+      background: rgba(7, 23, 19, 0.95);
+      font-size: 0.84rem;
+    }
+
+    @media (max-width: 768px) {
+      .tour-scene-container {
+        padding: 12px;
+      }
+
+      .tour-scene-stage {
+        aspect-ratio: 4 / 3;
+        max-height: 55vh;
+        border-radius: 12px;
+      }
+
+      .tour-scene-caption-bar {
+        padding: 16px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .tour-controls {
+        align-self: flex-end;
+      }
+
+      .tour-app-footer {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body class="tour-page">
+
+  <!-- Tour App Header -->
+  <header class="tour-app-header">
+    <a href="index.html" class="tour-back-btn">
+      <span>←</span> На главную Прокшино
+    </a>
+
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <span style="font-size: 0.76rem; font-weight: 700; color: var(--v9-mint); background: rgba(31,224,170,0.1); padding: 4px 10px; border-radius: 9999px;">
+        Фотоэкскурсия
+      </span>
+      <button type="button" class="btn-primary" style="padding: 8px 16px; font-size: 0.82rem;" data-open-booking data-service-name="Запись после фотоэкскурсии">
+        Записаться
+      </button>
+    </div>
+  </header>
+
+  <!-- Category Chapters Navigation -->
+  <nav class="tour-chapter-bar" aria-label="Разделы фотоэкскурсии">
+    <button type="button" class="tour-chap-btn is-active" data-tour-chapter="all">Все фото (6)</button>
+    <button type="button" class="tour-chap-btn" data-tour-chapter="cabinets">Кабинеты (2)</button>
+    <button type="button" class="tour-chap-btn" data-tour-chapter="equipment">Оборудование Zeiss (2)</button>
+    <button type="button" class="tour-chap-btn" data-tour-chapter="interior">Интерьер и зона ожидания (2)</button>
+  </nav>
+
+  <!-- Central Scene Stage (Dual Layer Cross-Fade like REGINA salon.html) -->
+  <main class="tour-scene-container">
+    <section class="tour-scene-stage" data-tour-scene aria-label="Сцена фотоэкскурсии">
+      <img id="tourPhotoA" class="tour-photo-layer is-active" src="../design/assets/prokshino/hero-clinic.webp" alt="Главный холл и зона консультации пациентов">
+      <img id="tourPhotoB" class="tour-photo-layer" alt="">
+      <div class="tour-scene-vignette" aria-hidden="true"></div>
+
+      <div class="tour-scene-caption-bar">
+        <div class="tour-caption-text">
+          <span class="tour-kicker" id="tourPhotoCounter">01 / 06 · Фото клиники</span>
+          <h1 class="tour-photo-title" id="tourPhotoTitle">Главный холл и зона консультации пациентов</h1>
+        </div>
+
+        <div class="tour-controls">
+          <button type="button" class="tour-ctrl-btn" id="tourPrevPhoto" aria-label="Предыдущее фото">‹</button>
+          <button type="button" class="tour-ctrl-btn" id="tourNextPhoto" aria-label="Следующее фото">›</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Tour Footer -->
+  <footer class="tour-app-footer">
+    <span style="color: var(--v9-text-dim);">Клиника ДантистЪ Прокшино · Москва, ул. Лобановский Лес, д. 11</span>
+    <a href="tel:+79045199697" style="font-weight: 700; color: #ffffff;">+7 (904) 519-96-97</a>
+  </footer>
+
+  <!-- Choice Modal for Booking -->
+  <div class="choice-modal" id="bookingChoiceModal" role="dialog" aria-modal="true" aria-labelledby="bookingChoiceTitle" aria-hidden="true">
+    <div class="choice-modal-card">
+      <div class="choice-modal-top">
+        <div>
+          <div class="eyebrow" style="margin-bottom: 6px;">Запись в клинику</div>
+          <h3 id="bookingChoiceTitle">Как вам удобнее записаться?</h3>
+        </div>
+        <button type="button" class="choice-modal-close" id="bookingChoiceClose" aria-label="Закрыть окно">✕</button>
+      </div>
+
+      <div id="bookingChoiceContext" hidden></div>
+
+      <div class="choice-cards-grid">
+        <div class="choice-action-card">
+          <h4>Позвонить в клинику</h4>
+          <p>Администратор согласует удобное время визита.</p>
+          <div class="choice-phone-row">
+            <a href="tel:+79045199697" class="choice-call-btn">📞 +7 (904) 519-96-97</a>
+            <button type="button" class="choice-copy-btn" data-copy-phone>📋 Скопировать</button>
+            <span style="font-size:0.78rem; color:var(--v9-mint);" data-copy-status></span>
+          </div>
+        </div>
+
+        <div class="choice-action-card">
+          <h4>Онлайн-запись DentalPRO</h4>
+          <a href="https://dantist-prokshino.ru/online-zapis/" target="_blank" rel="noopener noreferrer" class="choice-online-btn">
+            Перейти к расписанию DentalPRO →
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/v9.js"></script>
+</body>
+</html>
