@@ -1,0 +1,104 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "DentalServiceCPT",
+  "description": "WordPress Custom Post Type schema for Dantist Dental Services (Прокшино & Испанские кварталы)",
+  "type": "object",
+  "required": [
+    "post_type",
+    "post_title",
+    "post_status",
+    "tax_input",
+    "meta_input"
+  ],
+  "properties": {
+    "post_type": {
+      "type": "string",
+      "enum": [
+        "dental_service"
+      ]
+    },
+    "post_title": {
+      "type": "string"
+    },
+    "post_name": {
+      "type": "string"
+    },
+    "post_status": {
+      "type": "string",
+      "enum": [
+        "publish",
+        "draft"
+      ]
+    },
+    "post_content": {
+      "type": "string"
+    },
+    "tax_input": {
+      "type": "object",
+      "properties": {
+        "dental_category": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "dental_category"
+      ]
+    },
+    "meta_input": {
+      "type": "object",
+      "required": [
+        "_service_sku",
+        "_price_prokshino",
+        "_price_ispanskie",
+        "_price_currency",
+        "_branches_available"
+      ],
+      "properties": {
+        "_service_sku": {
+          "type": "string"
+        },
+        "_service_category_code": {
+          "type": "string"
+        },
+        "_price_prokshino": {
+          "type": "integer"
+        },
+        "_price_prokshino_formatted": {
+          "type": "string"
+        },
+        "_price_ispanskie": {
+          "type": "integer"
+        },
+        "_price_ispanskie_formatted": {
+          "type": "string"
+        },
+        "_price_currency": {
+          "type": "string",
+          "enum": [
+            "RUB"
+          ]
+        },
+        "_branches_available": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "prokshino",
+              "ispanskie"
+            ]
+          }
+        },
+        "_booking_allowed": {
+          "type": "boolean"
+        },
+        "_verified_date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  }
+}
