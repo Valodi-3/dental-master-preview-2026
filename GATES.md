@@ -172,7 +172,7 @@ G16 confirms the existing PR is open and Draft; no merge, production change, or 
   EXPECT: обе mobile-страницы и обе цельные desktop-страницы показывают все секции; team-карточки доступны; внутренние страницы читаемы; V5-before не подменяет текущие кадры.
   EVIDENCE: вручную просмотрены mobile/full-PC images и шесть типов внутренних маршрутов; exact desktop page images Prokshino=1440×4855, Испанские кварталы=1440×4780; archived V5 full-PC images=1440×4699. Все ссылки собраны в `docs/V2_SCREENSHOT_INDEX.md`.
 
-- [ ] G30: новая версия остаётся только в existing isolated design branch и current open Draft PR; `main`, tech, V1, Pages, production и merge status остаются нетронутыми.
-  CHECK: `python design/draft_safety_qa.py`
-  EXPECT: `DRAFT_SAFETY_PASS` после последнего commit/push
-  EVIDENCE: pending post-push safety recheck.
+- [x] G30: V6 опубликована только в existing isolated design branch и current open Draft PR; `main`, tech, V1, Pages, production и merge status остаются нетронутыми.
+  CHECK: `python design/draft_safety_qa.py` после каждого последнего commit/push
+  EXPECT: `DRAFT_SAFETY_PASS`; PR #2 сохраняется `OPEN · Draft`, `mergedAt=null`.
+  EVIDENCE: post-push safety oracle passed; local/remote design refs matched; `main` and tech unchanged; `protectedFiles=0`; worktree clean; PR #2 description updated with V6 results. SHA is intentionally not hard-coded here.
