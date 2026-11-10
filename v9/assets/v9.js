@@ -10,201 +10,8 @@
 (function () {
   'use strict';
 
-  // --- Real Service Catalog for Configurator ---
-  const CONFIGURATOR_DATA = {
-    treatment: {
-      categoryName: 'Лечение зубов',
-      procedures: [
-        {
-          id: 'svc_treatment_027',
-          name: 'Восстановление зуба пломбой (1 поверхность)',
-          shortDesc: 'Лечение поверхностного и среднего кариеса современными светоотверждаемыми композитами с восстановлением анатомии зуба.',
-          price: '4 950 ₽',
-          duration: '45 мин',
-          img: '../design/assets/prokshino/treatment.webp',
-          tag: 'Терапия кариеса'
-        },
-        {
-          id: 'svc_treatment_028',
-          name: 'Восстановление зуба пломбой (2 поверхности)',
-          shortDesc: 'Пломбирование при контактном кариесе с созданием правильного плотного контактного пункта зубной нити.',
-          price: '5 500 ₽',
-          duration: '50 мин',
-          img: '../design/assets/prokshino/treatment.webp',
-          tag: 'Контактный кариес'
-        },
-        {
-          id: 'svc_treatment_029',
-          name: 'Эстетическая реставрация зуба (3 поверхности)',
-          shortDesc: 'Послойное художественное восстановление разрушенной коронковой части зуба с воссозданием фиссур и бугров.',
-          price: '6 050 ₽',
-          duration: '60 мин',
-          img: '../design/assets/prokshino/treatment.webp',
-          tag: 'Реставрация'
-        }
-      ]
-    },
-    endodontics: {
-      categoryName: 'Микроскопия Zeiss',
-      procedures: [
-        {
-          id: 'svc_endodontics_055',
-          name: 'Лечение корневых каналов под микроскопом Zeiss',
-          shortDesc: 'Немецкая оптика Carl Zeiss с 25-кратным увеличением. Позволяет найти скрытые микроканалы и спасти безнадежные зубы.',
-          price: '7 150 ₽',
-          duration: '60–90 мин',
-          img: '../design/assets/prokshino/microscope.webp',
-          tag: 'Carl Zeiss 25x'
-        },
-        {
-          id: 'svc_endodontics_048',
-          name: 'Инструментальная обработка каналов с оптикой',
-          shortDesc: 'Прецизионная механическая обработка никель-титановыми ротационными инструментами под постоянным визуальным контролем.',
-          price: '1 320 ₽',
-          duration: '45 мин',
-          img: '../design/assets/prokshino/microscope.webp',
-          tag: 'Обработка каналов'
-        },
-        {
-          id: 'svc_endodontics_049',
-          name: 'Временное пломбирование лечебной пастой',
-          shortDesc: 'Антисептическая терапия кальцийсодержащими препаратами для снятия воспаления в периодонте перед постоянным пломбированием.',
-          price: '880 ₽',
-          duration: '30 мин',
-          img: '../design/assets/prokshino/microscope.webp',
-          tag: 'Терапия периодонтита'
-        }
-      ]
-    },
-    implantation: {
-      categoryName: 'Имплантация',
-      procedures: [
-        {
-          id: 'svc_implantation_091',
-          name: 'Установка имплантата Osstem (Корея) под ключ',
-          shortDesc: 'Надежная корейская система с приживаемостью более 99%. Компьютерное 3D-планирование и атравматичный хирургический протокол.',
-          price: '33 000 ₽',
-          duration: '45–60 мин',
-          img: '../design/assets/prokshino/treatment.webp',
-          tag: 'Osstem Implant'
-        },
-        {
-          id: 'svc_implantation_093',
-          name: 'Установка премиум-имплантата Straumann (Швейцария)',
-          shortDesc: 'Золотой стандарт мировой дентальной имплантологии. Пожизненная международная гарантия и ускоренная остеоинтеграция Roxolid SLActive.',
-          price: '66 000 ₽',
-          duration: '45–60 мин',
-          img: '../design/assets/prokshino/treatment.webp',
-          tag: 'Straumann Swiss'
-        },
-        {
-          id: 'svc_implantation_092',
-          name: 'Установка формирователя десны',
-          shortDesc: 'Формирование эстетичного естественного контура десневого края вокруг будущего искусственного зуба.',
-          price: '4 400 ₽',
-          duration: '30 мин',
-          img: '../design/assets/prokshino/treatment.webp',
-          tag: 'Пластика десны'
-        }
-      ]
-    },
-    orthodontics: {
-      categoryName: 'Ортодонтия и прикус',
-      procedures: [
-        {
-          id: 'svc_orthodontics_211',
-          name: 'Фиксация брекет-системы металл (1 челюсть)',
-          shortDesc: 'Надежная классическая брекет-система для точного исправления нарушений прикуса любой сложности у подростков и взрослых.',
-          price: '75 000 ₽',
-          duration: '60 мин',
-          img: '../design/assets/prokshino/orthodontics.webp',
-          tag: 'Брекеты металл'
-        },
-        {
-          id: 'svc_orthodontics_212',
-          name: 'Самолигирующая брекет-система Damon (1 челюсть)',
-          shortDesc: 'Низкотрениевая система с мягкими биологическими силами. Меньше визитов в клинику и более комфортное перемещение зубов.',
-          price: '75 000 ₽',
-          duration: '60 мин',
-          img: '../design/assets/prokshino/orthodontics.webp',
-          tag: 'Damon System'
-        },
-        {
-          id: 'svc_consultations_002',
-          name: 'Первичный прием врача-ортодонта с диагностикой',
-          shortDesc: 'Фотометрия лица и улыбки, анализ профиля, снятие диагностических слепков и планирование траектории исправления прикуса.',
-          price: '880 ₽',
-          duration: '40 мин',
-          img: '../design/assets/prokshino/orthodontics.webp',
-          tag: 'Консультация ортодонта'
-        }
-      ]
-    },
-    prosthetics: {
-      categoryName: 'Протезирование',
-      procedures: [
-        {
-          id: 'svc_prosthetics_127',
-          name: 'Металлокерамическая коронка на зуб',
-          shortDesc: 'Прочная проверенная конструкция для восстановления жевательных зубов. Точное краевое прилегание к уступу.',
-          price: '14 300 ₽',
-          duration: '45 мин',
-          img: '../design/assets/prokshino/hero-clinic.webp',
-          tag: 'Металлокерамика'
-        },
-        {
-          id: 'svc_prosthetics_122',
-          name: 'Коронка с использованием циркониевой вкладки',
-          shortDesc: 'Безметалловая эстетика высшего класса. Диоксид циркония исключает темную кайму у десны и обеспечивает долговечность.',
-          price: '11 000 ₽',
-          duration: '45 мин',
-          img: '../design/assets/prokshino/hero-clinic.webp',
-          tag: 'Цирконий'
-        },
-        {
-          id: 'svc_prosthetics_117',
-          name: 'Временная коронка прямым методом',
-          shortDesc: 'Защита обработанного зуба от температурных раздражителей и сохранение эстетики на период изготовления постоянной коронки.',
-          price: '3 850 ₽',
-          duration: '30 мин',
-          img: '../design/assets/prokshino/hero-clinic.webp',
-          tag: 'Временная коронка'
-        }
-      ]
-    },
-    hygiene: {
-      categoryName: 'Гигиена и уход',
-      procedures: [
-        {
-          id: 'svc_hygiene_012',
-          name: 'Профессиональная гигиена полости рта и зубов',
-          shortDesc: 'Комплекс AirFlow с мелкодисперсным порошком + ультразвуковое снятие камня + полировка пастами и покрытие фторлаком.',
-          price: '6 000 ₽',
-          duration: '60 мин',
-          img: '../design/assets/prokshino/hygiene.webp',
-          tag: 'AirFlow комплекс'
-        },
-        {
-          id: 'svc_hygiene_014',
-          name: 'Удаление зубного камня ультразвуком (1 зуб)',
-          shortDesc: 'Точечное деликатное удаление поддесневых и наддесневых минерализованных отложений с сохранением эмали.',
-          price: '440 ₽',
-          duration: '20 мин',
-          img: '../design/assets/prokshino/hygiene.webp',
-          tag: 'Ультразвук'
-        },
-        {
-          id: 'svc_hygiene_013',
-          name: 'Реминерализирующая терапия эмали',
-          shortDesc: 'Насыщение ослабленной эмали соединениями кальция и фосфора для снятия чувствительности и профилактики кариеса.',
-          price: '275 ₽',
-          duration: '15 мин',
-          img: '../design/assets/prokshino/hygiene.webp',
-          tag: 'Реминерализация'
-        }
-      ]
-    }
-  };
+  // --- Service Catalog for Configurator (Single Source of Truth from catalog-data.js) ---
+  const CONFIGURATOR_DATA = window.DENTAL_V9_CATALOG || {};
 
   // --- 1. Init Configurator ---
   function initConfigurator() {
@@ -218,7 +25,7 @@
     const resultTitle = root.querySelector('[data-result-title]');
     const resultDesc = root.querySelector('[data-result-desc]');
     const resultPrice = root.querySelector('[data-result-price]');
-    const resultDuration = root.querySelector('[data-result-duration]');
+    const resultStatus = root.querySelector('[data-result-status]');
     const resultBookBtn = root.querySelector('[data-result-book]');
 
     let currentCat = 'treatment';
@@ -239,7 +46,7 @@
         btn.innerHTML = `
           <div class="proc-btn-info">
             <strong>${proc.name}</strong>
-            <small>${proc.tag} · ${proc.duration}</small>
+            <small>${proc.tag}</small>
           </div>
           <span class="proc-btn-price">${proc.price}</span>
         `;
@@ -274,7 +81,7 @@
       if (resultTitle) resultTitle.textContent = proc.name;
       if (resultDesc) resultDesc.textContent = proc.shortDesc;
       if (resultPrice) resultPrice.textContent = proc.price;
-      if (resultDuration) resultDuration.textContent = proc.duration;
+      if (resultStatus) resultStatus.textContent = 'Утвержденный тариф';
 
       if (resultBookBtn) {
         resultBookBtn.dataset.serviceName = proc.name;
@@ -469,11 +276,6 @@
         src: '../design/assets/prokshino/hygiene.webp',
         title: 'Кабинет гигиены полости рта и спа-протокола AirFlow',
         category: 'cabinets'
-      },
-      {
-        src: '../design/assets/ispanskie/gallery-1.jpg',
-        title: 'Стерилизационный блок и стандарты антисептики',
-        category: 'interior'
       }
     ];
 

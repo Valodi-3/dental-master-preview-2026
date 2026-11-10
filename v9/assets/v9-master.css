@@ -56,7 +56,6 @@ html {
 body {
   line-height: 1.6;
   min-height: 100vh;
-  overflow-x: hidden;
   background-color: var(--v9-bg);
   background-image: 
     radial-gradient(circle at 85% 15%, rgba(31, 224, 170, 0.04), transparent 45%),
@@ -100,6 +99,9 @@ button {
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   z-index: 1000;
   background: rgba(7, 23, 19, 0.95);
   backdrop-filter: blur(12px);
@@ -121,6 +123,7 @@ button {
   font-weight: 700;
   color: var(--v9-text);
   white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .v9-preview-tag {
@@ -137,7 +140,10 @@ button {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+  max-width: 100%;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 
@@ -571,6 +577,8 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
+  min-width: 0;
+  max-width: 100%;
   padding: 14px 18px;
   background: var(--v9-surface-card);
   border: 1px solid var(--v9-border);
@@ -579,6 +587,11 @@ button {
   text-align: left;
   cursor: pointer;
   transition: all 0.2s var(--v9-ease);
+}
+
+.proc-btn-info {
+  min-width: 0;
+  flex: 1;
 }
 
 .config-proc-btn:hover {
@@ -699,7 +712,8 @@ button {
 .result-meta-specs {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 24px;
+  flex-wrap: wrap;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--v9-border);
   margin-bottom: 24px;
@@ -1339,6 +1353,42 @@ button {
 }
 
 @media (max-width: 768px) {
+  .wrap {
+    padding: 0 16px;
+  }
+
+  .v9-preview-bar {
+    padding: 6px 12px;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .v9-preview-brand {
+    font-size: 0.74rem;
+    gap: 6px;
+  }
+
+  .v9-preview-tag {
+    display: none;
+  }
+
+  .v9-preview-nav {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 6px;
+    padding-bottom: 2px;
+  }
+
+  .v9-preview-link {
+    font-size: 0.7rem;
+    padding: 3px 8px;
+    flex-shrink: 0;
+  }
+
   .v9-header {
     padding: 14px 0;
   }
@@ -1462,11 +1512,27 @@ button {
 
 @media (max-width: 360px) {
   .wrap {
-    padding: 0 14px;
+    padding: 0 10px;
   }
   
   .hero h1 {
-    font-size: 2rem;
+    font-size: 1.85rem;
+  }
+
+  .config-proc-panel {
+    padding: 16px 10px;
+  }
+
+  .config-result-stage {
+    padding: 16px 10px;
+  }
+
+  .config-proc-btn {
+    padding: 10px 12px;
+  }
+
+  .proc-btn-info strong {
+    font-size: 0.85rem;
   }
 }
 
