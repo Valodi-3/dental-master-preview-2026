@@ -3,11 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-  <title>DENTAL ATLAS — Цифровая клиника ДантистЪ (Gate 2 Wireframe)</title>
+  <title>DENTAL ATLAS — Цифровая клиника ДантистЪ (Gate 3 Art Direction)</title>
   <meta name="description" content="Интерактивная архитектура цифровой клиники ДантистЪ. Единая навигационная система: услуги, врачи, подтверждённая запись.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/atlas-wireframe.css">
+  <link rel="stylesheet" href="assets/css/atlas-themes.css">
 </head>
-<body>
+<body class="theme-editorial">
 
   <!-- Top System Bar -->
   <header class="atlas-topbar" role="banner">
@@ -41,6 +45,16 @@
         </button>
         <button type="button" class="pathway-btn" data-pathway="booking" role="tab" aria-selected="false">
           <span>Запись</span>
+        </button>
+      </nav>
+
+      <!-- GATE 3: Art Direction Switcher (Editorial vs Clinical) -->
+      <nav class="theme-switcher-bar" aria-label="Выбор художественного направления">
+        <button type="button" class="theme-switch-btn is-active" id="themeBtnEditorial" data-theme-val="editorial">
+          <span>🏛 Редакционный</span>
+        </button>
+        <button type="button" class="theme-switch-btn" id="themeBtnClinical" data-theme-val="clinical">
+          <span>🔬 Клинический</span>
         </button>
       </nav>
 
@@ -262,7 +276,7 @@
   <!-- Footer -->
   <footer class="atlas-footer">
     <div class="wire-shell atlas-footer-inner">
-      <span>Стоматологическая сеть «ДантистЪ» · Gate 2 Wireframe Prototype</span>
+      <span>Стоматологическая сеть «ДантистЪ» · Gate 3 Art Direction Prototype</span>
       <span style="font-family: var(--wire-font-mono); font-size: 0.74rem;">DENTAL ATLAS · v1.0.0</span>
     </div>
   </footer>

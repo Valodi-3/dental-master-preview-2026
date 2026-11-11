@@ -27,6 +27,7 @@
     catId: 'diagnostics',
     procId: 'consult-head',
     docSlug: null,
+    theme: 'editorial', // 'editorial' | 'clinical' (GATE 3 Art Direction)
     searchQuery: '',
     modalOpen: false,
     modalContext: null,
@@ -42,6 +43,10 @@
     brandBranchBadge: document.getElementById('brandBranchBadge'),
     topPhoneLink: document.getElementById('topPhoneLink'),
     topPhoneText: document.getElementById('topPhoneText'),
+
+    // GATE 3 Art Direction Theme Buttons
+    themeBtnEditorial: document.getElementById('themeBtnEditorial'),
+    themeBtnClinical: document.getElementById('themeBtnClinical'),
 
     // Pathway Tabs
     pathwayBtns: document.querySelectorAll('[data-pathway]'),
@@ -96,6 +101,7 @@
     const viewParam = params.get('view');
     const catParam = params.get('cat');
     const idParam = params.get('id');
+    const themeParam = params.get('theme');
 
     let invalid = false;
 
@@ -109,6 +115,18 @@
       }
     } else {
       state.branch = 'ispanskie';
+    }
+
+    // Theme (GATE 3 Art Direction with Smart Branch Default REV-011)
+    if (themeParam) {
+      if (['editorial', 'clinical'].includes(themeParam)) {
+        state.theme = themeParam;
+      } else {
+        state.theme = (state.branch === 'prokshino') ? 'clinical' : 'editorial';
+        invalid = true;
+      }
+    } else {
+      state.theme = (state.branch === 'prokshino') ? 'clinical' : 'editorial';
     }
 
     // View / Pathway
@@ -170,6 +188,7 @@
     const params = new URLSearchParams();
     params.set('branch', state.branch);
     params.set('view', state.pathway);
+    params.set('theme', state.theme);
 
     if (state.pathway === 'services') {
       params.set('cat', state.catId);
@@ -189,6 +208,15 @@
   // 3. Render TopBar & Ribbon
   function renderHeaderAndRibbon() {
     const branch = data.branches[state.branch];
+
+    // Apply active Art Direction theme to body (GATE 3)
+    document.body.className = `theme-${state.theme}`;
+
+    // Theme Switch Buttons
+    if (el.themeBtnEditorial && el.themeBtnClinical) {
+      el.themeBtnEditorial.classList.toggle('is-active', state.theme === 'editorial');
+      el.themeBtnClinical.classList.toggle('is-active', state.theme === 'clinical');
+    }
 
     // Branch switch buttons
     if (el.btnBranchIspanskie && el.btnBranchProkshino) {
@@ -580,11 +608,31 @@
 
   // 9. Event Listeners Setup
   function setupListeners() {
-    // Branch Switches
+    // GATE 3 Art Direction Switchers
+    if (el.themeBtnEditorial) {
+      el.themeBtnEditorial.addEventListener('click', () => {
+        if (state.theme === 'editorial') return;
+        state.theme = 'editorial';
+        syncUrl();
+        renderHeaderAndRibbon();
+      });
+    }
+
+    if (el.themeBtnClinical) {
+      el.themeBtnClinical.addEventListener('click', () => {
+        if (state.theme === 'clinical') return;
+        state.theme = 'clinical';
+        syncUrl();
+        renderHeaderAndRibbon();
+      });
+    }
+
+    // Branch Switches (with Smart Art Direction Default REV-011)
     if (el.btnBranchIspanskie) {
       el.btnBranchIspanskie.addEventListener('click', () => {
         if (state.branch === 'ispanskie') return;
         state.branch = 'ispanskie';
+        state.theme = 'editorial';
         syncUrl();
         renderHeaderAndRibbon();
         renderServices();
@@ -597,6 +645,7 @@
       el.btnBranchProkshino.addEventListener('click', () => {
         if (state.branch === 'prokshino') return;
         state.branch = 'prokshino';
+        state.theme = 'clinical';
         syncUrl();
         renderHeaderAndRibbon();
         renderServices();

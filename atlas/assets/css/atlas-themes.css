@@ -1,0 +1,291 @@
+/**
+ * DENTAL ATLAS — GATE 3 ART DIRECTIONS
+ * Provides 2 distinct visual systems for the approved Clinical Canvas architecture:
+ * 1. .theme-editorial (Светлая архитектурная редакционная система)
+ * 2. .theme-clinical (Контрастная высокоточная клиническая система)
+ */
+
+/* ==========================================================================
+   THEME 1: ARCHITECTURAL EDITORIAL (.theme-editorial)
+   Travertine stone, warm porcelain, Cormorant Garamond, subtle bronze accents
+   ========================================================================== */
+body.theme-editorial {
+  --wire-bg: #faf7f2;
+  --wire-surface: #ffffff;
+  --wire-surface-alt: #f5f0e6;
+  --wire-surface-subtle: #fcfaf7;
+
+  --wire-border: #e6dfd3;
+  --wire-border-subtle: #eee9e0;
+  --wire-border-strong: #c8bead;
+
+  --wire-ink-loud: #1c1917;
+  --wire-ink: #44403c;
+  --wire-ink-muted: #78716c;
+  --wire-ink-faint: #a8a29e;
+
+  --wire-accent: #926b2b;
+  --wire-accent-bg: #f9f5ed;
+  --wire-accent-border: #dfd0b5;
+
+  --wire-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --wire-font-serif: 'Cormorant Garamond', Garamond, 'Times New Roman', Georgia, serif;
+
+  font-family: var(--wire-font-sans);
+  background-color: var(--wire-bg);
+  color: var(--wire-ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Editorial Typography & Accents */
+body.theme-editorial .stage-proc-title {
+  font-family: var(--wire-font-serif);
+  font-size: clamp(1.7rem, 2.7vw, 2.3rem);
+  font-weight: 600;
+  color: var(--wire-ink-loud);
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+}
+
+body.theme-editorial .doctor-card-name {
+  font-family: var(--wire-font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+body.theme-editorial .atlas-brand-title {
+  font-family: var(--wire-font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+body.theme-editorial .atlas-brand-logo-frame {
+  background: var(--wire-ink-loud);
+  font-family: var(--wire-font-serif);
+  font-size: 1.1rem;
+}
+
+body.theme-editorial .stage-price-val {
+  font-family: var(--wire-font-sans);
+  font-weight: 800;
+  color: var(--wire-accent);
+}
+
+body.theme-editorial .services-canvas,
+body.theme-editorial .doctor-card,
+body.theme-editorial .booking-gateway-container {
+  box-shadow: 0 8px 30px rgba(50, 40, 30, 0.04);
+  border-color: var(--wire-border);
+}
+
+body.theme-editorial .btn-primary-wire {
+  background: var(--wire-ink-loud);
+  color: #ffffff;
+  border-radius: var(--wire-radius-md);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+body.theme-editorial .btn-primary-wire:hover {
+  background: #292524;
+  box-shadow: 0 4px 16px rgba(41, 37, 36, 0.2);
+}
+
+body.theme-editorial .wire-tag.active {
+  background: var(--wire-accent-bg);
+  border-color: var(--wire-accent-border);
+  color: var(--wire-accent);
+}
+
+body.theme-editorial .nav-proc-btn.is-active {
+  box-shadow: inset 3px 0 0 var(--wire-accent);
+}
+
+/* ==========================================================================
+   THEME 2: MODERN HIGH-TECH CLINICAL (.theme-clinical)
+   Mineral graphite, Carl Zeiss precision emerald, Manrope neo-grotesque, mono prices
+   ========================================================================== */
+body.theme-clinical {
+  --wire-bg: #09120f;
+  --wire-surface: #101c18;
+  --wire-surface-alt: #0c1613;
+  --wire-surface-subtle: #080f0c;
+
+  --wire-border: #1e352c;
+  --wire-border-subtle: #152620;
+  --wire-border-strong: #2d5043;
+
+  --wire-ink-loud: #ffffff;
+  --wire-ink: #cbd5e1;
+  --wire-ink-muted: #8ea59b;
+  --wire-ink-faint: #475569;
+
+  --wire-accent: #10b981;
+  --wire-accent-bg: rgba(16, 185, 129, 0.12);
+  --wire-accent-border: rgba(16, 185, 129, 0.35);
+
+  --wire-font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --wire-font-mono: ui-monospace, SFMono-Regular, "JetBrains Mono", monospace;
+
+  font-family: var(--wire-font-sans);
+  background-color: var(--wire-bg);
+  color: var(--wire-ink);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* High-Tech Clinical Typography & Accents */
+body.theme-clinical .stage-proc-title {
+  font-family: var(--wire-font-sans);
+  font-size: clamp(1.5rem, 2.5vw, 2.1rem);
+  font-weight: 800;
+  color: var(--wire-ink-loud);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+}
+
+body.theme-clinical .doctor-card-name {
+  font-family: var(--wire-font-sans);
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+body.theme-clinical .atlas-brand-title {
+  font-family: var(--wire-font-sans);
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+body.theme-clinical .atlas-brand-logo-frame {
+  background: var(--wire-accent);
+  color: #05130e;
+  font-weight: 900;
+}
+
+body.theme-clinical .stage-price-val {
+  font-family: var(--wire-font-mono);
+  font-weight: 800;
+  color: #34d399;
+  letter-spacing: -0.02em;
+}
+
+body.theme-clinical .proc-btn-price {
+  color: #34d399;
+  font-family: var(--wire-font-mono);
+}
+
+body.theme-clinical .services-canvas,
+body.theme-clinical .doctor-card,
+body.theme-clinical .booking-gateway-container {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  border-color: var(--wire-border);
+}
+
+body.theme-clinical .doctor-card:hover,
+body.theme-clinical .services-canvas:hover {
+  border-color: var(--wire-border-strong);
+}
+
+body.theme-clinical .btn-primary-wire {
+  background: #10b981;
+  color: #05130e;
+  font-weight: 800;
+  border-radius: var(--wire-radius-md);
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.25);
+  transition: all 0.2s ease;
+}
+
+body.theme-clinical .btn-primary-wire:hover {
+  background: #34d399;
+  box-shadow: 0 6px 24px rgba(16, 185, 129, 0.4);
+}
+
+body.theme-clinical .btn-secondary-wire {
+  background: var(--wire-surface-alt);
+  color: #ffffff;
+  border-color: var(--wire-border-strong);
+}
+
+body.theme-clinical .btn-secondary-wire:hover {
+  background: var(--wire-surface);
+  border-color: var(--wire-accent);
+}
+
+body.theme-clinical .nav-proc-btn.is-active {
+  border-color: var(--wire-accent);
+  box-shadow: inset 3px 0 0 var(--wire-accent);
+  background: #14241e;
+}
+
+body.theme-clinical .wire-tag.active {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+body.theme-clinical .doctor-card.is-selected-doctor {
+  border-color: var(--wire-accent);
+  box-shadow: 0 0 25px rgba(16, 185, 129, 0.2);
+}
+
+body.theme-clinical .doctor-selected-badge {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+/* ==========================================================================
+   THEME SWITCHER CONTROLS IN HEADER
+   ========================================================================== */
+.theme-switcher-bar {
+  display: flex;
+  align-items: center;
+  background: var(--wire-surface-alt);
+  border: 1px solid var(--wire-border);
+  border-radius: var(--wire-radius-md);
+  padding: 2px;
+  gap: 2px;
+}
+
+.theme-switch-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  border-radius: var(--wire-radius-sm);
+  color: var(--wire-ink-muted);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.theme-switch-btn:hover {
+  color: var(--wire-ink-loud);
+}
+
+.theme-switch-btn.is-active {
+  background: var(--wire-surface);
+  color: var(--wire-ink-loud);
+  border: 1px solid var(--wire-border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 768px) {
+  .theme-switcher-bar {
+    width: 100%;
+    justify-content: stretch;
+    margin-top: 4px;
+  }
+  .theme-switch-btn {
+    flex: 1;
+    min-height: 42px;
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+}
