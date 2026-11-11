@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Фотоэкскурсия — Стоматологические клиники ДантистЪ</title>
+  <meta name="description" content="Фотоэкскурсия по стоматологическим клиникам ДантистЪ: филиал Испанские кварталы и филиал Прокшино. Кабинеты, микроскопы Zeiss, зона ожидания и оборудование.">
+  <link rel="stylesheet" href="../assets/css/dx-style.css">
+  <style>
+    .gallery-page-header {
+      padding: 32px 0 20px;
+      border-bottom: 1px solid var(--dx-border);
+      background: var(--dx-surface);
+    }
+
+    .gallery-filter-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+      flex-wrap: wrap;
+    }
+
+    .gallery-tabs {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .gallery-tab-btn {
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--dx-muted);
+      background: var(--dx-paper-alt);
+      border: 1px solid var(--dx-border);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+    }
+
+    .gallery-tab-btn:hover {
+      color: var(--dx-ink);
+      border-color: var(--dx-border-strong);
+    }
+
+    .gallery-tab-btn.is-active {
+      background: var(--dx-primary);
+      color: #ffffff;
+      border-color: var(--dx-primary);
+      font-weight: 700;
+    }
+
+    .gallery-grid-full {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 40px 0 80px;
+    }
+
+    .gallery-card {
+      background: var(--dx-surface);
+      border: 1px solid var(--dx-border);
+      border-radius: var(--dx-radius-lg);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--dx-shadow-sm);
+      transition: transform 0.25s var(--dx-ease), box-shadow 0.25s var(--dx-ease);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--dx-shadow-md);
+    }
+
+    .gallery-card-img {
+      width: 100%;
+      aspect-ratio: 16 / 11;
+      overflow: hidden;
+      background: var(--dx-paper-alt);
+    }
+
+    .gallery-card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s var(--dx-ease);
+    }
+
+    .gallery-card:hover .gallery-card-img img {
+      transform: scale(1.05);
+    }
+
+    .gallery-card-caption {
+      padding: 16px 20px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--dx-ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .gallery-card-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--dx-accent);
+    }
+
+    /* Lightbox Modal */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(10, 18, 15, 0.92);
+      backdrop-filter: blur(14px);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+    }
+
+    .lightbox.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .lightbox-stage {
+      position: relative;
+      max-width: 1000px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lightbox-frame {
+      width: 100%;
+      max-height: 75vh;
+      border-radius: var(--dx-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--dx-shadow-modal);
+      background: #000000;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .lightbox-frame img {
+      width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+    }
+
+    .lightbox-caption-bar {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #ffffff;
+      padding: 16px 0 0;
+      gap: 16px;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -48px;
+      right: 0;
+      color: #ffffff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+    }
+
+    .lightbox-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .lightbox-nav-btn:hover {
+      background: #ffffff;
+      color: var(--dx-ink);
+    }
+
+    .lightbox-nav-btn.prev {
+      left: -64px;
+    }
+
+    .lightbox-nav-btn.next {
+      right: -64px;
+    }
+
+    @media (max-width: 1024px) {
+      .gallery-grid-full {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .lightbox-nav-btn.prev { left: 8px; }
+      .lightbox-nav-btn.next { right: 8px; }
+    }
+
+    @media (max-width: 600px) {
+      .gallery-grid-full {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .lightbox-stage { padding: 10px; }
+      .lightbox-caption-bar { flex-direction: column; align-items: flex-start; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Preview / Status Bar -->
+  <aside class="dx-preview-bar" aria-label="Панель переключения филиалов сети ДантистЪ">
+    <div class="wrap dx-preview-bar-inner">
+      <div class="dx-preview-brand-label">
+        <strong>ДАНТИСТЪ · Фотоэкскурсия</strong>
+      </div>
+      <nav class="dx-preview-branch-nav" aria-label="Выбор филиала">
+        <a href="../index.html" class="dx-preview-branch-link">← Испанские кварталы</a>
+        <a href="../prokshino/index.html" class="dx-preview-branch-link">Прокшино ↗</a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Header -->
+  <header class="dx-header">
+    <div class="wrap dx-header-inner">
+      <a href="../index.html" class="dx-brand">
+        <img src="../../design/assets/prokshino/logo.png" alt="ДантистЪ Стоматологическая клиника" class="dx-brand-logo" width="160" height="42">
+        <div class="dx-brand-meta">
+          <span class="dx-brand-title">ДантистЪ</span>
+          <span class="dx-brand-branch-badge">Фотоэкскурсия по клиникам</span>
+        </div>
+      </a>
+      <div class="dx-header-actions">
+        <a href="tel:+79045199697" class="dx-phone-link">
+          <span>+7 (904) 519-96-97</span>
+          <small>Ежедневно 09:00–21:00</small>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Intro Header -->
+    <section class="gallery-page-header">
+      <div class="wrap">
+        <div class="eyebrow">Пространство и оснащение</div>
+        <h1 style="font-family: var(--dx-serif); font-size: clamp(2.2rem, 3.6vw, 3.2rem); font-weight: 500; margin-bottom: 10px;">
+          Фотоэкскурсия <em>по клиникам ДантистЪ</em>
+        </h1>
+        <p style="color: var(--dx-muted); max-width: 640px; font-size: 1.02rem;">
+          Оцените интерьер, кабинеты, немецкую оптику Carl Zeiss и стерилизационные стандарты до первого визита. Только реальные фотографии филиалов.
+        </p>
+
+        <!-- Branch & Category Filters -->
+        <div class="gallery-filter-bar">
+          <div class="gallery-tabs" id="branchFilterTabs" role="tablist" aria-label="Выбор клиники">
+            <button type="button" class="gallery-tab-btn is-active" data-branch-filter="ispanskie">● Испанские кварталы (6 фото)</button>
+            <button type="button" class="gallery-tab-btn" data-branch-filter="prokshino">○ Прокшино (5 фото)</button>
+          </div>
+
+          <div class="gallery-tabs" id="categoryFilterTabs" role="tablist" aria-label="Категории фото">
+            <button type="button" class="gallery-tab-btn is-active" data-cat-filter="all">Все помещения</button>
+            <button type="button" class="gallery-tab-btn" data-cat-filter="cabinets">Кабинеты</button>
+            <button type="button" class="gallery-tab-btn" data-cat-filter="equipment">Оборудование</button>
+            <button type="button" class="gallery-tab-btn" data-cat-filter="interior">Интерьер и холл</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photos Grid -->
+    <section class="wrap">
+      <div class="gallery-grid-full" id="galleryGrid">
+        <!-- Rendered dynamically by script below -->
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightboxModal" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" aria-hidden="true">
+    <div class="lightbox-stage">
+      <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Закрыть">✕ Закрыть</button>
+      <button type="button" class="lightbox-nav-btn prev" id="lightboxPrev" aria-label="Предыдущее фото">‹</button>
+      <div class="lightbox-frame">
+        <img id="lightboxImg" src="" alt="">
+      </div>
+      <button type="button" class="lightbox-nav-btn next" id="lightboxNext" aria-label="Следующее фото">›</button>
+      <div class="lightbox-caption-bar">
+        <strong id="lightboxTitle" style="font-size: 1.1rem; font-family: var(--dx-serif);"></strong>
+        <span id="lightboxCounter" style="font-size: 0.85rem; color: #a4b8b1;"></span>
+      </div>
+    </div>
+  </div>
+
+  <footer class="dx-footer">
+    <div class="wrap footer-bottom">
+      <span>Клиники «ДантистЪ» · Испанские кварталы (ул. Магеллана, 5) · Прокшино (Лобановский Лес, 11)</span>
+      <a href="tel:+79045199697" style="color: #ffffff; font-weight: 700;">+7 (904) 519-96-97</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/dx-catalog.js"></script>
+  <script>
+    (function() {
+      'use strict';
+      const catalog = window.DX_CATALOG;
+      if (!catalog) return;
+
+      const urlParams = new URLSearchParams(window.location.search);
+      let activeBranch = urlParams.get('branch') === 'prokshino' ? 'prokshino' : 'ispanskie';
+      let activeCat = 'all';
+
+      const grid = document.getElementById('galleryGrid');
+      const branchBtns = document.querySelectorAll('[data-branch-filter]');
+      const catBtns = document.querySelectorAll('[data-cat-filter]');
+
+      // Lightbox elements
+      const lightbox = document.getElementById('lightboxModal');
+      const lbImg = document.getElementById('lightboxImg');
+      const lbTitle = document.getElementById('lightboxTitle');
+      const lbCounter = document.getElementById('lightboxCounter');
+      const lbPrev = document.getElementById('lightboxPrev');
+      const lbNext = document.getElementById('lightboxNext');
+      const lbClose = document.getElementById('lightboxClose');
+
+      let currentFilteredItems = [];
+      let currentLbIndex = 0;
+
+      function resolveAsset(path) {
+        if (!path) return '';
+        if (path.startsWith('../design/')) {
+          return '../' + path;
+        }
+        return path;
+      }
+
+      function render() {
+        const branchData = catalog.branches[activeBranch];
+        if (!branchData) return;
+
+        const allItems = branchData.gallery.map(item => ({
+          ...item,
+          branchName: branchData.name
+        }));
+
+        currentFilteredItems = allItems.filter(item => {
+          if (activeCat === 'all') return true;
+          return item.cat === activeCat;
+        });
+
+        // Update branch tab states
+        branchBtns.forEach(btn => {
+          const isAct = btn.dataset.branchFilter === activeBranch;
+          btn.classList.toggle('is-active', isAct);
+        });
+
+        // Update cat tab states
+        catBtns.forEach(btn => {
+          const isAct = btn.dataset.catFilter === activeCat;
+          btn.classList.toggle('is-active', isAct);
+        });
+
+        grid.innerHTML = '';
+        if (currentFilteredItems.length === 0) {
+          grid.innerHTML = '<p style="grid-column: 1/-1; padding: 40px; text-align: center; color: var(--dx-muted);">В этой категории пока нет фотографий.</p>';
+          return;
+        }
+
+        currentFilteredItems.forEach((item, idx) => {
+          const card = document.createElement('article');
+          card.className = 'gallery-card';
+          card.tabIndex = 0;
+          card.setAttribute('role', 'button');
+          card.setAttribute('aria-label', `${item.title} — нажать для увеличения`);
+          card.innerHTML = `
+            <div class="gallery-card-img">
+              <img src="${resolveAsset(item.src)}" alt="${item.title}" loading="lazy">
+            </div>
+            <div class="gallery-card-caption">
+              <span>${item.title}</span>
+              <span class="gallery-card-tag">${item.cat === 'cabinets' ? 'Кабинет' : item.cat === 'equipment' ? 'Оснащение' : 'Интерьер'}</span>
+            </div>
+          `;
+
+          card.addEventListener('click', () => openLightbox(idx));
+          card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              openLightbox(idx);
+            }
+          });
+
+          grid.appendChild(card);
+        });
+      }
+
+      function openLightbox(index) {
+        if (!currentFilteredItems[index]) return;
+        currentLbIndex = index;
+        updateLightbox();
+        lightbox.classList.add('is-open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('is-open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      function updateLightbox() {
+        const item = currentFilteredItems[currentLbIndex];
+        if (!item) return;
+        lbImg.src = resolveAsset(item.src);
+        lbImg.alt = item.title;
+        lbTitle.textContent = `${item.title} (${item.branchName})`;
+        lbCounter.textContent = `${String(currentLbIndex + 1).padStart(2, '0')} / ${String(currentFilteredItems.length).padStart(2, '0')}`;
+      }
+
+      function nextPhoto() {
+        currentLbIndex = (currentLbIndex + 1) % currentFilteredItems.length;
+        updateLightbox();
+      }
+
+      function prevPhoto() {
+        currentLbIndex = (currentLbIndex - 1 + currentFilteredItems.length) % currentFilteredItems.length;
+        updateLightbox();
+      }
+
+      // Event Listeners
+      branchBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeBranch = btn.dataset.branchFilter;
+          render();
+        });
+      });
+
+      catBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          activeCat = btn.dataset.catFilter;
+          render();
+        });
+      });
+
+      lbClose.addEventListener('click', closeLightbox);
+      lbNext.addEventListener('click', nextPhoto);
+      lbPrev.addEventListener('click', prevPhoto);
+
+      lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox.classList.contains('is-open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') nextPhoto();
+        if (e.key === 'ArrowLeft') prevPhoto();
+      });
+
+      // Touch swipe
+      let startX = 0;
+      lightbox.addEventListener('touchstart', (e) => {
+        startX = e.changedTouches[0].screenX;
+      }, { passive: true });
+
+      lightbox.addEventListener('touchend', (e) => {
+        const diffX = e.changedTouches[0].screenX - startX;
+        if (Math.abs(diffX) > 45) {
+          if (diffX < 0) nextPhoto();
+          else prevPhoto();
+        }
+      }, { passive: true });
+
+      render();
+    })();
+  </script>
+</body>
+</html>
