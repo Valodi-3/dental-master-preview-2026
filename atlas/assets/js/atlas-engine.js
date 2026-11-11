@@ -27,7 +27,7 @@
     catId: 'diagnostics',
     procId: 'consult-head',
     docSlug: null,
-    theme: 'editorial', // 'editorial' | 'clinical' (GATE 3 Art Direction)
+    theme: 'clinical', // Unified High-Tech Clinical standard (Carl Zeiss emerald, Manrope, graphite)
     searchQuery: '',
     modalOpen: false,
     modalContext: null,
@@ -117,16 +117,16 @@
       state.branch = 'ispanskie';
     }
 
-    // Theme (GATE 3 Art Direction with Smart Branch Default REV-011)
+    // Theme (Unified High-Tech Clinical Standard)
     if (themeParam) {
       if (['editorial', 'clinical'].includes(themeParam)) {
         state.theme = themeParam;
       } else {
-        state.theme = (state.branch === 'prokshino') ? 'clinical' : 'editorial';
+        state.theme = 'clinical';
         invalid = true;
       }
     } else {
-      state.theme = (state.branch === 'prokshino') ? 'clinical' : 'editorial';
+      state.theme = 'clinical';
     }
 
     // View / Pathway
@@ -627,12 +627,11 @@
       });
     }
 
-    // Branch Switches (with Smart Art Direction Default REV-011)
+    // Branch Switches (Unified Clinical Art Direction)
     if (el.btnBranchIspanskie) {
       el.btnBranchIspanskie.addEventListener('click', () => {
         if (state.branch === 'ispanskie') return;
         state.branch = 'ispanskie';
-        state.theme = 'editorial';
         syncUrl();
         renderHeaderAndRibbon();
         renderServices();
@@ -645,7 +644,6 @@
       el.btnBranchProkshino.addEventListener('click', () => {
         if (state.branch === 'prokshino') return;
         state.branch = 'prokshino';
-        state.theme = 'clinical';
         syncUrl();
         renderHeaderAndRibbon();
         renderServices();
