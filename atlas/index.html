@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>DENTAL ATLAS — Цифровая клиника ДантистЪ (Gate 2 Wireframe)</title>
+  <meta name="description" content="Интерактивная архитектура цифровой клиники ДантистЪ. Единая навигационная система: услуги, врачи, подтверждённая запись.">
+  <link rel="stylesheet" href="assets/css/atlas-wireframe.css">
+</head>
+<body>
+
+  <!-- Top System Bar -->
+  <header class="atlas-topbar" role="banner">
+    <div class="wire-shell atlas-topbar-inner">
+      <!-- Brand Entity -->
+      <div class="atlas-brand">
+        <div class="atlas-brand-logo-frame">Д</div>
+        <div>
+          <div class="atlas-brand-title">ДантистЪ</div>
+        </div>
+        <span class="atlas-brand-badge" id="brandBranchBadge">Испанские кв.</span>
+      </div>
+
+      <!-- Clinic Switcher (Segmented Control) -->
+      <nav class="clinic-switcher" aria-label="Выбор филиала сети">
+        <button type="button" class="clinic-switch-btn is-active" id="switchBranchIspanskie" aria-pressed="true">
+          <span class="primary-mark">★</span>Испанские кварталы
+        </button>
+        <button type="button" class="clinic-switch-btn" id="switchBranchProkshino" aria-pressed="false">
+          Прокшино
+        </button>
+      </nav>
+
+      <!-- Pathway Tabs (Services / Doctors / Booking) -->
+      <nav class="pathway-nav" role="tablist" aria-label="Разделы цифровой клиники">
+        <button type="button" class="pathway-btn is-active" data-pathway="services" role="tab" aria-selected="true">
+          <span>Услуги</span>
+        </button>
+        <button type="button" class="pathway-btn" data-pathway="doctors" role="tab" aria-selected="false">
+          <span>Врачи</span>
+        </button>
+        <button type="button" class="pathway-btn" data-pathway="booking" role="tab" aria-selected="false">
+          <span>Запись</span>
+        </button>
+      </nav>
+
+      <!-- Direct Phone Action -->
+      <a href="tel:+79045199697" class="topbar-phone-link" id="topPhoneLink" aria-label="Позвонить администратору филиала">
+        <span>✆</span>
+        <span id="topPhoneText">+7 (904) 519-96-97</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Context Ribbon (Breadcrumbs & Meta) -->
+  <aside class="context-ribbon" aria-label="Навигационный контекст">
+    <div class="wire-shell context-ribbon-inner">
+      <div class="context-breadcrumbs" id="ribbonCrumbs" aria-live="polite">
+        <!-- Rendered dynamically by engine -->
+      </div>
+      <div class="context-meta-badge" id="ribbonMeta">
+        Москва, Коммунарка · Ежедневно 09:00–21:00
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Digital Workspace -->
+  <main class="atlas-main">
+    <div class="wire-shell">
+
+      <!-- VIEW A: SERVICES WORKSPACE (The Clinical Canvas) -->
+      <section class="atlas-view is-visible" id="viewServices" aria-label="Атлас услуг клиники">
+        <div class="services-canvas">
+          
+          <!-- Left Navigator Column -->
+          <div class="canvas-nav-pane">
+            <div class="nav-pane-header">
+              <input type="search" class="nav-search-input" id="navSearchInput" placeholder="Поиск услуги или процедуры..." aria-label="Поиск по утверждённому прейскуранту">
+            </div>
+
+            <!-- Categories Horizontal / Vertical Scroller -->
+            <div class="nav-category-list" id="categoryList" role="tablist" aria-label="Направления стоматологии">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <!-- Procedures List -->
+            <div class="nav-procedure-list" id="procedureList" role="tablist" aria-label="Процедуры выбранного направления">
+              <!-- Rendered dynamically -->
+            </div>
+          </div>
+
+          <!-- Right Stage Panel (ServiceScene) -->
+          <div class="canvas-stage-pane" id="stagePane" aria-live="polite">
+            <!-- Stage Media Framing -->
+            <div class="stage-media-card">
+              <img id="stageMediaImg" src="../design/assets/ispanskie/gallery-5.jpg" alt="Кабинет стоматологии">
+              <span class="stage-media-badge" id="stageMediaBadge">Испанские кварталы · Кабинет</span>
+            </div>
+
+            <!-- Header & Price -->
+            <div class="stage-info-header">
+              <div class="wire-tag active" id="stageProcTag">Консультация</div>
+              <h1 class="stage-proc-title" id="stageProcTitle">Консультация главного врача с составлением плана</h1>
+              <div class="stage-price-row">
+                <span class="stage-price-label">Официальная цена прейскуранта:</span>
+                <span class="stage-price-val" id="stagePriceVal">2 500 ₽</span>
+              </div>
+            </div>
+
+            <!-- Clinical Explanation -->
+            <p class="stage-proc-desc" id="stageProcDesc">
+              Комплексный осмотр полости рта, анализ КТ/ОПТГ, определение этапности и стоимости лечения.
+            </p>
+
+            <!-- Matching Doctor Card -->
+            <div class="stage-doctor-box" id="stageDoctorBox">
+              <!-- Rendered dynamically -->
+            </div>
+
+            <!-- Primary Actions Row -->
+            <div class="stage-actions-row">
+              <button type="button" class="btn-primary-wire" id="stageBookBtn">
+                <span>Записаться на процедуру</span> <span>→</span>
+              </button>
+              <button type="button" class="btn-secondary-wire" id="stageShareBtn">
+                Скопировать ссылку
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- VIEW B: DOCTORS WORKSPACE -->
+      <section class="atlas-view" id="viewDoctors" aria-label="Каталог специалистов клиники">
+        <div style="margin-bottom: 20px;">
+          <h2 style="font-size: 1.5rem; font-weight: 800; color: var(--wire-ink-loud); margin-bottom: 6px;">
+            Врачи филиала «ДантистЪ»
+          </h2>
+          <p style="color: var(--wire-ink-muted); font-size: 0.9rem;">
+            Только подтверждённая квалификация, сертифицированные курсы и реальный клинический стаж. Никаких выдуманных регалий.
+          </p>
+        </div>
+        <div class="doctors-grid" id="doctorsGrid">
+          <!-- Rendered dynamically -->
+        </div>
+      </section>
+
+      <!-- VIEW C: BOOKING GATEWAY WORKSPACE -->
+      <section class="atlas-view" id="viewBooking" aria-label="Шлюз подтверждённой записи">
+        <div class="booking-gateway-container">
+          <div class="gateway-intro">
+            <h2>Шлюз записи на приём</h2>
+            <p>Выберите удобный подтверждённый канал связи с клиникой. Никаких имитаций свободных слотов и ложных обещаний.</p>
+          </div>
+
+          <div class="gateway-channels-list">
+            <!-- Channel 1: Phone -->
+            <a href="tel:+79045199697" class="gateway-channel-item">
+              <div class="gateway-channel-meta">
+                <strong>Прямой звонок администратору</strong>
+                <small>+7 (904) 519-96-97 · Ежедневно с 09:00 до 21:00</small>
+              </div>
+              <span class="btn-secondary-wire" style="padding: 8px 14px; font-size: 0.8rem;">Позвонить ✆</span>
+            </a>
+
+            <!-- Channel 2: WhatsApp -->
+            <a href="https://wa.me/message/2WBFWCZJGHQDG1" target="_blank" rel="noopener" class="gateway-channel-item">
+              <div class="gateway-channel-meta">
+                <strong>Диалог в WhatsApp</strong>
+                <small>Официальный бизнес-аккаунт клиники для быстрых вопросов</small>
+              </div>
+              <span class="btn-secondary-wire" style="padding: 8px 14px; font-size: 0.8rem;">Открыть WhatsApp ↗</span>
+            </a>
+
+            <!-- Channel 3: Telegram -->
+            <a href="https://t.me/Stomatologiya1108" target="_blank" rel="noopener" class="gateway-channel-item">
+              <div class="gateway-channel-meta">
+                <strong>Telegram-канал клиники</strong>
+                <small>@Stomatologiya1108 · Задать вопрос и записаться</small>
+              </div>
+              <span class="btn-secondary-wire" style="padding: 8px 14px; font-size: 0.8rem;">Открыть Telegram ↗</span>
+            </a>
+
+            <!-- Channel 4: DentalPRO -->
+            <a href="https://dantist-prokshino.ru/online-zapis/" target="_blank" rel="noopener" class="gateway-channel-item" style="border-left: 4px solid var(--wire-ink-loud);">
+              <div class="gateway-channel-meta">
+                <strong>Онлайн-запись через DentalPRO</strong>
+                <small>Централизованный виджет выбора специалиста сети «ДантистЪ»</small>
+              </div>
+              <span class="btn-primary-wire" style="padding: 8px 14px; font-size: 0.8rem;">Перейти в DentalPRO ↗</span>
+            </a>
+          </div>
+
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--wire-border-subtle); font-size: 0.82rem; color: var(--wire-ink-muted);">
+            <div><strong>Адрес филиала:</strong> <span id="gatewayAddressText">Москва, Коммунарка, улица Магеллана, 5</span></div>
+            <div><strong>Режим работы:</strong> <span id="gatewayHoursText">Ежедневно 09:00–21:00</span></div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Modal Booking Gateway Dialog -->
+  <div class="atlas-modal" id="bookingModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="atlas-modal-box">
+      <button type="button" class="atlas-modal-close" id="modalCloseBtn" aria-label="Закрыть модальное окно">✕</button>
+      
+      <div>
+        <div class="wire-tag active">Шлюз подтверждённой записи</div>
+        <h3 id="modalTitle" style="font-size: 1.3rem; font-weight: 800; color: var(--wire-ink-loud); margin-top: 6px;">
+          Запись на приём в «ДантистЪ»
+        </h3>
+        <p style="font-size: 0.86rem; color: var(--wire-ink-muted); margin-top: 4px;">
+          Мы не имитируем свободные слоты в базе. Выберите прямой подтверждённый способ связи:
+        </p>
+      </div>
+
+      <!-- Context notice (prefilled procedure or doctor) -->
+      <div id="modalContextNotice" style="display: none; padding: 10px 12px; background: var(--wire-accent-bg); border: 1px solid var(--wire-accent-border); border-radius: var(--wire-radius-sm); font-size: 0.84rem; font-weight: 600; color: var(--wire-accent);">
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <a href="tel:+79045199697" class="btn-primary-wire" style="justify-content: center;">
+          ✆ Позвонить прямо сейчас (+7 904 519-96-97)
+        </a>
+        <div style="display: flex; gap: 8px;">
+          <button type="button" class="btn-secondary-wire" id="modalCopyPhoneBtn" style="flex: 1; justify-content: center; font-size: 0.82rem;">
+            Скопировать номер
+          </button>
+          <span id="modalCopyFeedback" style="display: none; align-self: center; font-size: 0.8rem; font-weight: 700; color: #16a34a;">
+            ✓ Скопировано
+          </span>
+        </div>
+      </div>
+
+      <div style="border-top: 1px solid var(--wire-border-subtle); padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+        <a href="https://wa.me/message/2WBFWCZJGHQDG1" target="_blank" rel="noopener" class="btn-secondary-wire" style="justify-content: space-between;">
+          <span>Написать в WhatsApp</span> <span>↗</span>
+        </a>
+        <a href="https://t.me/Stomatologiya1108" target="_blank" rel="noopener" class="btn-secondary-wire" style="justify-content: space-between;">
+          <span>Написать в Telegram</span> <span>↗</span>
+        </a>
+        <a href="https://dantist-prokshino.ru/online-zapis/" target="_blank" rel="noopener" class="btn-secondary-wire" style="justify-content: space-between;">
+          <span>Виджет DentalPRO (онлайн-запись)</span> <span>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Floating Action Bar -->
+  <aside class="mobile-action-float" aria-label="Быстрая связь на мобильных устройствах">
+    <button type="button" class="mobile-float-btn secondary" id="mobileFloatCall">
+      ✆ Позвонить
+    </button>
+    <button type="button" class="mobile-float-btn primary" id="mobileFloatBook">
+      Записаться →
+    </button>
+  </aside>
+
+  <!-- Footer -->
+  <footer class="atlas-footer">
+    <div class="wire-shell atlas-footer-inner">
+      <span>Стоматологическая сеть «ДантистЪ» · Gate 2 Wireframe Prototype</span>
+      <span style="font-family: var(--wire-font-mono); font-size: 0.74rem;">DENTAL ATLAS · v1.0.0</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/atlas-data.js"></script>
+  <script src="assets/js/atlas-engine.js"></script>
+</body>
+</html>
